@@ -1,0 +1,11 @@
+Tool Name,Type,Status,Version,Config Location,Documentation URL,Cost (Free/Paid),Notes
+Claude Code,CLI,Active,1.0.x,~/.claude/CLAUDE.md,https://docs.anthropic.com/en/docs/claude-code,Paid (API usage),Primary development tool. Uses claude-sonnet-4-20250514. Custom CLAUDE.md with workflow rules and skill routing.
+GitHub MCP Server,MCP Server,Active,latest,~/.claude/mcp_servers.json,https://github.com/modelcontextprotocol/servers,Free,Provides PR management and issue tracking directly from Claude Code. Heavily used for code review workflows.
+Filesystem MCP Server,MCP Server,Active,latest,~/.claude/mcp_servers.json,https://github.com/modelcontextprotocol/servers,Free,File read/write/search operations. Sandboxed to project directories for safety.
+Playwright MCP,MCP Server,Active,latest,~/.claude/mcp_servers.json,https://playwright.dev/,Free,Browser automation for testing web apps. Uses Chrome remote debugging on port 9222.
+Context7,MCP Server,Active,latest,~/.claude/mcp_servers.json,https://context7.com/,Free,Documentation lookup for libraries and frameworks. Prevents AI hallucination of non-existent APIs.
+PAC CLI,CLI,Active,2.3.2,~/.pac/,https://learn.microsoft.com/en-us/power-platform/developer/cli/introduction,Free,Power Platform CLI for solution management. Used for deploying Power Automate flows via solution export/import.
+n8n,API,Active,1.x (self-hosted),Docker Compose on GCP VM,https://docs.n8n.io/,Free (self-hosted),Self-hosted workflow automation. Handles webhook-driven integrations and scheduled monitoring jobs.
+Anthropic SDK,Library,Active,0.40.x,package.json,https://docs.anthropic.com/en/docs/sdks,Paid (API usage),TypeScript SDK for building AI-powered features. Used in production apps alongside Claude Code for development.
+ripgrep,CLI,Active,14.x,System install,https://github.com/BurntSushi/ripgrep,Free,Fast code search. Integrated into Claude Code's Grep tool. Essential for large codebase navigation.
+GitHub CLI (gh),CLI,Active,2.x,~/.config/gh/,https://cli.github.com/,Free,GitHub operations from terminal. Used for PR creation and review. Integrated with Claude Code via Bash tool.

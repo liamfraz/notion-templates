@@ -1,0 +1,13 @@
+Skill,Category,Proficiency,Certification,Certification Expiry,Last Used,Learning Goal,Priority
+Power Automate,Technical,Expert,Microsoft Certified: Power Automate RPA Developer Associate (PL-500),2027-01-15,2026-03-05,Process mining and AI Builder integration,Medium
+Power BI,Technical,Advanced,Microsoft Certified: Data Analyst Associate (PL-300),2026-09-20,2026-03-04,Composite models and DirectQuery optimisation,Medium
+SharePoint Online,Technical,Advanced,,,,SharePoint Framework (SPFx) development,High
+Python,Technical,Intermediate,,,,FastAPI and async patterns for automation backends,High
+TypeScript / JavaScript,Technical,Intermediate,,,,Node.js backend development and testing frameworks,Medium
+Azure Functions,Technical,Intermediate,Microsoft Certified: Azure Developer Associate (AZ-204),2026-12-01,2026-02-15,Durable Functions orchestration patterns,Medium
+REST API Design,Technical,Advanced,,,,GraphQL as alternative to REST for complex integrations,Low
+Project Management,Business,Advanced,,,2026-03-05,Agile/Scrum certification (PSM I),High
+Solution Architecture,Business,Advanced,,,,TOGAF fundamentals for enterprise clients,Low
+Client Communication,Soft Skill,Advanced,,,,Presentation skills for executive stakeholder workshops,Medium
+Sales & Negotiation,Business,Intermediate,,,,Value-based pricing and proposal writing,High
+AI / Machine Learning,Technical,Beginner,,,,Azure OpenAI Service integration and prompt engineering,High

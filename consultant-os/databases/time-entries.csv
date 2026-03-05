@@ -1,0 +1,16 @@
+Date,Client,Project,Description,Hours,Rate ($),Billable Amount ($),Billable,Category
+2026-03-03,Meridian Property Group,SharePoint Intranet Automation,Built Power Automate flow for document approval routing with multi-level approval logic,4.0,250.00,1000.00,Yes,Development
+2026-03-03,Meridian Property Group,SharePoint Intranet Automation,Client meeting to review milestone 2 deliverables and plan milestone 3,1.0,250.00,250.00,Yes,Meeting
+2026-03-03,TechVault Pty Ltd,API Integration Platform,Developed webhook handler for incoming order events with retry logic,3.5,262.50,918.75,Yes,Development
+2026-03-04,TechVault Pty Ltd,API Integration Platform,Debugging authentication issues with third-party inventory API,2.5,262.50,656.25,Yes,Development
+2026-03-04,Coastal Energy Solutions,Logistics Reporting Dashboard,Power BI dashboard development for fleet utilisation metrics,3.0,275.00,825.00,Yes,Development
+2026-03-04,Coastal Energy Solutions,Logistics Reporting Dashboard,Call with new project sponsor to realign on priorities and timeline,1.0,275.00,275.00,Yes,Consulting
+2026-03-04,,,"Weekly invoicing and admin - sent 2 invoices, reconciled payments",1.5,0.00,0.00,No,Admin
+2026-03-05,Meridian Property Group,SharePoint Intranet Automation,SharePoint site provisioning automation using PnP PowerShell,4.5,250.00,1125.00,Yes,Development
+2026-03-05,Meridian Property Group,SharePoint Intranet Automation,HR onboarding flow testing and bug fixes,2.0,250.00,500.00,Yes,Development
+2026-03-05,Horizon Legal Partners,,"Discovery call - requirements gathering for document automation project",1.0,0.00,0.00,No,Meeting
+2026-02-28,TechVault Pty Ltd,API Integration Platform,Architecture review and technical design for error monitoring dashboard,2.0,262.50,525.00,Yes,Consulting
+2026-02-28,TechVault Pty Ltd,API Integration Platform,REST API integration layer - endpoint mapping and data transformation,4.0,262.50,1050.00,Yes,Development
+2026-02-27,Coastal Energy Solutions,Logistics Reporting Dashboard,Data pipeline development - automated ETL from fleet management system,3.5,275.00,962.50,Yes,Development
+2026-02-27,Meridian Property Group,SharePoint Intranet Automation,Travel to client office for milestone 2 walkthrough and user testing,2.0,250.00,500.00,Yes,Travel
+2026-02-26,Coastal Energy Solutions,Logistics Reporting Dashboard,Executive summary report template design and stakeholder review,2.5,275.00,687.50,Yes,Consulting
