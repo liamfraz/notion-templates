@@ -1,0 +1,5 @@
+Project Name,Project Code,Client/Sponsor,Budget,Status,Start Date,End Date,Priority,Owner,% Complete,Health,Notes
+Mobile App Redesign,MAR-2026-001,Horizon Financial,450000,Active,2026-01-15,2026-06-30,High,Sarah Chen,38,Amber,"UX research phase complete. Development sprints underway, some scope creep flagged in sprint 4."
+Data Platform Migration,DPM-2025-089,Internal IT,1200000,Active,2025-09-01,2026-04-30,Critical,James Okafor,65,Green,"Phase 2 data migration on track. Legacy system decommission scheduled for April. All vendor contracts signed."
+Q3 Marketing Campaign,QMC-2026-012,Marketing Dept,180000,Planning,2026-04-01,2026-09-30,Medium,Lisa Nakamura,8,Green,"Initial brief approved. Awaiting creative agency shortlist and budget sign-off from VP Marketing."
+Customer Portal v2,CPV-2026-003,Product Team,320000,On Hold,2026-02-01,2026-08-15,High,Sarah Chen,22,Red,"On hold pending outcome of Data Platform Migration. API dependencies need to be resolved before frontend work can resume."

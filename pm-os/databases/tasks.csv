@@ -1,0 +1,11 @@
+Task Name,Project,Assignee,Status,Priority,Due Date,Estimated Hours,Actual Hours,Tags,Dependencies,Notes
+Complete wireframes for checkout flow,Mobile App Redesign,Priya Sharma,Done,High,2026-03-14,24,28,"Design, UX",,Took longer due to accessibility requirements added mid-sprint
+Build authentication API endpoints,Mobile App Redesign,Tom Bradley,In Progress,High,2026-04-04,40,18,"Backend, Security",Complete wireframes for checkout flow,Using OAuth 2.0 with PKCE flow as agreed in ADR-007
+Migrate customer transaction database,Data Platform Migration,Wei Zhang,In Progress,Critical,2026-03-28,80,62,"Database, Migration",,Batch migration running nightly. 78% of records transferred successfully
+Write integration test suite for new APIs,Data Platform Migration,Anika Patel,To Do,High,2026-04-11,32,0,"Testing, QA",Migrate customer transaction database,Blocked until transaction DB migration is verified
+Decommission legacy reporting server,Data Platform Migration,James Okafor,To Do,Medium,2026-04-25,16,0,"Infrastructure, Cleanup","Migrate customer transaction database, Write integration test suite for new APIs",Requires sign-off from compliance team before shutdown
+Draft creative brief for agency,Q3 Marketing Campaign,Lisa Nakamura,In Progress,Medium,2026-03-30,12,6,"Strategy, Creative",,Meeting with three shortlisted agencies scheduled for April 2
+Define campaign KPIs and tracking plan,Q3 Marketing Campaign,David Kim,To Do,Medium,2026-04-08,8,0,"Analytics, Strategy",Draft creative brief for agency,Need alignment with sales team on lead attribution model
+Update API documentation for portal endpoints,Customer Portal v2,Tom Bradley,On Hold,Medium,2026-04-18,16,4,"Documentation, API",,Paused until Data Platform Migration API contracts are finalised
+Conduct stakeholder interviews for portal UX,Customer Portal v2,Priya Sharma,Done,High,2026-02-28,20,22,"Research, UX",,Completed 12 interviews across 4 customer segments. Report shared with Product Team
+Set up CI/CD pipeline for mobile app,Mobile App Redesign,Wei Zhang,Done,High,2026-02-20,16,14,"DevOps, Infrastructure",,GitHub Actions pipeline with automated testing and staging deployment
