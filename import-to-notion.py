@@ -459,6 +459,80 @@ def build_consultant_os(parent_id):
     return page_id
 
 
+def build_pm_os(parent_id):
+    print("\n📋 Building PM OS (green theme)...")
+    theme = THEMES["pm_os"]
+
+    children = [
+        toc_block(),
+        divider(),
+        quote_block("Your projects are scattered across Jira, Asana, spreadsheets, "
+                     "and Slack threads. PM OS fixes that."),
+        colored_callout(
+            "8 connected databases covering projects, tasks, risks, decisions, "
+            "stakeholders, goals, weekly reviews, and meeting notes — built by "
+            "a PM who actually manages projects.",
+            "📋", theme["primary_callout"]),
+        divider(),
+        colored_heading("Quick Start", 2, theme["heading"]),
+        bulleted("Review the 8 databases below — they contain realistic sample data"),
+        bulleted("Connect databases with relations using the Setup Guide"),
+        bulleted("Run your first weekly review to see everything surface automatically"),
+        bulleted("Delete sample data and start adding your own projects"),
+        divider(),
+        colored_heading("Databases", 2, theme["heading"]),
+        colored_callout(
+            "Every database is pre-loaded with sample data from a realistic "
+            "multi-project portfolio. Status, Priority, Health, and Type columns "
+            "use colored select options for instant visual scanning.",
+            "📊", theme["info_callout"]),
+    ]
+
+    page = create_page(parent_id, "PM OS — Project Manager Personal OS",
+                       "📋", COVERS["pm_os"], children)
+    if not page:
+        return
+    page_id = page["id"]
+
+    db_dir = os.path.join(BASE_DIR, "pm-os", "databases")
+    databases = [
+        ("Projects", "📁", "projects.csv"),
+        ("Tasks", "✅", "tasks.csv"),
+        ("Goals", "🎯", "goals.csv"),
+        ("Weekly Reviews", "📝", "weekly-reviews.csv"),
+        ("Meeting Notes", "🤝", "meeting-notes.csv"),
+        ("Stakeholders", "👥", "stakeholders.csv"),
+        ("Risks", "⚠️", "risks.csv"),
+        ("Decisions", "⚖️", "decisions.csv"),
+    ]
+
+    for title, icon, csv_file in databases:
+        csv_path = os.path.join(db_dir, csv_file)
+        if os.path.exists(csv_path):
+            append_blocks(page_id, [
+                colored_heading(title, 3, theme["heading"]),
+            ])
+            create_database(page_id, title, icon, csv_path)
+            time.sleep(0.5)
+
+    append_blocks(page_id, [
+        divider(),
+        colored_heading("Weekly Review System", 2, theme["heading"]),
+        colored_callout(
+            "Every Friday: run through overdue tasks, escalating risks, "
+            "pending decisions, and stakeholder updates. Everything surfaces "
+            "automatically — no digging required.",
+            "🔄", theme["info_callout"]),
+        colored_heading("Pricing", 2, theme["heading"]),
+        colored_callout(
+            "PM OS — $49 AUD (one-time). 8 databases, 3 dashboards, "
+            "setup guide, and free updates.",
+            "💲", theme["success_callout"]),
+    ])
+    print("  ✅ PM OS complete!")
+    return page_id
+
+
 # ============================================================
 # MAIN
 # ============================================================
@@ -474,9 +548,10 @@ if __name__ == "__main__":
     build_siteos(PARENT_PAGE_ID)
     build_agentops(PARENT_PAGE_ID)
     build_consultant_os(PARENT_PAGE_ID)
+    build_pm_os(PARENT_PAGE_ID)
 
     print("\n" + "=" * 50)
-    print("✅ All 3 templates redesigned with visual enhancements!")
+    print("✅ All 4 templates redesigned with visual enhancements!")
     print("Features added: covers, colored callouts, colored headings,")
     print("select properties with colored options, TOC, quote blocks.")
     print("Open Notion and check your pages.")
