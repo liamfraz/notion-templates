@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Job Search Tracker 2026 — Notion Template | $19</title>
+  <meta name="description" content="Track applications, interviews, contacts, salary research & offers in one place. Job Search CRM is the Notion template for tech professionals in the job market. $19 one-time.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://flowtech.notion.site/job-search">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Job Search CRM 2026 — Job Application Tracker | Notion Template">
+  <meta property="og:description" content="Track applications, interviews, contacts & salary research. Built for tech professionals navigating the job market.">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://flowtech.notion.site/job-search">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Job Search CRM 2026 — Job Application Tracker | Notion Template">
+  <meta name="twitter:description" content="Track applications, interviews, contacts & salary research. Built for tech professionals navigating the job market.">
+
+  <!-- Structured Data: Product -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Job Search CRM 2026 — Job Application Tracker (Notion Template)",
+    "description": "Track applications, interviews, contacts, salary research & offers in one place. The CRM for tech professionals navigating the 2026 job market.",
+    "brand": {"@type": "Brand", "name": "FlowTech"},
+    "offers": {
+      "@type": "Offer",
+      "price": "19",
+      "priceCurrency": "AUD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://flowtech.gumroad.com/l/job-search-notion-template"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "14"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I customize the databases?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, every database is fully customizable. Add columns for specific industries, adjust interview stages, and tailor everything to your job search process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the salary data accurate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The sample salary data is AU-focused and based on 2026 market research. You can update it with your own research from Glassdoor, Levels.fyi, or recruiter conversations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What Notion plan do I need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Job Search CRM works on any Notion plan, including the free plan. No paid Notion subscription required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does setup take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most people are fully set up within 20 minutes. The setup guide walks you through importing the template and customizing it for your target roles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this work alongside LinkedIn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, this is designed to complement LinkedIn, not replace it. Use LinkedIn for networking and discovery, then log everything in your CRM to track follow-ups, outcomes, and patterns."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface: '#0f0f0f',
+            card: '#1a1a1a',
+            cardHover: '#222222',
+            border: '#2a2a2a',
+            accent: '#0EA5E9',
+            accentDark: '#0284C7',
+            muted: '#888888',
+            light: '#e5e5e5',
+          },
+          fontFamily: {
+            display: ['"DM Serif Display"', 'Georgia', 'serif'],
+            body: ['"Instrument Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0f0f0f; }
+    .card-glow:hover { box-shadow: 0 0 40px rgba(14, 165, 233, 0.08); }
+    .gradient-text {
+      background: linear-gradient(135deg, #0EA5E9 0%, #7DD3FC 50%, #0EA5E9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-grain {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+    .tag { letter-spacing: 0.15em; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.7s ease-out both; }
+    .fade-up-1 { animation-delay: 0.1s; }
+    .fade-up-2 { animation-delay: 0.2s; }
+    .fade-up-3 { animation-delay: 0.3s; }
+    .fade-up-4 { animation-delay: 0.4s; }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::marker { display: none; }
+    details[open] summary .faq-chevron { transform: rotate(180deg); }
+    .faq-chevron { transition: transform 0.2s ease; }
+  </style>
+</head>
+<body class="font-body text-light antialiased">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-surface/80 border-b border-border">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-display text-xl text-accent">FlowTech</a>
+      <div class="hidden sm:flex items-center gap-8 text-sm text-muted">
+        <a href="#features" class="hover:text-light transition-colors">Features</a>
+        <a href="#compare" class="hover:text-light transition-colors">Compare</a>
+        <a href="#faq" class="hover:text-light transition-colors">FAQ</a>
+      </div>
+      <a href="https://flowtech.gumroad.com/l/job-search-notion-template" target="_blank" rel="noopener" class="text-sm font-semibold text-surface bg-accent hover:bg-accentDark px-5 py-2 rounded-full transition-colors">Buy on Gumroad &mdash; $19</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-grain relative min-h-[90vh] flex items-center justify-center pt-20">
+    <div class="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface pointer-events-none"></div>
+    <div class="relative text-center max-w-4xl mx-auto px-6 py-24">
+      <span class="inline-block bg-sky-500/10 text-sky-400 text-xs font-semibold px-3 py-1 rounded-full mb-6 fade-up">For Job Seekers</span>
+      <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.1] mb-8 fade-up fade-up-1">
+        Land Your Next Role<br>
+        <span class="gradient-text">with a System That Works</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-12 leading-relaxed fade-up fade-up-2">
+        Job Search CRM is the Notion template for tech professionals who treat their job search like a pipeline. Track every application, interview, and contact &mdash; stop letting opportunities slip through the cracks.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-up fade-up-3">
+        <a href="https://flowtech.gumroad.com/l/job-search-notion-template" target="_blank" rel="noopener" class="bg-accent hover:bg-accentDark text-surface font-semibold px-8 py-3.5 rounded-full transition-colors text-base">Buy on Gumroad &mdash; $19</a>
+        <a href="index.html" class="border border-border hover:border-muted text-light font-medium px-8 py-3.5 rounded-full transition-colors text-base">View All Templates</a>
+      </div>
+      <div class="flex items-center justify-center gap-8 mt-16 text-muted text-sm fade-up fade-up-4">
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+          One-time purchase
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+          30-day guarantee
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+          Free lite version
+        </span>
+      </div>
+
+      <!-- Template Preview Placeholder -->
+      <div class="mt-16 mx-auto max-w-3xl border-2 border-dashed border-border rounded-2xl p-16 flex items-center justify-center fade-up fade-up-4">
+        <p class="text-muted text-lg">Template Preview</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <p class="tag text-accent text-xs font-semibold uppercase mb-4">What's Inside</p>
+      <h2 class="font-display text-4xl sm:text-5xl mb-4">Everything You Need to Run a Systematic Job Search</h2>
+      <p class="text-muted text-lg max-w-xl mx-auto">6 pre-built databases to track your entire job search pipeline from first application to signed offer.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Applications -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">Applications</h3>
+        <p class="text-muted leading-relaxed">Track every application with status, date applied, source, resume version, and follow-up reminders. Kanban view shows your pipeline at a glance.</p>
+      </div>
+
+      <!-- Interviews -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">Interviews</h3>
+        <p class="text-muted leading-relaxed">Log interview rounds, interviewer names, questions asked, your answers, and post-interview notes. Prep for follow-up rounds with full context.</p>
+      </div>
+
+      <!-- Contacts -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">Contacts</h3>
+        <p class="text-muted leading-relaxed">Build your networking CRM: recruiters, hiring managers, referrals, and LinkedIn connections. Track relationship strength and last contact date.</p>
+      </div>
+
+      <!-- Salary Research -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">Salary Research</h3>
+        <p class="text-muted leading-relaxed">Compile salary data by role, company, and location. Track base, bonus, equity, and total comp to negotiate from a position of strength.</p>
+      </div>
+
+      <!-- Offers -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">Offers</h3>
+        <p class="text-muted leading-relaxed">Compare offers side-by-side: salary, benefits, equity, remote policy, culture notes. Make data-driven decisions on the biggest career choice.</p>
+      </div>
+
+      <!-- Companies -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">Companies</h3>
+        <p class="text-muted leading-relaxed">Research and rate target companies: size, tech stack, Glassdoor scores, culture, and why you'd want to work there. Link to applications.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section id="compare" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <p class="tag text-accent text-xs font-semibold uppercase mb-4">Free vs Premium</p>
+      <h2 class="font-display text-4xl sm:text-5xl mb-4">Lite vs Premium</h2>
+      <p class="text-muted text-lg max-w-xl mx-auto">Start free with core tracking. Upgrade when you need the full job search CRM.</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto overflow-hidden rounded-2xl border border-border">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b border-border">
+            <th class="px-6 py-4 text-sm font-semibold text-light">Feature</th>
+            <th class="px-6 py-4 text-sm font-semibold text-muted text-center bg-card">Lite (Free)</th>
+            <th class="px-6 py-4 text-sm font-semibold text-accent text-center bg-accent/5 border-l border-accent/20">Premium ($19)</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm">
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Applications</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Companies</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Contacts</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Interviews</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-muted/40 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Salary Research</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-muted/40 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Offers Comparison</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-muted/40 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Sample Data (6 databases)</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-muted/40 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4">Setup Guide</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-muted/40 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flex justify-center mt-10">
+      <a href="https://flowtech.gumroad.com/l/job-search-notion-template" target="_blank" rel="noopener" class="bg-accent hover:bg-accentDark text-surface font-semibold px-8 py-3.5 rounded-full transition-colors text-base">Get Job Search CRM &mdash; $19</a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <p class="tag text-accent text-xs font-semibold uppercase mb-4">What Job Seekers Say</p>
+      <h2 class="font-display text-4xl sm:text-5xl mb-4">Trusted by Tech Professionals</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="bg-card border border-border rounded-2xl p-8">
+        <p class="text-muted leading-relaxed italic mb-6">"After getting laid off, I applied to 80+ roles. Without this CRM I would have lost track after the first 20. Landed a role in 6 weeks."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent font-semibold text-sm">JS</div>
+          <div>
+            <p class="text-sm font-medium">Job Seeker</p>
+            <p class="text-xs text-muted">Software Engineer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-card border border-border rounded-2xl p-8">
+        <p class="text-muted leading-relaxed italic mb-6">"The salary research database helped me negotiate $15K more than the initial offer. Knowing market rates gave me confidence at the table."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent font-semibold text-sm">JS</div>
+          <div>
+            <p class="text-sm font-medium">Job Seeker</p>
+            <p class="text-xs text-muted">Product Manager</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-card border border-border rounded-2xl p-8">
+        <p class="text-muted leading-relaxed italic mb-6">"The contacts database turned my job search into a proper networking operation. I knew exactly who to follow up with and when."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent font-semibold text-sm">JS</div>
+          <div>
+            <p class="text-sm font-medium">Job Seeker</p>
+            <p class="text-xs text-muted">Data Analyst</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <p class="tag text-accent text-xs font-semibold uppercase mb-4">Frequently Asked Questions</p>
+      <h2 class="font-display text-4xl sm:text-5xl mb-4">Common Questions</h2>
+    </div>
+
+    <div class="max-w-2xl mx-auto space-y-4">
+
+      <details class="bg-card border border-border rounded-2xl group">
+        <summary class="px-8 py-5 flex items-center justify-between text-light font-medium">
+          <h3 class="text-base font-medium">Can I customize the databases?</h3>
+          <svg class="faq-chevron w-5 h-5 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-8 pb-6 text-muted leading-relaxed">
+          Yes, every database is fully customizable. Add columns for specific industries, adjust interview stages, and tailor everything to your job search process.
+        </div>
+      </details>
+
+      <details class="bg-card border border-border rounded-2xl group">
+        <summary class="px-8 py-5 flex items-center justify-between text-light font-medium">
+          <h3 class="text-base font-medium">Is the salary data accurate?</h3>
+          <svg class="faq-chevron w-5 h-5 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-8 pb-6 text-muted leading-relaxed">
+          The sample salary data is AU-focused and based on 2026 market research. You can update it with your own research from Glassdoor, Levels.fyi, or recruiter conversations. The database structure is the real value &mdash; populate it with data relevant to your target roles.
+        </div>
+      </details>
+
+      <details class="bg-card border border-border rounded-2xl group">
+        <summary class="px-8 py-5 flex items-center justify-between text-light font-medium">
+          <h3 class="text-base font-medium">What Notion plan do I need?</h3>
+          <svg class="faq-chevron w-5 h-5 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-8 pb-6 text-muted leading-relaxed">
+          Job Search CRM works on any Notion plan, including the free plan. No paid Notion subscription required.
+        </div>
+      </details>
+
+      <details class="bg-card border border-border rounded-2xl group">
+        <summary class="px-8 py-5 flex items-center justify-between text-light font-medium">
+          <h3 class="text-base font-medium">How long does setup take?</h3>
+          <svg class="faq-chevron w-5 h-5 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-8 pb-6 text-muted leading-relaxed">
+          Most people are fully set up within 20 minutes. The setup guide walks you through importing the template and customizing it for your target roles and industries.
+        </div>
+      </details>
+
+      <details class="bg-card border border-border rounded-2xl group">
+        <summary class="px-8 py-5 flex items-center justify-between text-light font-medium">
+          <h3 class="text-base font-medium">Does this work alongside LinkedIn?</h3>
+          <svg class="faq-chevron w-5 h-5 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-8 pb-6 text-muted leading-relaxed">
+          Yes, this is designed to complement LinkedIn, not replace it. Use LinkedIn for networking and discovery, then log everything in your CRM to track follow-ups, outcomes, and patterns across your entire job search.
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- Bundle Upsell -->
+  <section class="max-w-3xl mx-auto px-6 py-12">
+    <a href="bundle.html" class="block bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-2xl p-8 sm:p-10 text-center hover:border-accent/40 transition-all group">
+      <div class="inline-flex items-center gap-2 bg-accent/15 text-accent text-xs font-semibold px-3 py-1 rounded-full mb-4">SAVE 30%</div>
+      <h3 class="font-display text-2xl sm:text-3xl mb-3 group-hover:text-accent transition-colors">Get All Templates for $149 AUD</h3>
+      <p class="text-muted text-sm leading-relaxed max-w-lg mx-auto mb-4">Job Search CRM + AgentOps + Consultant OS + PM OS + SiteOS &mdash; every database, every setup guide. Save big vs buying separately.</p>
+      <span class="text-accent font-semibold text-sm">View the Bundle &rarr;</span>
+    </a>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center bg-card border border-border rounded-2xl p-16">
+      <h2 class="font-display text-4xl sm:text-5xl mb-6">Start Your Systematic Job Search Today</h2>
+      <p class="text-muted text-lg max-w-xl mx-auto mb-10">One-time purchase. 30-day money-back guarantee. Setup in under 20 minutes.</p>
+      <a href="https://flowtech.gumroad.com/l/job-search-notion-template" target="_blank" rel="noopener" class="inline-block bg-accent hover:bg-accentDark text-surface font-semibold px-10 py-4 rounded-full transition-colors text-lg">Buy Job Search CRM &mdash; $19</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-border mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="mb-10">
+        <p class="tag text-accent text-xs font-semibold uppercase mb-6">Other Templates</p>
+        <div class="flex flex-wrap gap-6">
+          <a href="agentops.html" class="text-muted hover:text-light transition-colors">AgentOps</a>
+          <a href="ai-sidehustle.html" class="text-muted hover:text-light transition-colors">AI Side Hustle Tracker</a>
+          <a href="creator-os.html" class="text-muted hover:text-light transition-colors">Creator OS</a>
+          <a href="creator-biz.html" class="text-muted hover:text-light transition-colors">Creator Business OS</a>
+          <a href="consultant-os.html" class="text-muted hover:text-light transition-colors">Consultant OS</a>
+          <a href="pm-os.html" class="text-muted hover:text-light transition-colors">PM OS</a>
+          <a href="siteos.html" class="text-muted hover:text-light transition-colors">SiteOS</a>
+          <a href="tiktok-machine.html" class="text-muted hover:text-light transition-colors">TikTok Content Machine</a>
+          <a href="youtube-calendar.html" class="text-muted hover:text-light transition-colors">YouTube Calendar</a>
+        </div>
+      </div>
+      <p class="text-muted text-sm">&copy; 2026 FlowTech. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

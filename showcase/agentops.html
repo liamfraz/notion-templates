@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Notion AI Agent Template 2026 — AgentOps | $29</title>
+  <meta name="description" content="Track AI sessions, version prompts, monitor API costs & automation health. AgentOps is the Notion template built for developers who build with AI daily. $29 one-time.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://flowtech.notion.site/agentops">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AgentOps — AI Agent & Automation Tracker | Notion Template">
+  <meta property="og:description" content="Track AI sessions, version prompts, monitor API costs. Built for developers who ship with AI daily.">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://flowtech.notion.site/agentops">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AgentOps — AI Agent & Automation Tracker | Notion Template">
+  <meta name="twitter:description" content="Track AI sessions, version prompts, monitor API costs. Built for developers who ship with AI daily.">
+
+  <!-- Structured Data: Product -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "AgentOps — AI Agent & Automation Tracker (Notion Template)",
+    "description": "Track AI sessions, version prompts, monitor API costs & automation health. The ops dashboard for developers who build with AI daily.",
+    "brand": {"@type": "Brand", "name": "FlowTech"},
+    "offers": {
+      "@type": "Offer",
+      "price": "29",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://flowtech.gumroad.com/l/agentops-notion-template"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "12"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I customize the databases?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, every database is fully customizable. Add columns, change categories, adjust views, and tailor everything to your workflow."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it integrate with AI APIs automatically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not out of the box — it's a Notion template. However, the setup guide includes ideas for automating data entry with n8n or Power Automate webhooks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What Notion plan do I need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AgentOps works on any Notion plan, including the free plan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a free version?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, AgentOps Lite includes the AI Session Logger, Prompt Library, and a basic cost tracker — completely free."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use this for a team?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, share your Notion workspace and use the Owner field to assign items. Works well for teams of 2–10."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface: '#0f0f0f',
+            card: '#1a1a1a',
+            cardHover: '#222222',
+            border: '#2a2a2a',
+            accent: '#e8a838',
+            accentDark: '#c48a2a',
+            muted: '#888888',
+            light: '#e5e5e5',
+          },
+          fontFamily: {
+            display: ['"DM Serif Display"', 'Georgia', 'serif'],
+            body: ['"Instrument Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background: #0f0f0f; }
+    .card-glow:hover { box-shadow: 0 0 40px rgba(232, 168, 56, 0.08); }
+    .gradient-text {
+      background: linear-gradient(135deg, #e8a838 0%, #f0c96e 50%, #e8a838 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-grain {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+    .tag { letter-spacing: 0.15em; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.7s ease-out both; }
+    .fade-up-1 { animation-delay: 0.1s; }
+    .fade-up-2 { animation-delay: 0.2s; }
+    .fade-up-3 { animation-delay: 0.3s; }
+    .fade-up-4 { animation-delay: 0.4s; }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::marker { display: none; }
+    details[open] summary .faq-chevron { transform: rotate(180deg); }
+    .faq-chevron { transition: transform 0.2s ease; }
+  </style>
+</head>
+<body class="font-body text-light antialiased">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-surface/80 border-b border-border">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-display text-xl text-accent">FlowTech</a>
+      <div class="hidden sm:flex items-center gap-8 text-sm text-muted">
+        <a href="#features" class="hover:text-light transition-colors">Features</a>
+        <a href="#compare" class="hover:text-light transition-colors">Compare</a>
+        <a href="#faq" class="hover:text-light transition-colors">FAQ</a>
+      </div>
+      <a href="https://flowtech.gumroad.com/l/agentops-notion-template" target="_blank" rel="noopener" class="text-sm font-semibold text-surface bg-accent hover:bg-accentDark px-5 py-2 rounded-full transition-colors">Buy on Gumroad &mdash; $29</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-grain relative min-h-[90vh] flex items-center justify-center pt-20">
+    <div class="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface pointer-events-none"></div>
+    <div class="relative text-center max-w-4xl mx-auto px-6 py-24">
+      <span class="inline-block bg-blue-500/10 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full mb-6 fade-up">For Developers</span>
+      <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.1] mb-8 fade-up fade-up-1">
+        Track Your AI Agents, Prompts &amp; Costs<br>
+        <span class="gradient-text">in One Notion Workspace</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-12 leading-relaxed fade-up fade-up-2">
+        AgentOps is the operational dashboard for developers who build with Claude Code, ChatGPT, Copilot, and automation tools daily. Stop guessing &mdash; start measuring.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-up fade-up-3">
+        <a href="https://flowtech.gumroad.com/l/agentops-notion-template" target="_blank" rel="noopener" class="bg-accent hover:bg-accentDark text-surface font-semibold px-8 py-3.5 rounded-full transition-colors text-base">Buy on Gumroad &mdash; $29</a>
+        <a href="index.html" class="border border-border hover:border-muted text-light font-medium px-8 py-3.5 rounded-full transition-colors text-base">View All Templates</a>
+      </div>
+      <div class="flex items-center justify-center gap-8 mt-16 text-muted text-sm fade-up fade-up-4">
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+          One-time purchase
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+          30-day guarantee
+        </span>
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+          Free lite version
+        </span>
+      </div>
+
+      <!-- Template Preview Placeholder -->
+      <div class="mt-16 mx-auto max-w-3xl border-2 border-dashed border-border rounded-2xl p-16 flex items-center justify-center fade-up fade-up-4">
+        <p class="text-muted text-lg">Template Preview</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <p class="tag text-accent text-xs font-semibold uppercase mb-4">What's Inside</p>
+      <h2 class="font-display text-4xl sm:text-5xl mb-4">Everything You Need to Run AI Operations</h2>
+      <p class="text-muted text-lg max-w-xl mx-auto">7 pre-built databases and operational tools, ready to use from day one.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Command Center -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">Command Center</h3>
+        <p class="text-muted leading-relaxed">Overview dashboard with key metrics, quick actions, and active alerts. Your single pane of glass for AI operations.</p>
+      </div>
+
+      <!-- AI Session Logger -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">AI Session Logger</h3>
+        <p class="text-muted leading-relaxed">Track sessions with Claude Code, ChatGPT, Copilot, and Gemini. Log duration, cost, quality ratings, and key learnings.</p>
+      </div>
+
+      <!-- Prompt Library -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">Prompt Library</h3>
+        <p class="text-muted leading-relaxed">Save, categorize, rate, and version your prompts. Includes 10 starter prompts to get you productive immediately.</p>
+      </div>
+
+      <!-- Automation Registry -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25a2.25 2.25 0 0 1-2.25-2.25v-2.25Z"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">Automation Registry</h3>
+        <p class="text-muted leading-relaxed">Track flows across Power Automate, n8n, Zapier, and Make. Monitor status, success rates, and error logs.</p>
+      </div>
+
+      <!-- API Cost Tracker -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">API Cost Tracker</h3>
+        <p class="text-muted leading-relaxed">Monthly spend tracking across Anthropic, OpenAI, Google, and Azure. Set budgets and get alerted before overages.</p>
+      </div>
+
+      <!-- AI Code Review Checklist -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15a2.25 2.25 0 0 1 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">AI Code Review Checklist</h3>
+        <p class="text-muted leading-relaxed">20-item QA checklist purpose-built for reviewing AI-generated code. Catch hallucinations, security gaps, and logic errors.</p>
+      </div>
+
+      <!-- Tech Debt Log -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">Tech Debt Log</h3>
+        <p class="text-muted leading-relaxed">Track AI-introduced tech debt with severity ratings, effort estimates, and resolution status. Keep your codebase healthy.</p>
+      </div>
+
+      <!-- Tool Registry -->
+      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30">
+        <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085"/></svg>
+        </div>
+        <h3 class="font-display text-xl mb-2">Tool Registry</h3>
+        <p class="text-muted leading-relaxed">Catalog your MCP servers, CLI tools, APIs, and libraries. Track versions, documentation links, and usage notes.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section id="compare" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <p class="tag text-accent text-xs font-semibold uppercase mb-4">Free vs Premium</p>
+      <h2 class="font-display text-4xl sm:text-5xl mb-4">AgentOps Lite vs AgentOps Premium</h2>
+      <p class="text-muted text-lg max-w-xl mx-auto">Start free. Upgrade when you need the full operational suite.</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto overflow-hidden rounded-2xl border border-border">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b border-border">
+            <th class="px-6 py-4 text-sm font-semibold text-light">Feature</th>
+            <th class="px-6 py-4 text-sm font-semibold text-muted text-center bg-card">Lite (Free)</th>
+            <th class="px-6 py-4 text-sm font-semibold text-accent text-center bg-accent/5 border-l border-accent/20">Premium ($29)</th>
+          </tr>
+        </thead>
+        <tbody class="text-sm">
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">AI Session Logger</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Prompt Library</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Basic Cost Tracker</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Command Center Dashboard</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-muted/40 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Automation Registry</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-muted/40 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">AI Code Review Checklist</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-muted/40 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Tech Debt Log</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-muted/40 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Tool Registry</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-muted/40 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">10 Starter Prompts</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-muted/40 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="px-6 py-4">Monthly Ops Report</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-muted/40 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4">Sample Data (7 databases)</td>
+            <td class="px-6 py-4 text-center bg-card"><svg class="w-5 h-5 text-muted/40 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/></svg></td>
+            <td class="px-6 py-4 text-center bg-accent/5 border-l border-accent/20"><svg class="w-5 h-5 text-accent mx-auto" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flex justify-center mt-10">
+      <a href="https://flowtech.gumroad.com/l/agentops-notion-template" target="_blank" rel="noopener" class="bg-accent hover:bg-accentDark text-surface font-semibold px-8 py-3.5 rounded-full transition-colors text-base">Get AgentOps Premium &mdash; $29</a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <p class="tag text-accent text-xs font-semibold uppercase mb-4">What Developers Say</p>
+      <h2 class="font-display text-4xl sm:text-5xl mb-4">Trusted by AI Builders</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="bg-card border border-border rounded-2xl p-8">
+        <p class="text-muted leading-relaxed italic mb-6">"Finally a system to track what I'm actually spending on AI APIs each month. The cost tracker alone paid for itself in the first week."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent font-semibold text-sm">DN</div>
+          <div>
+            <p class="text-sm font-medium">Developer Name</p>
+            <p class="text-xs text-muted">Role at Company</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-card border border-border rounded-2xl p-8">
+        <p class="text-muted leading-relaxed italic mb-6">"The prompt library with versioning changed how I work with Claude Code. I can see which prompts actually produce quality output over time."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent font-semibold text-sm">DN</div>
+          <div>
+            <p class="text-sm font-medium">Developer Name</p>
+            <p class="text-xs text-muted">Role at Company</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-card border border-border rounded-2xl p-8">
+        <p class="text-muted leading-relaxed italic mb-6">"I was tracking AI sessions in a messy spreadsheet. AgentOps gave me a proper system with the code review checklist as a bonus. Highly recommend."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent font-semibold text-sm">DN</div>
+          <div>
+            <p class="text-sm font-medium">Developer Name</p>
+            <p class="text-xs text-muted">Role at Company</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <p class="tag text-accent text-xs font-semibold uppercase mb-4">Frequently Asked Questions</p>
+      <h2 class="font-display text-4xl sm:text-5xl mb-4">Common Questions About AgentOps</h2>
+    </div>
+
+    <div class="max-w-2xl mx-auto space-y-4">
+
+      <details class="bg-card border border-border rounded-2xl group">
+        <summary class="px-8 py-5 flex items-center justify-between text-light font-medium">
+          <h3 class="text-base font-medium">Can I customize the databases?</h3>
+          <svg class="faq-chevron w-5 h-5 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-8 pb-6 text-muted leading-relaxed">
+          Yes, every database is fully customizable. Add columns, change categories, adjust views, and tailor everything to your workflow. It's your Notion workspace — make it yours.
+        </div>
+      </details>
+
+      <details class="bg-card border border-border rounded-2xl group">
+        <summary class="px-8 py-5 flex items-center justify-between text-light font-medium">
+          <h3 class="text-base font-medium">Does it integrate with AI APIs automatically?</h3>
+          <svg class="faq-chevron w-5 h-5 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-8 pb-6 text-muted leading-relaxed">
+          Not out of the box — it's a Notion template, so data entry is manual by default. However, the setup guide includes ideas for automating data entry with n8n or Power Automate webhooks to push session data directly into your databases.
+        </div>
+      </details>
+
+      <details class="bg-card border border-border rounded-2xl group">
+        <summary class="px-8 py-5 flex items-center justify-between text-light font-medium">
+          <h3 class="text-base font-medium">What Notion plan do I need?</h3>
+          <svg class="faq-chevron w-5 h-5 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-8 pb-6 text-muted leading-relaxed">
+          AgentOps works on any Notion plan, including the free plan. No paid Notion subscription required.
+        </div>
+      </details>
+
+      <details class="bg-card border border-border rounded-2xl group">
+        <summary class="px-8 py-5 flex items-center justify-between text-light font-medium">
+          <h3 class="text-base font-medium">Is there a free version?</h3>
+          <svg class="faq-chevron w-5 h-5 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-8 pb-6 text-muted leading-relaxed">
+          Yes, AgentOps Lite is completely free and includes the AI Session Logger, Prompt Library, and a basic cost tracker. It's a great way to try the system before upgrading to Premium.
+        </div>
+      </details>
+
+      <details class="bg-card border border-border rounded-2xl group">
+        <summary class="px-8 py-5 flex items-center justify-between text-light font-medium">
+          <h3 class="text-base font-medium">Can I use this for a team?</h3>
+          <svg class="faq-chevron w-5 h-5 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-8 pb-6 text-muted leading-relaxed">
+          Yes, share your Notion workspace and use the Owner field to assign items to team members. Works well for teams of 2&ndash;10 developers working with AI tools.
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- Bundle Upsell -->
+  <section class="max-w-3xl mx-auto px-6 py-12">
+    <a href="bundle.html" class="block bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-2xl p-8 sm:p-10 text-center hover:border-accent/40 transition-all group">
+      <div class="inline-flex items-center gap-2 bg-accent/15 text-accent text-xs font-semibold px-3 py-1 rounded-full mb-4">SAVE 30%</div>
+      <h3 class="font-display text-2xl sm:text-3xl mb-3 group-hover:text-accent transition-colors">Get All 4 Templates for $149 AUD</h3>
+      <p class="text-muted text-sm leading-relaxed max-w-lg mx-auto mb-4">AgentOps + Consultant OS + PM OS + SiteOS &mdash; 34 databases, 4 setup guides, every Lite version. Save $67 vs buying separately.</p>
+      <span class="text-accent font-semibold text-sm">View the Bundle &rarr;</span>
+    </a>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="max-w-7xl mx-auto px-6 py-24">
+    <div class="text-center bg-card border border-border rounded-2xl p-16">
+      <h2 class="font-display text-4xl sm:text-5xl mb-6">Start Tracking Your AI Operations Today</h2>
+      <p class="text-muted text-lg max-w-xl mx-auto mb-10">One-time purchase. 30-day money-back guarantee. Setup in under 60 minutes.</p>
+      <a href="https://flowtech.gumroad.com/l/agentops-notion-template" target="_blank" rel="noopener" class="inline-block bg-accent hover:bg-accentDark text-surface font-semibold px-10 py-4 rounded-full transition-colors text-lg">Buy AgentOps &mdash; $29</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-border mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="mb-10">
+        <p class="tag text-accent text-xs font-semibold uppercase mb-6">Other Templates</p>
+        <div class="flex flex-wrap gap-6">
+          <a href="ai-sidehustle.html" class="text-muted hover:text-light transition-colors">AI Side Hustle Tracker</a>
+          <a href="creator-os.html" class="text-muted hover:text-light transition-colors">Creator OS</a>
+          <a href="creator-biz.html" class="text-muted hover:text-light transition-colors">Creator Business OS</a>
+          <a href="job-search.html" class="text-muted hover:text-light transition-colors">Job Search CRM</a>
+          <a href="consultant-os.html" class="text-muted hover:text-light transition-colors">Consultant OS</a>
+          <a href="pm-os.html" class="text-muted hover:text-light transition-colors">PM OS</a>
+          <a href="siteos.html" class="text-muted hover:text-light transition-colors">SiteOS</a>
+          <a href="tiktok-machine.html" class="text-muted hover:text-light transition-colors">TikTok Content Machine</a>
+          <a href="youtube-calendar.html" class="text-muted hover:text-light transition-colors">YouTube Calendar</a>
+        </div>
+      </div>
+      <p class="text-muted text-sm">&copy; 2026 FlowTech. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
