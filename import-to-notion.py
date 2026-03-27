@@ -1,5 +1,5 @@
 """
-Import all 3 Notion templates with premium visual design.
+Import all 10 Notion templates with premium visual design.
 Creates pages with covers, colored callouts, colored headings,
 and databases with select properties with colored options.
 """
@@ -533,6 +533,442 @@ def build_pm_os(parent_id):
     return page_id
 
 
+def build_ai_sidehustle(parent_id):
+    print("\n💰 Building AI Side Hustle Tracker (pink theme)...")
+    theme = THEMES["ai_sidehustle"]
+
+    children = [
+        toc_block(),
+        divider(),
+        quote_block("You're running 5 AI side hustles from your laptop. "
+                     "Which ones are actually making money?"),
+        colored_callout(
+            "Track every AI income stream, tool cost, and project in one "
+            "workspace. Built for the AI entrepreneur running multiple "
+            "revenue streams from day one.",
+            "💰", theme["primary_callout"]),
+        divider(),
+        colored_heading("Quick Start", 2, theme["heading"]),
+        bulleted("Add your AI income streams with current monthly revenue"),
+        bulleted("Log your tool costs — see your real overhead instantly"),
+        bulleted("Set monthly revenue goals and track progress"),
+        bulleted("Run a monthly review to cut losers and double down on winners"),
+        divider(),
+        colored_heading("Databases", 2, theme["heading"]),
+        colored_callout(
+            "6 databases covering income streams, monthly revenue, tool costs, "
+            "projects, expenses, and goals. Status, Priority, and ROI columns "
+            "use colored select options.",
+            "📊", theme["info_callout"]),
+    ]
+
+    page = create_page(parent_id, "AI Side Hustle Tracker",
+                       "💰", COVERS["ai_sidehustle"], children)
+    if not page:
+        return
+    page_id = page["id"]
+
+    db_dir = os.path.join(BASE_DIR, "ai-sidehustle", "databases")
+    databases = [
+        ("Income Streams", "💸", "income-streams.csv"),
+        ("Monthly Revenue", "📈", "monthly-revenue.csv"),
+        ("Tool Costs", "🛠️", "tool-costs.csv"),
+        ("Projects", "🚀", "projects.csv"),
+        ("Expenses", "🧾", "expenses.csv"),
+        ("Goals", "🎯", "goals.csv"),
+    ]
+
+    for title, icon, csv_file in databases:
+        csv_path = os.path.join(db_dir, csv_file)
+        if os.path.exists(csv_path):
+            append_blocks(page_id, [
+                colored_heading(title, 3, theme["heading"]),
+            ])
+            create_database(page_id, title, icon, csv_path)
+            time.sleep(0.5)
+
+    append_blocks(page_id, [
+        divider(),
+        colored_heading("Monthly Review", 2, theme["heading"]),
+        colored_callout(
+            "Every month: review revenue per stream, cut tools with low ROI, "
+            "check goal progress, and decide where to invest more time.",
+            "🔄", theme["info_callout"]),
+        colored_heading("Pricing", 2, theme["heading"]),
+        colored_callout(
+            "AI Side Hustle Tracker — $24 AUD (one-time). Track every "
+            "dollar in and out of your AI business.",
+            "💲", theme["success_callout"]),
+    ])
+    print("  ✅ AI Side Hustle Tracker complete!")
+    return page_id
+
+
+def build_creator_os(parent_id):
+    print("\n🎬 Building Content Creator Command Center (yellow theme)...")
+    theme = THEMES["creator_os"]
+
+    children = [
+        toc_block(),
+        divider(),
+        quote_block("Your content calendar is in Google Sheets. Your brand deals "
+                     "are in email. Your analytics are in 6 different apps."),
+        colored_callout(
+            "Content calendar, analytics tracker, brand deal CRM, and income "
+            "tracker — designed for creators managing content across multiple "
+            "platforms.",
+            "🎬", theme["primary_callout"]),
+        divider(),
+        colored_heading("Quick Start", 2, theme["heading"]),
+        bulleted("Add your platforms and posting schedule"),
+        bulleted("Plan your next 2 weeks of content in the calendar"),
+        bulleted("Log your income sources and brand deal pipeline"),
+        bulleted("Track what's performing and double down"),
+        divider(),
+        colored_heading("Databases", 2, theme["heading"]),
+        colored_callout(
+            "6 databases covering content calendar, analytics, brand deals, "
+            "income, platforms, and ideas. Status, Platform, and Performance "
+            "columns use colored select options.",
+            "📊", theme["info_callout"]),
+    ]
+
+    page = create_page(parent_id, "Content Creator Command Center",
+                       "🎬", COVERS["creator_os"], children)
+    if not page:
+        return
+    page_id = page["id"]
+
+    db_dir = os.path.join(BASE_DIR, "creator-os", "databases")
+    databases = [
+        ("Content Calendar", "📅", "content-calendar.csv"),
+        ("Analytics", "📊", "analytics.csv"),
+        ("Brand Deals", "🤝", "brand-deals.csv"),
+        ("Income Tracker", "💵", "income.csv"),
+        ("Platforms", "📱", "platforms.csv"),
+        ("Ideas Backlog", "💡", "ideas.csv"),
+    ]
+
+    for title, icon, csv_file in databases:
+        csv_path = os.path.join(db_dir, csv_file)
+        if os.path.exists(csv_path):
+            append_blocks(page_id, [
+                colored_heading(title, 3, theme["heading"]),
+            ])
+            create_database(page_id, title, icon, csv_path)
+            time.sleep(0.5)
+
+    append_blocks(page_id, [
+        divider(),
+        colored_heading("Monthly Creator Review", 2, theme["heading"]),
+        colored_callout(
+            "Every month: review top-performing content, check brand deal "
+            "pipeline, update income breakdown, and plan next month's "
+            "content themes.",
+            "🔄", theme["info_callout"]),
+        colored_heading("Pricing", 2, theme["heading"]),
+        colored_callout(
+            "Content Creator Command Center — $29 AUD (one-time). Your "
+            "entire creator business in one workspace.",
+            "💲", theme["success_callout"]),
+    ])
+    print("  ✅ Content Creator Command Center complete!")
+    return page_id
+
+
+def build_job_search(parent_id):
+    print("\n🎯 Building Job Search CRM 2026 (blue theme)...")
+    theme = THEMES["job_search"]
+
+    children = [
+        toc_block(),
+        divider(),
+        quote_block("You've applied to 47 jobs. You can't remember which ones "
+                     "you've heard back from. Your interview prep is scattered "
+                     "across 12 browser tabs."),
+        colored_callout(
+            "Application tracker, interview prep, networking CRM, salary "
+            "research, and offer comparison — built for the structured "
+            "job seeker who treats their search like a project.",
+            "🎯", theme["primary_callout"]),
+        divider(),
+        colored_heading("Quick Start", 2, theme["heading"]),
+        bulleted("Add your target companies and research their comp ranges"),
+        bulleted("Log every application with status tracking"),
+        bulleted("Prep for interviews with linked notes and checklists"),
+        bulleted("Compare offers side-by-side when they come in"),
+        divider(),
+        colored_heading("Databases", 2, theme["heading"]),
+        colored_callout(
+            "6 databases covering applications, interviews, contacts, salary "
+            "research, offers, and company profiles. Status, Priority, and "
+            "Round columns use colored select options.",
+            "📊", theme["info_callout"]),
+    ]
+
+    page = create_page(parent_id, "Job Search CRM 2026",
+                       "🎯", COVERS["job_search"], children)
+    if not page:
+        return
+    page_id = page["id"]
+
+    db_dir = os.path.join(BASE_DIR, "job-search", "databases")
+    databases = [
+        ("Applications", "📋", "applications.csv"),
+        ("Interviews", "🎤", "interviews.csv"),
+        ("Networking Contacts", "🤝", "contacts.csv"),
+        ("Salary Research", "💰", "salary-research.csv"),
+        ("Offers", "🎁", "offers.csv"),
+        ("Company Research", "🏢", "companies.csv"),
+    ]
+
+    for title, icon, csv_file in databases:
+        csv_path = os.path.join(db_dir, csv_file)
+        if os.path.exists(csv_path):
+            append_blocks(page_id, [
+                colored_heading(title, 3, theme["heading"]),
+            ])
+            create_database(page_id, title, icon, csv_path)
+            time.sleep(0.5)
+
+    append_blocks(page_id, [
+        divider(),
+        colored_heading("Weekly Review", 2, theme["heading"]),
+        colored_callout(
+            "Every week: follow up on pending applications, prep for "
+            "upcoming interviews, reach out to 3 contacts, and update "
+            "your pipeline status.",
+            "🔄", theme["info_callout"]),
+        colored_heading("Pricing", 2, theme["heading"]),
+        colored_callout(
+            "Job Search CRM 2026 — $19 AUD (one-time). Land your next "
+            "role faster with a system, not a spreadsheet.",
+            "💲", theme["success_callout"]),
+    ])
+    print("  ✅ Job Search CRM 2026 complete!")
+    return page_id
+
+
+def build_youtube_calendar(parent_id):
+    print("\n🎥 Building YouTube Content Calendar (red theme)...")
+    theme = THEMES["youtube_calendar"]
+
+    children = [
+        toc_block(),
+        divider(),
+        quote_block("Stop guessing what works. Plan your uploads, track your "
+                     "analytics, A/B test your thumbnails, and grow your revenue "
+                     "— all from one workspace built exclusively for YouTube."),
+        colored_callout(
+            "Video pipeline, analytics tracker, playlist strategy, thumbnail "
+            "testing, revenue breakdown, and ideas backlog — designed for "
+            "YouTubers who treat their channel like a business.",
+            "🎥", theme["primary_callout"]),
+        divider(),
+        colored_heading("Quick Start", 2, theme["heading"]),
+        bulleted("Add your current video pipeline with status tracking"),
+        bulleted("Log analytics after each upload to spot trends"),
+        bulleted("A/B test thumbnails and track which styles win"),
+        bulleted("Break down revenue by source — ads, sponsors, affiliates"),
+        divider(),
+        colored_heading("Databases", 2, theme["heading"]),
+        colored_callout(
+            "6 databases covering videos, analytics, playlists, thumbnails, "
+            "revenue, and ideas. Status, Category, and SEO Score columns "
+            "use colored select options.",
+            "📊", theme["info_callout"]),
+    ]
+
+    page = create_page(parent_id, "YouTube Content Calendar & Analytics Tracker",
+                       "🎥", COVERS["youtube_calendar"], children)
+    if not page:
+        return
+    page_id = page["id"]
+
+    db_dir = os.path.join(BASE_DIR, "youtube-calendar", "databases")
+    databases = [
+        ("Videos", "🎬", "videos.csv"),
+        ("Analytics", "📊", "analytics.csv"),
+        ("Playlists", "📂", "playlists.csv"),
+        ("Thumbnails", "🖼️", "thumbnails.csv"),
+        ("Revenue", "💵", "revenue.csv"),
+        ("Ideas Backlog", "💡", "ideas.csv"),
+    ]
+
+    for title, icon, csv_file in databases:
+        csv_path = os.path.join(db_dir, csv_file)
+        if os.path.exists(csv_path):
+            append_blocks(page_id, [
+                colored_heading(title, 3, theme["heading"]),
+            ])
+            create_database(page_id, title, icon, csv_path)
+            time.sleep(0.5)
+
+    append_blocks(page_id, [
+        divider(),
+        colored_heading("Monthly Channel Review", 2, theme["heading"]),
+        colored_callout(
+            "Every month: review top-performing videos, check thumbnail "
+            "A/B test results, update revenue breakdown, and plan next "
+            "month's upload schedule.",
+            "🔄", theme["info_callout"]),
+        colored_heading("Pricing", 2, theme["heading"]),
+        colored_callout(
+            "YouTube Content Calendar — $19 AUD (one-time). Your entire "
+            "YouTube operation in one workspace.",
+            "💲", theme["success_callout"]),
+    ])
+    print("  ✅ YouTube Content Calendar complete!")
+    return page_id
+
+
+def build_tiktok_machine(parent_id):
+    print("\n📱 Building TikTok & Reels Content Machine (pink theme)...")
+    theme = THEMES["tiktok_machine"]
+
+    children = [
+        toc_block(),
+        divider(),
+        quote_block("You're posting TikToks when you feel like it, saving "
+                     "trending sounds you never use, and wondering why your "
+                     "views are stuck."),
+        colored_callout(
+            "Content pipeline, hooks library, sounds & trends tracker, "
+            "hashtag research, posting schedule, and analytics — built for "
+            "short-form creators on TikTok, Reels, and Shorts.",
+            "📱", theme["primary_callout"]),
+        divider(),
+        colored_heading("Quick Start", 2, theme["heading"]),
+        bulleted("Build your content pipeline with hook-first planning"),
+        bulleted("Save trending sounds and track when they peak"),
+        bulleted("Research hashtags and track which combos perform"),
+        bulleted("Set a posting schedule and stick to it"),
+        divider(),
+        colored_heading("Databases", 2, theme["heading"]),
+        colored_callout(
+            "6 databases covering content pipeline, hooks library, sounds & "
+            "trends, hashtag tracker, posting schedule, and analytics. Status, "
+            "Hook Type, and Platform columns use colored select options.",
+            "📊", theme["info_callout"]),
+    ]
+
+    page = create_page(parent_id, "TikTok & Reels Content Machine",
+                       "📱", COVERS["tiktok_machine"], children)
+    if not page:
+        return
+    page_id = page["id"]
+
+    db_dir = os.path.join(BASE_DIR, "tiktok-machine", "databases")
+    databases = [
+        ("Content Pipeline", "🎬", "content-pipeline.csv"),
+        ("Hooks Library", "🪝", "hooks-library.csv"),
+        ("Sounds & Trends", "🎵", "sounds-trends.csv"),
+        ("Hashtag Tracker", "🏷️", "hashtag-tracker.csv"),
+        ("Posting Schedule", "📅", "posting-schedule.csv"),
+        ("Analytics", "📊", "analytics.csv"),
+    ]
+
+    for title, icon, csv_file in databases:
+        csv_path = os.path.join(db_dir, csv_file)
+        if os.path.exists(csv_path):
+            append_blocks(page_id, [
+                colored_heading(title, 3, theme["heading"]),
+            ])
+            create_database(page_id, title, icon, csv_path)
+            time.sleep(0.5)
+
+    append_blocks(page_id, [
+        divider(),
+        colored_heading("Weekly Content Review", 2, theme["heading"]),
+        colored_callout(
+            "Every week: review analytics, identify winning hooks, check "
+            "trending sounds, refresh hashtag strategy, and batch your "
+            "next week of content.",
+            "🔄", theme["info_callout"]),
+        colored_heading("Pricing", 2, theme["heading"]),
+        colored_callout(
+            "TikTok & Reels Content Machine — $14 AUD (one-time). Stop "
+            "posting and hoping. Start posting with a system.",
+            "💲", theme["success_callout"]),
+    ])
+    print("  ✅ TikTok & Reels Content Machine complete!")
+    return page_id
+
+
+def build_creator_biz(parent_id):
+    print("\n💼 Building Creator Business OS (green theme)...")
+    theme = THEMES["creator_biz"]
+
+    children = [
+        toc_block(),
+        divider(),
+        quote_block("You know exactly how many views your last video got. "
+                     "But do you know your profit margin? Your effective "
+                     "hourly rate? Which income stream gives the best ROI?"),
+        colored_callout(
+            "Products, income streams, brand deals, sponsor CRM, invoices, "
+            "expenses, and financial goals — designed for creators who treat "
+            "their channel like a real business.",
+            "💼", theme["primary_callout"]),
+        divider(),
+        colored_heading("Quick Start", 2, theme["heading"]),
+        bulleted("Add your digital products and track sales per platform"),
+        bulleted("Log all income streams — ads, sponsors, affiliates, products"),
+        bulleted("Manage brand deals from pitch to payment"),
+        bulleted("Set quarterly revenue goals and track progress"),
+        divider(),
+        colored_heading("Databases", 2, theme["heading"]),
+        colored_callout(
+            "7 databases covering products, income streams, brand deals, "
+            "sponsor CRM, invoices, expenses, and goals. Status, Platform, "
+            "and Payment Status columns use colored select options.",
+            "📊", theme["info_callout"]),
+    ]
+
+    page = create_page(parent_id, "Creator Business OS",
+                       "💼", COVERS["creator_biz"], children)
+    if not page:
+        return
+    page_id = page["id"]
+
+    db_dir = os.path.join(BASE_DIR, "creator-biz", "databases")
+    databases = [
+        ("Products", "📦", "products.csv"),
+        ("Income Streams", "💸", "income-streams.csv"),
+        ("Brand Deals", "🤝", "brand-deals.csv"),
+        ("Sponsors CRM", "🎯", "sponsors-crm.csv"),
+        ("Invoices", "🧾", "invoices.csv"),
+        ("Expenses", "💳", "expenses.csv"),
+        ("Goals", "🎯", "goals.csv"),
+    ]
+
+    for title, icon, csv_file in databases:
+        csv_path = os.path.join(db_dir, csv_file)
+        if os.path.exists(csv_path):
+            append_blocks(page_id, [
+                colored_heading(title, 3, theme["heading"]),
+            ])
+            create_database(page_id, title, icon, csv_path)
+            time.sleep(0.5)
+
+    append_blocks(page_id, [
+        divider(),
+        colored_heading("Monthly Business Review", 2, theme["heading"]),
+        colored_callout(
+            "Every month: review revenue per stream, chase unpaid invoices, "
+            "check brand deal pipeline, update expense tracking, and assess "
+            "goal progress.",
+            "🔄", theme["info_callout"]),
+        colored_heading("Pricing", 2, theme["heading"]),
+        colored_callout(
+            "Creator Business OS — $29 AUD (one-time). Your creator career "
+            "is a business. Give it a finance department.",
+            "💲", theme["success_callout"]),
+    ])
+    print("  ✅ Creator Business OS complete!")
+    return page_id
+
+
 # ============================================================
 # MAIN
 # ============================================================
@@ -549,9 +985,15 @@ if __name__ == "__main__":
     build_agentops(PARENT_PAGE_ID)
     build_consultant_os(PARENT_PAGE_ID)
     build_pm_os(PARENT_PAGE_ID)
+    build_ai_sidehustle(PARENT_PAGE_ID)
+    build_creator_os(PARENT_PAGE_ID)
+    build_job_search(PARENT_PAGE_ID)
+    build_youtube_calendar(PARENT_PAGE_ID)
+    build_tiktok_machine(PARENT_PAGE_ID)
+    build_creator_biz(PARENT_PAGE_ID)
 
     print("\n" + "=" * 50)
-    print("✅ All 4 templates redesigned with visual enhancements!")
+    print("✅ All 10 templates built with visual enhancements!")
     print("Features added: covers, colored callouts, colored headings,")
     print("select properties with colored options, TOC, quote blocks.")
     print("Open Notion and check your pages.")
