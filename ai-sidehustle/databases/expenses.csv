@@ -1,0 +1,13 @@
+Date,Category,Description,Amount ($),Project,Tax Deductible,Receipt,Vendor,Payment Method,Notes
+2026-01-05,Software,Claude Pro annual subscription,240,Claude Code Consulting,Yes,claude-pro-receipt-jan26.pdf,Anthropic,Credit Card,Primary AI tool -- essential for consulting work
+2026-01-12,Marketing,Facebook Ads for Udemy course,350,ChatGPT Course,Yes,fb-ads-jan26.pdf,Meta,PayPal,Targeting AI learners -- 2.4x ROAS
+2026-01-18,Education,AI Engineering bootcamp (Maven),490,Claude Code Consulting,Yes,maven-bootcamp-jan26.pdf,Maven,Credit Card,12-week program on advanced prompt engineering
+2026-01-25,Outsourcing,Freelancer for Etsy listing SEO,180,AI Coloring Books,Yes,fiverr-seo-jan26.pdf,Fiverr,PayPal,Optimised 15 KDP listing titles and descriptions
+2026-02-03,Software,n8n Cloud plan upgrade to Starter,288,n8n Automation Services,Yes,n8n-upgrade-feb26.pdf,n8n GmbH,Credit Card,Annual plan -- needed more workflow executions
+2026-02-10,Hardware,Wacom tablet for design work,320,AI Coloring Books,Yes,wacom-receipt-feb26.pdf,JB Hi-Fi,Credit Card,Claim 80% business use on BAS
+2026-02-15,Marketing,Substack paid recommendations,200,AI Newsletter,Yes,substack-recs-feb26.pdf,Substack,Credit Card,Testing cross-promotion with 3 similar newsletters
+2026-02-22,Hosting,Vercel Pro for SaaS landing page,20,AI Thumbnail SaaS,Yes,vercel-feb26.pdf,Vercel,Credit Card,Monthly hosting for MVP development
+2026-03-05,Outsourcing,Video editor for course intros,450,ChatGPT Course,Yes,editor-invoice-mar26.pdf,Freelancer,PayPal,Professional intro/outro for advanced course modules
+2026-03-15,Software,Midjourney annual plan renewal,360,AI Coloring Books,Yes,midjourney-annual-mar26.pdf,Midjourney,Credit Card,Standard plan -- 15hr fast GPU. Used across multiple projects
+2026-03-20,Marketing,Google Ads for template store,150,Notion Template Store,Yes,google-ads-mar26.pdf,Google,Credit Card,"Testing search ads for ""notion template"" keywords"
+2026-03-25,Office,Home office electricity (business portion),85,All Projects,Yes,electricity-q1-26.pdf,Origin Energy,Direct Debit,25% business use claim -- Q1 2026

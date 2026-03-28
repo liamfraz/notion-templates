@@ -1,0 +1,11 @@
+Task ID,Task Name,Agent,Priority,Status,Created,Started,Completed,Input Tokens,Output Tokens,Cost ($),Error Message,Retry Count
+TSK-2026-0138,"Review PR #482: Add rate limiting to /api/users endpoint",Code Review Bot,High,Completed,2026-03-28,2026-03-28,2026-03-28,14200,3800,0.11,,0
+TSK-2026-0139,"Extract line items from invoice batch #51 (23 PDFs)",Data Extraction Pipeline,Medium,Completed,2026-03-28,2026-03-28,2026-03-28,186000,42000,1.84,,0
+TSK-2026-0140,"Summarise NIST AI RMF 2.0 framework document",Research Summariser,Low,Completed,2026-03-27,2026-03-27,2026-03-27,48000,6200,0.05,,0
+TSK-2026-0141,"Generate pytest suite for payments module (14 functions)",Test Generator,High,Completed,2026-03-28,2026-03-28,2026-03-28,8400,12600,0.04,,0
+TSK-2026-0142,"Classify 340 customer feedback entries from March survey",Sentiment Analyser,Medium,Running,2026-03-28,2026-03-28,,82000,4200,0.01,,0
+TSK-2026-0143,"Draft changelog for v3.2.0 release",Content Writer,Low,Queued,2026-03-28,,,,,,,0
+TSK-2026-0144,"Review PR #483: Refactor database connection pooling",Code Review Bot,Critical,Completed,2026-03-28,2026-03-28,2026-03-28,22400,5100,0.14,,0
+TSK-2026-0145,"Extract vendor details from 8 new supplier contracts",Data Extraction Pipeline,High,Failed,2026-03-28,2026-03-28,2026-03-28,94000,1200,0.08,"Context length exceeded on contract #7 (scanned PDF with 48 pages). Split into smaller batches.",2
+TSK-2026-0146,"Classify 180 support tickets from last 48 hours",Email Classifier,Medium,Completed,2026-03-28,2026-03-28,2026-03-28,36000,2800,0.02,,0
+TSK-2026-0147,"Generate integration tests for new webhook handlers",Test Generator,High,Queued,2026-03-29,,,,,,,0

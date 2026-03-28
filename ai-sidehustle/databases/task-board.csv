@@ -1,0 +1,11 @@
+Task Name,Project,Priority,Status,Due Date,Estimated Hours,Actual Hours,Category,Notes
+Write 10 new prompts for v2 bundle,Prompt Pack Store,High,In Progress,2026-04-01,8,4,Content,Focus on Claude Code and Cursor prompts -- highest demand
+Set up Substack paid recommendations,AI Newsletter,Medium,To Do,2026-04-07,2,0,Marketing,Budget $200/month for cross-promotion with AI newsletters
+Record first 5 modules for advanced course,ChatGPT Course,High,In Progress,2026-04-15,20,6,Build,Script outline done. Recording in OBS with screen share
+Build MVP landing page for thumbnail SaaS,AI Thumbnail SaaS,High,To Do,2026-04-10,12,0,Build,Use Vercel + Next.js. Include waitlist signup form
+Create Mother's Day coloring pack,AI Coloring Books,Medium,To Do,2026-04-20,6,0,Content,12 designs using Midjourney. Target upload by 1 May for seasonal sales
+Send March invoice to SydneyTech,n8n Automation Services,High,Done,2026-03-28,0.5,0.5,Admin,Invoice #INV-049 sent. Payment due 14 April
+Update Upwork profile with new case studies,Claude Code Consulting,Medium,Backlog,2026-04-30,3,0,Marketing,Add RetailCo and FinanceApp projects as portfolio items
+Fix broken automation for accounting client,n8n Automation Services,High,In Progress,2026-03-29,4,2,Build,Xero webhook stopped firing after their API update. Debugging
+Bundle 5 Notion templates into $49 pack,Notion Template Store,Medium,To Do,2026-04-14,8,0,Build,Combine PM OS + Site OS + 3 others. Create bundle listing on Gumroad
+Research competitor pricing for SaaS launch,AI Thumbnail SaaS,Low,Backlog,2026-04-30,3,0,Research,Check Canva API pricing and similar thumbnail tools. Document findings

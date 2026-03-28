@@ -1,0 +1,15 @@
+Item,Phase,Project,Status,Due Date,Owner,Dependencies,Notes
+Validate demand with Reddit and Twitter search,Research,AI Thumbnail SaaS,Done,2026-02-25,Me,None,"Found 50+ threads asking for AI thumbnail tools. Strong signal"
+Analyse competitor pricing and features,Research,AI Thumbnail SaaS,Done,2026-03-01,Me,None,"Canva charges $13/mo, dedicated tools charge $19-39/mo. Sweet spot: $15/mo"
+Define MVP feature set,Research,AI Thumbnail SaaS,Done,2026-03-05,Me,Demand validation,"MVP: upload image + select style + generate 4 variations. No editor"
+Build core image generation pipeline,Build,AI Thumbnail SaaS,In Progress,2026-04-10,Me,MVP scope defined,Using Midjourney API + custom post-processing. 80% complete
+Create landing page with waitlist,Build,AI Thumbnail SaaS,Not Started,2026-04-12,Me,None,Vercel + Next.js. Include 4 example thumbnails and pricing
+Set up Stripe payment processing,Pre-Launch,AI Thumbnail SaaS,Not Started,2026-04-18,Me,Landing page live,"Monthly subscription at $15/mo AUD, annual at $144/mo AUD"
+Write sales page copy,Pre-Launch,AI Thumbnail SaaS,Not Started,2026-04-20,Me,Landing page live,Focus on time saved vs manual thumbnail creation
+Recruit 10 beta testers from newsletter,Pre-Launch,AI Thumbnail SaaS,Not Started,2026-04-22,Me,MVP functional,Offer 3 months free in exchange for feedback and testimonial
+Publish product on own website,Launch,AI Thumbnail SaaS,Not Started,2026-05-01,Me,All pre-launch done,Soft launch to beta users first before public announcement
+Send launch email to newsletter list,Launch,AI Thumbnail SaaS,Not Started,2026-05-03,Me,Product live,"2650 subscribers. Expect 2-3% conversion = 50-80 signups"
+Post in 5 relevant communities,Launch,AI Thumbnail SaaS,Not Started,2026-05-03,Me,Product live,"r/YouTube, r/Thumbnails, IndieHackers, Twitter, LinkedIn"
+Collect first 10 pieces of user feedback,Post-Launch,AI Thumbnail SaaS,Not Started,2026-05-10,Me,Launch complete,Send feedback survey via email. Prioritise feature requests
+Fix critical bugs within 24 hours of launch,Post-Launch,AI Thumbnail SaaS,Not Started,2026-05-02,Me,Launch complete,Block calendar for launch day + 1. No other client work
+Plan v1.1 based on beta feedback,Post-Launch,AI Thumbnail SaaS,Not Started,2026-05-15,Me,Feedback collected,"Likely additions: batch generation, template presets, aspect ratio options"

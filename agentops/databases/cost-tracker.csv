@@ -1,0 +1,11 @@
+Month,Provider,Agent,API Calls,Input Tokens,Output Tokens,Cost ($),Budget ($),% of Budget,Model,Notes
+2026-03,Anthropic,Code Review Bot,1420,18640000,4280000,187.50,200.00,94,claude-opus-4-20250514,"High usage month — 3 major PRs with 50+ file changes each. Budget nearly hit."
+2026-03,Anthropic,Test Generator,1860,12400000,18200000,72.40,100.00,72,claude-sonnet-4-20250514,"Steady usage. Sonnet is cost-effective for test generation. No issues."
+2026-03,OpenAI,Data Extraction Pipeline,2180,284000000,62000000,124.30,150.00,83,gpt-4o-2024-11-20,"Invoice batch #51 was larger than expected (23 PDFs). Three context length failures on oversized contracts."
+2026-03,Google,Research Summariser,680,42000000,5800000,32.20,50.00,64,gemini-2.5-pro,"Lower usage than February — fewer research papers this sprint."
+2026-03,Google,Sentiment Analyser,4200,168000000,8400000,30.20,40.00,76,gemini-2.0-flash,"Cheap and reliable. March customer survey drove a spike mid-month."
+2026-03,Mistral,Email Classifier,3840,62000000,9600000,38.40,50.00,77,mistral-large-2,"Steady 15-minute cron job. Cost predictable. Considering moving to mistral-small for cost savings."
+2026-03,Anthropic,Code Migrator,0,0,0,0.00,50.00,0,claude-opus-4-20250514,"Paused since March 15. No spend this period. Budget reallocated to Code Review Bot next month."
+2026-02,Anthropic,Code Review Bot,1180,15200000,3600000,156.80,200.00,78,claude-opus-4-20250514,"Normal month. Comfortably under budget."
+2026-02,OpenAI,Data Extraction Pipeline,1840,246000000,54000000,108.60,150.00,72,gpt-4o-2024-11-20,"Smooth month. All batches processed without context length issues."
+2026-02,OpenAI,Legacy Invoice Parser,220,18000000,4200000,18.40,0.00,0,gpt-4-turbo-2024-04-09,"Final month of legacy parser usage before deprecation. No budget — wind-down only."

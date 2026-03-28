@@ -1,126 +1,120 @@
-# AgentOps -- AI Agent & Automation Dashboard
+# AgentOps -- AI Agent Operations Hub
 
 ## Listing Details
 
-**Title:** AgentOps -- AI Agent & Automation Tracker (Notion Template)
+**Title:** AgentOps -- AI Agent Operations Hub (Notion Template)
 
-**Price:** $29 (introductory) / $49 (full price after first 100 sales)
+**Price:** $49 AUD
 
-**Thumbnail text:** "Track AI sessions. Version prompts. Monitor costs. Ship faster."
+**Thumbnail text:** "Registry. Task queue. Execution logs. Cost tracking. One workspace for your entire agent fleet."
 
 ---
 
 ## Description
 
-### You're shipping code with AI every day. But can you answer these questions?
+### You're running AI agents in production. But can you answer these questions?
 
-- How much did you spend on AI APIs last month?
-- Which prompts consistently produce good results?
-- How many of your automation flows are silently failing?
-- What technical debt did AI-generated code introduce?
+- Which agent failed the most tasks this week?
+- How much did your Claude API calls cost yesterday vs. last Tuesday?
+- What's the average latency of your data extraction pipeline?
+- Which prompts have the highest success rate across agents?
+- Are you over budget on any provider this month?
 
-If you can't answer those in 10 seconds, you need AgentOps.
+If you can't answer those in 10 seconds, you're flying blind. And flying blind with agents that spend real money on every API call is how you wake up to a $400 invoice you didn't expect.
 
 ---
 
 ### What is AgentOps?
 
-AgentOps is a Notion template built specifically for developers and AI power users who work with Claude Code, ChatGPT, GitHub Copilot, Power Automate, n8n, and other AI/automation tools.
+AgentOps is a Notion template built for developers and AI engineers who run multiple AI agents across providers like Anthropic, OpenAI, Google, Meta, and Mistral. It's not a generic productivity tracker with "AI" in the title. It's an operational command center for people who deploy agents, queue tasks, monitor execution, version prompts, and track spend — daily.
 
-It's not a generic productivity planner. It's an operational dashboard for people who build with AI agents and automation platforms daily.
+If you're building with Claude, GPT-4o, Gemini, Llama, or Mistral and you don't have a single pane of glass for all of it, AgentOps is that pane.
 
 ---
 
 ### What's Inside
 
-**Command Center**
-Overview dashboard with key metrics, quick actions, and active alerts. Pin it to your sidebar and know your ops status at a glance.
+**Agent Registry**
+Your fleet inventory. Every agent catalogued with its provider, model, cost per run, success rate, and operational status. Know which agents are active, which are deprecated, and which are burning money. Filter by provider, category, or performance.
 
-**AI Session Logger**
-Log every session with Claude Code, ChatGPT, Copilot, or Gemini. Track duration, cost, quality, and learnings. Spot patterns in what works and what doesn't.
+**Task Queue**
+The work pipeline. Tasks assigned to agents with priority levels, status tracking, token counts, cost per execution, and error handling. See what's queued, what's running, what succeeded, and what failed — with retry counts and error messages for debugging.
+
+**Execution Logs**
+The audit trail. Every agent run logged with timestamps, duration, token usage, cost, model version, error types, and session IDs. When something breaks at 2am, you trace it here. Filter by agent, status, date range, or error type.
 
 **Prompt Library**
-Save, categorize, rate, and version your best prompts. Stop rewriting the same instructions every session. Includes 10 battle-tested starter prompts.
+Your prompt engineering lab. Save, version, categorise, and track performance of every prompt across your agents. Know which prompts produce consistent results and which need iteration. Includes success rates and usage counts.
 
-**Automation Registry**
-Track all your flows across Power Automate, n8n, Zapier, and Make in one place. Monitor status, success rates, and error counts. Never discover a broken flow by accident again.
-
-**API Cost Tracker**
-Monthly spend tracking across Anthropic, OpenAI, Google, and Azure. Set budgets, track usage percentage, and catch cost overruns before they happen.
-
-**AI Code Review Checklist**
-20-item QA checklist designed specifically for AI-generated code. Covers hallucinated APIs, security issues, test quality, and abstraction abuse. The stuff that generic checklists miss.
-
-**Tech Debt Log**
-Track technical debt introduced by AI-generated code with severity, source tracking, and effort estimates. Includes the 5 most common AI debt patterns.
-
-**Tool Registry**
-Catalog your entire stack -- MCP servers, CLI tools, APIs, libraries. Track versions, config locations, and costs. Includes evaluation template for new tools.
-
-**Monthly Ops Report**
-Structured template for monthly review covering sessions, costs, automation health, prompt performance, and lessons learned.
+**Cost Tracker**
+Monthly spend across every provider and agent. Set budgets, track usage percentage, and catch cost overruns before they become invoice surprises. Broken down by model, provider, and agent so you know exactly where the money goes.
 
 ---
 
 ### What You Get
 
 - 1 comprehensive Notion template (Markdown import ready)
-- 7 pre-built databases with realistic sample data (CSV format)
+- 5 pre-built databases with realistic sample data (CSV format)
 - Step-by-step setup guide with database configuration instructions
-- 10 starter prompts for coding, testing, documentation, and more
-- 20-item AI code review checklist
-- Monthly report template
+- 3 purpose-built dashboards: Daily Spend, Agent Performance, Error Rates
+- Database relationship map connecting all 5 databases
+- Ready-to-use Notion formulas for cost calculations, error rates, and performance scoring
+- Automation recipes for status alerts, budget warnings, and error notifications
 
 ---
 
 ### Who This Is For
 
-- Developers using Claude Code, Cursor, or GitHub Copilot daily
-- AI engineers building with the Anthropic or OpenAI APIs
-- Automation builders running flows on Power Automate, n8n, Zapier, or Make
-- Technical leads managing AI tool adoption across a team
-- Anyone spending $50+/month on AI tools without tracking ROI
+- AI engineers running agent pipelines with Claude, GPT-4o, Gemini, or open-source models
+- Developers building multi-agent systems who need operational visibility
+- Technical leads managing AI tool adoption and API spend across a team
+- Indie hackers and solopreneurs running AI-powered products who need cost discipline
+- Anyone spending $100+/month on AI APIs without tracking what's actually working
 
 ### Who This Is NOT For
 
-- Non-technical users looking for a simple task manager
+- Non-technical users looking for a simple AI chat organiser
 - People who use ChatGPT once a week for casual questions
-- Teams that already have enterprise-grade observability tools
+- Teams with enterprise observability stacks (Langfuse, Helicone, Langsmith) already deployed
+- Anyone who doesn't work with AI APIs directly
 
 ---
 
 ### Why This Exists
 
-AI tools are exploding. Every week there's a new model, a new agent framework, a new automation platform. Developers are spending hundreds of dollars a month across multiple providers with zero visibility into what's working.
+AI agents are expensive. Every API call costs money. Every failed execution is wasted spend. Every unversioned prompt is a regression waiting to happen. And most developers track none of it — they check their Anthropic dashboard once a month, wince at the number, and move on.
 
-Nobody's built a tracking system for this yet because the space moves too fast for enterprise tools and too niche for generic templates.
+Enterprise observability tools exist (Langfuse, Helicone, Langsmith) but they're overkill for solo developers and small teams. They require infrastructure, integration work, and often a paid plan. For most AI engineers, the gap between "no tracking" and "enterprise observability" is massive.
 
-AgentOps fills that gap. It's opinionated, developer-focused, and built by someone who runs 8+ automation flows and logs 50+ AI sessions per month.
+AgentOps fills that gap. It's a structured Notion workspace that gives you 80% of the visibility at 0% of the infrastructure cost. Built by someone who runs a fleet of AI agents daily and got tired of spreadsheets and guesswork.
 
 ---
 
 ### Frequently Asked Questions
 
-**Q: Can I customize the databases?**
-A: Absolutely. The CSVs give you a starting point -- add columns, change categories, adjust to your workflow. It's your workspace.
+**Q: Does this integrate with AI APIs automatically?**
+A: No — it's a Notion template, not a SaaS product. But the setup guide includes patterns for automating data entry via webhooks, n8n flows, or simple logging scripts that POST to the Notion API.
 
-**Q: Does it integrate with AI APIs automatically?**
-A: Not out of the box -- it's a Notion template, not a SaaS product. But the setup guide includes ideas for automating data entry with n8n or Power Automate webhooks.
+**Q: Can I customise the databases?**
+A: Completely. Add columns, change categories, rename properties. The CSVs give you a starting structure — make it yours.
 
 **Q: Is there a free version?**
-A: Yes. AgentOps Lite is a stripped-down version with the AI Session Log, Prompt Library, and a basic cost tracker. It's included as a separate file.
+A: Yes. AgentOps Lite includes the Agent Registry, Prompt Library, and a basic Cost Tracker. It's included as a separate file.
 
 **Q: What Notion plan do I need?**
-A: Works on any Notion plan, including free. Databases and linked views work on all tiers.
+A: Works on any Notion plan, including free. All databases, linked views, and formulas work on every tier.
+
+**Q: How is this different from Langfuse or Helicone?**
+A: Those are infrastructure tools that require code integration, self-hosting or SaaS plans, and engineering effort. AgentOps is a Notion workspace you set up in 30 minutes. It won't replace APM for production systems at scale, but it gives solo devs and small teams structured visibility they'd otherwise never build.
 
 **Q: Can I use this for a team?**
-A: Yes. Share the workspace with your team and use the Owner field in databases to track who's doing what. Works well for teams of 2-10.
+A: Yes. Share the Notion workspace with your team and use the Owner/Agent fields to filter views. Works well for teams of 2-10 engineers.
 
 ---
 
 ## Tags
 
-notion, ai, claude, chatgpt, automation, developer, productivity, power-automate, n8n, zapier, prompt-engineering, api-costs, code-review, tech-debt, mcp, claude-code, copilot, gemini, agent, workflow
+notion, ai, agents, claude, gpt-4o, gemini, llama, mistral, api-costs, prompt-engineering, developer, ai-ops, agent-registry, execution-logs, cost-tracking, ai-engineer, automation, notion-template, productivity, multi-agent
 
 ---
 
@@ -129,7 +123,7 @@ notion, ai, claude, chatgpt, automation, developer, productivity, power-automate
 - **Product type:** Digital product
 - **File delivery:** ZIP containing all files
 - **Refund policy:** 30-day money-back guarantee
-- **Suggested price:** $29 (allow custom pricing)
+- **Price:** $49 AUD
 - **Discount codes:**
   - `LAUNCH50` -- 50% off (first 50 buyers)
   - `EARLYBIRD` -- 30% off (first 100 buyers)

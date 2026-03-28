@@ -1,0 +1,11 @@
+Log ID,Agent,Task,Timestamp,Duration (sec),Status,Input Tokens,Output Tokens,Cost ($),Model,Error Type,Stack Trace,Session ID
+LOG-2026-03-28-0001,Code Review Bot,TSK-2026-0138,2026-03-28T08:14:00,16.2,Success,14200,3800,0.11,claude-opus-4-20250514,None,,ses_a1b2c3d4
+LOG-2026-03-28-0002,Data Extraction Pipeline,TSK-2026-0139,2026-03-28T08:30:00,287.4,Success,186000,42000,1.84,gpt-4o-2024-11-20,None,,ses_e5f6g7h8
+LOG-2026-03-28-0003,Test Generator,TSK-2026-0141,2026-03-28T09:02:00,7.8,Success,8400,12600,0.04,claude-sonnet-4-20250514,None,,ses_i9j0k1l2
+LOG-2026-03-28-0004,Code Review Bot,TSK-2026-0144,2026-03-28T09:18:00,21.4,Success,22400,5100,0.14,claude-opus-4-20250514,None,,ses_m3n4o5p6
+LOG-2026-03-28-0005,Data Extraction Pipeline,TSK-2026-0145,2026-03-28T10:05:00,4.2,Error,94000,0,0.08,gpt-4o-2024-11-20,Context Length,"OpenAI API error: This model's maximum context length is 128000 tokens. However, your messages resulted in 134218 tokens. Please reduce the length of the messages.",ses_q7r8s9t0
+LOG-2026-03-28-0006,Data Extraction Pipeline,TSK-2026-0145,2026-03-28T10:08:00,3.8,Error,94000,0,0.08,gpt-4o-2024-11-20,Context Length,"Retry 1 — same error. Contract #7 PDF is 48 pages scanned. Need to split into chunks.",ses_q7r8s9t0
+LOG-2026-03-28-0007,Data Extraction Pipeline,TSK-2026-0145,2026-03-28T10:15:00,2.1,Error,94000,1200,0.08,gpt-4o-2024-11-20,Context Length,"Retry 2 — partial output before context limit hit. Marking as failed. Needs manual batch splitting.",ses_q7r8s9t0
+LOG-2026-03-28-0008,Email Classifier,TSK-2026-0146,2026-03-28T11:00:00,14.6,Success,36000,2800,0.02,mistral-large-2,None,,ses_u1v2w3x4
+LOG-2026-03-28-0009,Sentiment Analyser,TSK-2026-0142,2026-03-28T11:30:00,48.2,Partial,82000,4200,0.01,gemini-2.0-flash,None,"Processed 312 of 340 entries. Remaining 28 entries had encoding issues (non-UTF8 characters in survey responses). Partial success.",ses_y5z6a7b8
+LOG-2026-03-27-0014,Research Summariser,TSK-2026-0140,2026-03-27T14:22:00,22.1,Success,48000,6200,0.05,gemini-2.5-pro,None,,ses_c9d0e1f2
