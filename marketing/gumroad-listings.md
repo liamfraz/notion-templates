@@ -239,7 +239,7 @@ PM OS is a Notion template built for how project managers actually work. Not ano
 | Weekly review dashboard | Yes — auto-surfaces overdue items | Manual reporting | Partial | No |
 | Multi-project portfolio view | Yes | Yes but $10-30/user/mo | Limited | No |
 | Meeting notes linked to tasks | Yes | Partial | No | No |
-| Price | $49 AUD one-time | $120-360/user/year | $49 USD | $0-15 |
+| Price | $39 AUD one-time | $120-360/user/year | $49 USD | $0-15 |
 
 ### FAQ
 
@@ -273,7 +273,7 @@ A: Yes. PM OS Lite includes Projects, Tasks, and Risks databases — free foreve
 `notion template`, `project management`, `risk register`, `decision log`, `PM tools`, `notion template 2026`, `Kanban`, `task management`
 
 ### Price
-**$49 AUD** — Pay what you want, minimum $49
+**$39 AUD** — Pay what you want, minimum $39
 One-time purchase. No subscription. No per-user fees. Lifetime updates.
 
 ### URL Slug
@@ -920,22 +920,22 @@ One-time purchase. No subscription. Updates included.
 ## Bundle — FlowTech Complete Pack 2026
 
 ### Product Name
-**FlowTech Complete Pack 2026 — All 10 Notion Templates | Save 40%**
+**FlowTech Complete Pack 2026 — All 10 Notion Templates | Save 43%**
 
 ### Short Description (140 chars)
-All 10 FlowTech Notion templates in one bundle. PM, construction, consulting, AI, creators, YouTube, TikTok & job search. Save 40% in 2026.
+All 10 FlowTech Notion templates in one bundle. PM, construction, consulting, AI, creators, YouTube, TikTok & job search. Save 43% in 2026.
 
 ### Bundle Price
-**$199 AUD** (vs $361 separately — save 45%)
+**$199 AUD** (vs $350 separately — save 43%)
 
 ### Long Description
 
 **Why buy one when you can run your entire life from Notion?**
 
-The FlowTech Complete Pack includes all ten professional Notion templates at 45% off:
+The FlowTech Complete Pack includes all ten professional Notion templates at 43% off:
 
 **Professional & Business:**
-:bar_chart: **PM OS** ($49 value) — Project portfolio, risk registers, decision logs & weekly reviews
+:bar_chart: **PM OS** ($39 value) — Project portfolio, risk registers, decision logs & weekly reviews
 :construction: **SiteOS** ($99 value) — Construction PM command center with defects, RFIs, variations & safety
 :busts_in_silhouette: **Consultant OS** ($49 value) — Client CRM, pipeline, time tracking & invoicing for technical consultants
 :rocket: **AgentOps** ($29 value) — AI session tracking, prompt library, automation monitoring & API cost management
@@ -950,7 +950,7 @@ The FlowTech Complete Pack includes all ten professional Notion templates at 45%
 :money_with_wings: **AI Side Hustle Tracker** ($24 value) — Multi-stream AI income dashboard with tool ROI tracking
 :dart: **Job Search CRM 2026** ($19 value) — Application tracker, interview prep, salary research & offer comparison
 
-**Total value: $361 AUD. Bundle price: $199 AUD. You save $162.**
+**Total value: $350 AUD. Bundle price: $199 AUD. You save $151.**
 
 Every template includes:
 - Pre-built databases with realistic 2026 sample data
