@@ -1,0 +1,11 @@
+Company,Round,Type,Date,Status,Duration (min),Interviewer,Prep Notes,Outcome,Follow-up
+Atlassian,Phone Screen,Video Call,2026-02-18,Completed,30,Sarah Chen - Engineering Manager,Research Atlassian values and recent product launches,Advanced,Sent thank-you email same day
+Atlassian,Technical 1,Live Coding,2026-02-26,Completed,60,Dev team panel,Practice LeetCode medium problems; review React hooks patterns,Advanced,Asked about team structure in follow-up
+Atlassian,System Design,Video Call,2026-03-08,Scheduled,90,Principal Engineer,Review system design primer; prepare Jira-scale architecture discussion,Pending,N/A
+Google,Phone Screen,Video Call,2026-03-02,Completed,45,Tech Recruiter,Review Google Cloud certifications; prepare STAR stories,Advanced,Recruiter confirmed next round in 1 week
+Canva,Hiring Manager,Video Call,2026-03-15,Scheduled,45,VP of Engineering,Research Canva's tech blog posts; prepare questions about growth plans,Pending,N/A
+SafetyCulture,Technical 1,Take-Home,2026-02-08,Completed,180,Engineering Lead,Build a REST API with Go — focus on clean architecture and tests,Advanced,Submitted 2 days early with README
+SafetyCulture,Behavioral,Video Call,2026-02-15,Completed,45,Head of People,Prepare STAR stories for conflict resolution and leadership,Advanced,Asked about remote work policy
+SafetyCulture,Final,In-Person,2026-02-22,Completed,120,CTO + Team,Prepare presentation on past project impact; review company mission,Offer Extended,Received offer within 48 hours
+Culture Amp,Technical 1,Live Coding,2026-03-01,Completed,60,Senior Data Engineer,Review SQL window functions; prepare dbt model examples,Advanced,Interviewer shared positive feedback via recruiter
+Rokt,Technical 1,Video Call,2026-03-05,Completed,60,Staff Engineer,Review distributed systems patterns; prepare for Kafka discussion,Advanced,Follow-up technical round scheduled

@@ -1,0 +1,11 @@
+Invoice Number,Client,Amount ($),Status,Issue Date,Due Date,Paid Date,Payment Method,Category,Notes
+INV-2026-001,NordVPN,3500.00,Paid,2026-01-15,2026-02-14,2026-02-10,Bank Transfer,Sponsorship,"Q1 dedicated video. Paid 4 days early."
+INV-2026-002,Skillshare,2800.00,Paid,2026-02-12,2026-03-14,2026-03-12,Bank Transfer,Sponsorship,"Integration deal. Performance bonus pending separately."
+INV-2026-003,Canva,4500.00,Sent,2026-03-16,2026-04-15,,Bank Transfer,Sponsorship,"Q1 campaign deliverables completed. Awaiting payment."
+INV-2026-004,Loom,2200.00,Sent,2026-03-21,2026-05-05,,PayPal,Sponsorship,"Net 45 terms. Tutorial video published."
+INV-2026-005,Epidemic Sound,1800.00,Draft,2026-03-25,2026-04-24,,Bank Transfer,Sponsorship,"First video delivered. Second due April 5 — will invoice together."
+INV-2026-006,Stan Store,1500.00,Draft,2026-03-27,2026-04-26,,Stripe,Sponsorship,"UGC content in progress. Will send when all deliverables complete."
+INV-2026-007,Creator Academy,1200.00,Paid,2026-01-20,2026-02-19,2026-02-18,PayPal,Freelance,"Guest workshop on Notion for creators. 90-minute session."
+INV-2026-008,TechStartup Co,800.00,Overdue,2026-02-01,2026-03-03,,Bank Transfer,Freelance,"Consulting session on creator strategy. Sent 2 follow-ups. Escalating."
+INV-2026-009,Riverside.fm,3200.00,Draft,2026-03-27,2026-05-11,,Bank Transfer,Sponsorship,"Contract signed. Will invoice on campaign start date."
+INV-2026-010,Adobe,6000.00,Draft,2026-03-27,2026-05-26,,Bank Transfer,Sponsorship,"Pending contract finalisation. Placeholder invoice prepared."

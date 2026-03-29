@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consultant OS Pinterest Pin</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .pin {
+    width: 1000px;
+    height: 1500px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .accent-bar {
+    height: 8px;
+    background: linear-gradient(90deg, #1B4332 0%, #2D6A4F 100%);
+  }
+
+  .header {
+    padding: 48px 64px 24px;
+    text-align: center;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #F0F7F4;
+    color: #2D6A4F;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+  }
+
+  .title {
+    font-size: 58px;
+    font-weight: 800;
+    color: #191919;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: -2px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+    color: #787878;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .mockup-section {
+    padding: 0 48px;
+  }
+
+  .mockup-container {
+    width: 100%;
+    background: #FAFAFA;
+    border-radius: 20px;
+    border: 1px solid #E8E8E8;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+  }
+
+  .mockup-toolbar {
+    background: #F5F5F5;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #E8E8E8;
+  }
+
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-red { background: #FF5F57; }
+  .dot-yellow { background: #FFBD2E; }
+  .dot-green { background: #28C840; }
+
+  .mockup-body { padding: 32px; }
+
+  .dash-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .dash-card {
+    background: #fff;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    padding: 18px;
+  }
+
+  .dash-card-label {
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .dash-card-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #191919;
+  }
+
+  .dash-card-value.green { color: #2D6A4F; }
+  .dash-card-value.teal { color: #1B8A6B; }
+
+  /* Pipeline kanban */
+  .pipeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .pipeline-col {
+    background: #fff;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .pipeline-header {
+    padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 1px solid #E8E8E8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .pipeline-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .pd-gray { background: #ccc; }
+  .pd-blue { background: #3498db; }
+  .pd-orange { background: #f39c12; }
+  .pd-green { background: #2ecc71; }
+
+  .pipeline-card {
+    margin: 10px;
+    padding: 12px;
+    background: #FAFAFA;
+    border-radius: 8px;
+    border: 1px solid #F0F0F0;
+  }
+
+  .pipeline-card-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+  }
+
+  .pipeline-card-meta {
+    font-size: 11px;
+    color: #999;
+  }
+
+  .benefits {
+    padding: 40px 64px 32px;
+  }
+
+  .benefit-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 19px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .benefit-check {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    background: #2D6A4F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  .benefit-check svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .cta {
+    padding: 0 64px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cta-button {
+    background: #1B4332;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 18px 40px;
+    border-radius: 12px;
+  }
+
+  .cta-price { text-align: right; }
+  .cta-price-amount { font-size: 36px; font-weight: 800; color: #191919; }
+  .cta-price-note { font-size: 15px; color: #999; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="pin">
+  <div class="accent-bar"></div>
+
+  <div class="header">
+    <div class="badge">Notion Template</div>
+    <div class="title">Consultant OS</div>
+    <div class="subtitle">Run your consulting business from one workspace</div>
+  </div>
+
+  <div class="mockup-section">
+    <div class="mockup-container">
+      <div class="mockup-toolbar">
+        <div class="dot dot-red"></div>
+        <div class="dot dot-yellow"></div>
+        <div class="dot dot-green"></div>
+      </div>
+      <div class="mockup-body">
+        <div class="dash-grid">
+          <div class="dash-card">
+            <div class="dash-card-label">Revenue MTD</div>
+            <div class="dash-card-value green">$18.4K</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-label">Pipeline</div>
+            <div class="dash-card-value teal">$42K</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-label">Utilisation</div>
+            <div class="dash-card-value">78%</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-label">Active Clients</div>
+            <div class="dash-card-value">6</div>
+          </div>
+        </div>
+        <div class="pipeline">
+          <div class="pipeline-col">
+            <div class="pipeline-header"><span class="pipeline-dot pd-gray"></span>Lead</div>
+            <div class="pipeline-card">
+              <div class="pipeline-card-title">Data Migration</div>
+              <div class="pipeline-card-meta">$8,500</div>
+            </div>
+          </div>
+          <div class="pipeline-col">
+            <div class="pipeline-header"><span class="pipeline-dot pd-blue"></span>Proposal</div>
+            <div class="pipeline-card">
+              <div class="pipeline-card-title">API Integration</div>
+              <div class="pipeline-card-meta">$15,000</div>
+            </div>
+          </div>
+          <div class="pipeline-col">
+            <div class="pipeline-header"><span class="pipeline-dot pd-orange"></span>Negotiation</div>
+            <div class="pipeline-card">
+              <div class="pipeline-card-title">Automation Build</div>
+              <div class="pipeline-card-meta">$12,000</div>
+            </div>
+          </div>
+          <div class="pipeline-col">
+            <div class="pipeline-header"><span class="pipeline-dot pd-green"></span>Won</div>
+            <div class="pipeline-card">
+              <div class="pipeline-card-title">Cloud Setup</div>
+              <div class="pipeline-card-meta">$6,500</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="benefits">
+    <ul class="benefit-list">
+      <li class="benefit-item">
+        <div class="benefit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Client CRM with health scoring</span>
+      </li>
+      <li class="benefit-item">
+        <div class="benefit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Time tracking & invoicing</span>
+      </li>
+      <li class="benefit-item">
+        <div class="benefit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Lead pipeline & deal tracking</span>
+      </li>
+      <li class="benefit-item">
+        <div class="benefit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>SOW templates & rate cards</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <div class="cta-button">Available on Gumroad</div>
+    <div class="cta-price">
+      <div class="cta-price-amount">$49</div>
+      <div class="cta-price-note">One-time purchase</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

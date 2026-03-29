@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SiteOS Pinterest Pin</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .pin {
+    width: 1000px;
+    height: 1500px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .accent-bar {
+    height: 8px;
+    background: linear-gradient(90deg, #B45309 0%, #D97706 100%);
+  }
+
+  .header {
+    padding: 48px 64px 24px;
+    text-align: center;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #FFFBEB;
+    color: #B45309;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+  }
+
+  .title {
+    font-size: 64px;
+    font-weight: 800;
+    color: #191919;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: -2px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+    color: #787878;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .mockup-section {
+    padding: 0 48px;
+  }
+
+  .mockup-container {
+    width: 100%;
+    background: #FAFAFA;
+    border-radius: 20px;
+    border: 1px solid #E8E8E8;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+  }
+
+  .mockup-toolbar {
+    background: #F5F5F5;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #E8E8E8;
+  }
+
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-red { background: #FF5F57; }
+  .dot-yellow { background: #FFBD2E; }
+  .dot-green { background: #28C840; }
+
+  .mockup-body { padding: 32px; }
+
+  .dash-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .dash-card {
+    background: #fff;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    padding: 18px;
+  }
+
+  .dash-card-label {
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .dash-card-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #191919;
+  }
+
+  .dash-card-value.amber { color: #B45309; }
+  .dash-card-value.red { color: #e53e3e; }
+
+  /* Defect / RFI table */
+  .site-table {
+    background: #fff;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  .site-table-header {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    padding: 12px 20px;
+    background: #F9F9F9;
+    border-bottom: 1px solid #E8E8E8;
+    font-size: 12px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .site-table-row {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    padding: 12px 20px;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 13px;
+    color: #444;
+    align-items: center;
+  }
+
+  .site-table-row:last-child { border-bottom: none; }
+
+  .priority-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .priority-critical { background: #FEE2E2; color: #DC2626; }
+  .priority-high { background: #FFF3E0; color: #D97706; }
+  .priority-medium { background: #FEF9C3; color: #A16207; }
+
+  .status-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .status-open { background: #EBF4FF; color: #2b6cb0; }
+  .status-progress { background: #FFF3E0; color: #D97706; }
+
+  /* Variation summary */
+  .var-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .var-card {
+    background: #fff;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .var-label {
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .var-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #191919;
+  }
+
+  .var-value.positive { color: #38a169; }
+  .var-value.negative { color: #e53e3e; }
+
+  .benefits {
+    padding: 40px 64px 32px;
+  }
+
+  .benefit-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 19px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .benefit-check {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    background: #B45309;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  .benefit-check svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .cta {
+    padding: 0 64px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cta-button {
+    background: #92400E;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 18px 40px;
+    border-radius: 12px;
+  }
+
+  .cta-price { text-align: right; }
+  .cta-price-amount { font-size: 36px; font-weight: 800; color: #191919; }
+  .cta-price-note { font-size: 15px; color: #999; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="pin">
+  <div class="accent-bar"></div>
+
+  <div class="header">
+    <div class="badge">Notion Template</div>
+    <div class="title">SiteOS</div>
+    <div class="subtitle">Construction Project Command Center</div>
+  </div>
+
+  <div class="mockup-section">
+    <div class="mockup-container">
+      <div class="mockup-toolbar">
+        <div class="dot dot-red"></div>
+        <div class="dot dot-yellow"></div>
+        <div class="dot dot-green"></div>
+      </div>
+      <div class="mockup-body">
+        <div class="dash-grid">
+          <div class="dash-card">
+            <div class="dash-card-label">Open Defects</div>
+            <div class="dash-card-value red">23</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-label">Pending RFIs</div>
+            <div class="dash-card-value amber">8</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-label">Active Projects</div>
+            <div class="dash-card-value">3</div>
+          </div>
+        </div>
+        <div class="site-table">
+          <div class="site-table-header">
+            <div>#</div>
+            <div>Defect</div>
+            <div>Location</div>
+            <div>Priority</div>
+            <div>Status</div>
+          </div>
+          <div class="site-table-row">
+            <div>D-041</div>
+            <div>Waterproofing failure</div>
+            <div>L3 Bathroom</div>
+            <div><span class="priority-tag priority-critical">Critical</span></div>
+            <div><span class="status-tag status-open">Open</span></div>
+          </div>
+          <div class="site-table-row">
+            <div>D-039</div>
+            <div>Fire collar missing</div>
+            <div>L2 Riser</div>
+            <div><span class="priority-tag priority-high">High</span></div>
+            <div><span class="status-tag status-progress">In Progress</span></div>
+          </div>
+          <div class="site-table-row">
+            <div>D-037</div>
+            <div>Paint touch-up needed</div>
+            <div>L4 Corridor</div>
+            <div><span class="priority-tag priority-medium">Medium</span></div>
+            <div><span class="status-tag status-open">Open</span></div>
+          </div>
+        </div>
+        <div class="var-row">
+          <div class="var-card">
+            <div class="var-label">Approved Variations</div>
+            <div class="var-value positive">+$142,500</div>
+          </div>
+          <div class="var-card">
+            <div class="var-label">Pending Variations</div>
+            <div class="var-value negative">$67,200</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="benefits">
+    <ul class="benefit-list">
+      <li class="benefit-item">
+        <div class="benefit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Defect & RFI tracking</span>
+      </li>
+      <li class="benefit-item">
+        <div class="benefit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Variation register & cost rollups</span>
+      </li>
+      <li class="benefit-item">
+        <div class="benefit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Site diary & safety incidents</span>
+      </li>
+      <li class="benefit-item">
+        <div class="benefit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Subcontractor compliance alerts</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <div class="cta-button">Available on Gumroad</div>
+    <div class="cta-price">
+      <div class="cta-price-amount">$99</div>
+      <div class="cta-price-note">AUD &middot; One-time purchase</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

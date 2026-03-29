@@ -113,7 +113,7 @@ Everything connects back to your projects. Open a project page and see every tas
 
 ## Pricing Rationale
 
-**$39 USD — one-time purchase. No subscriptions. No per-user fees.**
+**$39 AUD — one-time purchase. No subscriptions. No per-user fees.**
 
 For context:
 - Monday.com costs $8/user/month ($96/user/year) — and that's the basic plan

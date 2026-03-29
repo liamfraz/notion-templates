@@ -1,0 +1,11 @@
+Company,Industry,Size,Culture Rating,Glassdoor Score,Tech Stack,Location,Status,Priority,Notes
+Atlassian,SaaS,Enterprise (5K+),Excellent,4.2,"React, TypeScript, Java, AWS, Kubernetes",Sydney,Interviewing,Target,Strong engineering culture; ShipIt days are legendary; hybrid 3 days office
+Canva,SaaS,Enterprise (5K+),Excellent,4.4,"TypeScript, Python, AWS, Go, Terraform",Sydney,Applied,Target,Incredible growth trajectory; pre-IPO equity upside; known for design-led culture
+Google,SaaS,Enterprise (5K+),Good,4.1,"Go, Python, Java, GCP, Kubernetes, internal tools",Sydney,Interviewing,Target,World-class engineering but large company bureaucracy; APAC office has good work-life balance
+Xero,FinTech,Enterprise (5K+),Good,3.9,"C#, .NET, Azure, React, Terraform",Melbourne,Applied,Interested,Solid NZ-founded company; strong in AU/NZ market; good for financial domain experience
+SafetyCulture,SaaS,Scale-up (50-500),Excellent,4.3,"Go, React Native, AWS, PostgreSQL, Kafka",Sydney,Offer,Target,Fastest growing AU SaaS; amazing engineering team; iAuditor product is category leader
+Culture Amp,SaaS,Scale-up (50-500),Good,4.0,"Ruby on Rails, React, AWS, Python, Snowflake",Melbourne,Interviewing,Interested,People analytics leader; strong data engineering focus; Melbourne HQ could mean relocation
+Rokt,AI/ML,Scale-up (50-500),Good,3.8,"Java, Kotlin, React, AWS, Kafka, ML pipelines",Sydney,Interviewing,Interested,AdTech/e-commerce leader; heavy ML focus; competitive comp but demanding pace
+Buildkite,SaaS,Startup (1-50),Excellent,4.5,"Go, TypeScript, AWS, Rails, GraphQL",Remote (AU),Rejected,Maybe,Fully remote; small team means high impact; CI/CD domain is interesting; said reapply in 6 months
+Envato,E-commerce,Scale-up (50-500),Mixed,3.5,"Ruby on Rails, React, AWS, MySQL",Melbourne,Rejected,Backup,Established marketplace; slower growth phase; culture reviews are mixed recently
+Deloitte Digital,Consulting,Enterprise (5K+),Mixed,3.4,"Azure, Power Platform, .NET, React, Terraform",Sydney,Not Interested,Backup,Good brand on resume but consulting grind is real; lower base comp than product companies

@@ -1,0 +1,21 @@
+Date,Prompt,Model Used,Rating Given,Output Quality,Time Saved (min),Category,Notes
+2026-01-08,Weekly Planning Organiser,Claude,5,Excellent,25,Productivity,First use of the week. Completely changed how I approach Mondays.
+2026-01-15,Blog Post Outline Generator,ChatGPT,4,Good,30,Writing,Outline was solid but needed to rearrange two sections.
+2026-01-22,Python Code Reviewer,Claude,5,Excellent,45,Coding,Caught a race condition I'd missed entirely. Worth its weight in gold.
+2026-01-29,Meeting Summary Generator,Claude,5,Excellent,15,Business,Turned 2 pages of messy notes into a clean summary in 30 seconds.
+2026-02-03,Email Subject Line Tester,ChatGPT,4,Good,10,Marketing,Open rate jumped 8% using the curiosity-trigger variation.
+2026-02-10,Decision Matrix Builder,Claude,5,Excellent,40,Productivity,Used for choosing between two SaaS tools. Made the decision obvious.
+2026-02-14,Client Proposal Writer,Claude,4,Good,60,Business,Good structure but needed to add more specific pricing detail.
+2026-02-19,CSV Data Summariser,Claude,5,Excellent,35,Analysis,Fed in 3 months of sales data. Summary was board-ready with minor edits.
+2026-02-24,Social Media Thread Writer,ChatGPT,3,Acceptable,15,Marketing,Thread was okay but too generic. Need to add more context next time.
+2026-02-28,Test Generation Suite,Claude,4,Good,30,Coding,Generated 12 tests covering edge cases I wouldn't have thought of.
+2026-03-03,Newsletter Draft Writer,Claude,4,Good,35,Writing,Good draft but the tone was slightly too formal. Adjusted the tone parameter.
+2026-03-06,Brainstorm Facilitator,ChatGPT,5,Excellent,20,Creative,The moonshots section had 3 genuinely interesting ideas we're now exploring.
+2026-03-10,Task Breakdown Specialist,Claude,5,Excellent,25,Productivity,Broke a vague 2-week project into 23 specific tasks. Saved hours of planning.
+2026-03-14,Competitor Analysis Framework,Claude,4,Good,45,Marketing,Thorough analysis but needed to verify some claims about competitor pricing.
+2026-03-17,Debug Assistant,Claude,5,Excellent,50,Coding,Found the root cause of a 3-day-old bug in under a minute.
+2026-03-20,Landing Page Copy Generator,Claude,4,Good,40,Marketing,Headline A/B variants were strong. CTA section needed more urgency.
+2026-03-22,Technical Blog Post Writer,Claude,5,Excellent,60,Writing,Published with only minor edits. Best technical content prompt in the library.
+2026-03-24,Daily Standup Summariser,ChatGPT,4,Good,5,Productivity,Quick and reliable. Use it every morning now.
+2026-03-26,Content Calendar Planner,Claude,4,Good,20,Marketing,Solid month plan. Mixed content types well. Added 2 topical ideas manually.
+2026-03-27,Git Commit Message Writer,Claude,4,Good,5,Coding,Small time save per use but I use it 10+ times a day. Adds up.

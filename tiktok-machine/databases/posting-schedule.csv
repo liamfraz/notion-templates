@@ -1,0 +1,11 @@
+Day,Time Slot,Platform,Content Type,Status,Performance Rating,Notes
+Monday,07:00,TikTok,Educational,Scheduled,Strong,"Morning commute audience. Educational hooks perform best early week."
+Monday,18:00,Instagram Reels,Tutorial,Posted,Average,"After-work scroll time. Tutorial reels get higher save rates in evening."
+Tuesday,12:00,YouTube Shorts,Educational,Scheduled,Strong,"Lunchtime posting. Shorts algorithm favours midday uploads."
+Tuesday,20:00,TikTok,Comedy,Posted,Viral,"Peak TikTok hours. Comedy and entertainment content dominates evenings."
+Wednesday,07:30,Instagram Reels,Trend,Scheduled,Average,"Mid-week trend catch-up. Repost trending TikTok content adapted for Reels."
+Wednesday,19:00,TikTok,Story Time,Posted,Strong,"Story time content performs well on weeknight evenings."
+Thursday,08:00,YouTube Shorts,Tutorial,Scheduled,Average,"Pre-work audience. How-to content gets steady views throughout the day."
+Thursday,21:00,TikTok,POV,Posted,Strong,"Late evening peak. POV and entertainment content thrives after 9pm."
+Friday,17:00,TikTok,Trend,Skipped,Weak,"Friday afternoon underperforms. Consider moving to Saturday morning."
+Saturday,10:00,All,Day in Life,Scheduled,Strong,"Weekend mornings drive highest engagement for lifestyle content across all platforms."

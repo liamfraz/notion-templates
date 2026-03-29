@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgentOps Pinterest Pin</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .pin {
+    width: 1000px;
+    height: 1500px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Top accent bar */
+  .accent-bar {
+    height: 8px;
+    background: linear-gradient(90deg, #2D2D2D 0%, #5C5C5C 100%);
+  }
+
+  /* Header section */
+  .header {
+    padding: 48px 64px 24px;
+    text-align: center;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #F5F5F5;
+    color: #666;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+  }
+
+  .title {
+    font-size: 64px;
+    font-weight: 800;
+    color: #191919;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: -2px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+    color: #787878;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  /* Mockup section */
+  .mockup-section {
+    padding: 0 48px;
+  }
+
+  .mockup-container {
+    width: 100%;
+    background: #FAFAFA;
+    border-radius: 20px;
+    border: 1px solid #E8E8E8;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+  }
+
+  .mockup-toolbar {
+    background: #F5F5F5;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #E8E8E8;
+  }
+
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-red { background: #FF5F57; }
+  .dot-yellow { background: #FFBD2E; }
+  .dot-green { background: #28C840; }
+
+  .mockup-body {
+    padding: 32px;
+  }
+
+  /* Dashboard mockup grid */
+  .dash-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .dash-card {
+    background: #fff;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .dash-card-label {
+    font-size: 13px;
+    color: #999;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .dash-card-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #191919;
+  }
+
+  .dash-card-value.green { color: #2ecc71; }
+  .dash-card-value.blue { color: #3498db; }
+  .dash-card-value.orange { color: #e67e22; }
+
+  .dash-table {
+    background: #fff;
+    border: 1px solid #E8E8E8;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .dash-table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 12px 20px;
+    background: #F9F9F9;
+    border-bottom: 1px solid #E8E8E8;
+    font-size: 12px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .dash-table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 14px 20px;
+    border-bottom: 1px solid #F0F0F0;
+    font-size: 14px;
+    color: #444;
+  }
+
+  .dash-table-row:last-child { border-bottom: none; }
+
+  .status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  .status-active { background: #2ecc71; }
+  .status-idle { background: #f39c12; }
+
+  /* Benefits section */
+  .benefits {
+    padding: 40px 64px 32px;
+  }
+
+  .benefit-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 19px;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .benefit-check {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    background: #191919;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  .benefit-check svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* CTA section */
+  .cta {
+    padding: 0 64px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cta-button {
+    background: #191919;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 18px 40px;
+    border-radius: 12px;
+    letter-spacing: -0.3px;
+  }
+
+  .cta-price {
+    text-align: right;
+  }
+
+  .cta-price-amount {
+    font-size: 36px;
+    font-weight: 800;
+    color: #191919;
+  }
+
+  .cta-price-note {
+    font-size: 15px;
+    color: #999;
+    font-weight: 500;
+  }
+</style>
+</head>
+<body>
+<div class="pin">
+  <div class="accent-bar"></div>
+
+  <div class="header">
+    <div class="badge">Notion Template</div>
+    <div class="title">AgentOps</div>
+    <div class="subtitle">AI Agent & Automation Dashboard</div>
+  </div>
+
+  <div class="mockup-section">
+    <div class="mockup-container">
+      <div class="mockup-toolbar">
+        <div class="dot dot-red"></div>
+        <div class="dot dot-yellow"></div>
+        <div class="dot dot-green"></div>
+      </div>
+      <div class="mockup-body">
+        <div class="dash-grid">
+          <div class="dash-card">
+            <div class="dash-card-label">AI Sessions</div>
+            <div class="dash-card-value blue">127</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-label">Monthly Cost</div>
+            <div class="dash-card-value green">$284</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-label">Active Flows</div>
+            <div class="dash-card-value orange">12</div>
+          </div>
+        </div>
+        <div class="dash-table">
+          <div class="dash-table-header">
+            <div>Automation</div>
+            <div>Platform</div>
+            <div>Status</div>
+            <div>Success</div>
+          </div>
+          <div class="dash-table-row">
+            <div>Email Triage</div>
+            <div>n8n</div>
+            <div><span class="status-dot status-active"></span>Active</div>
+            <div>98.2%</div>
+          </div>
+          <div class="dash-table-row">
+            <div>Code Review</div>
+            <div>Claude</div>
+            <div><span class="status-dot status-active"></span>Active</div>
+            <div>95.7%</div>
+          </div>
+          <div class="dash-table-row">
+            <div>Data Sync</div>
+            <div>Zapier</div>
+            <div><span class="status-dot status-idle"></span>Idle</div>
+            <div>91.4%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="benefits">
+    <ul class="benefit-list">
+      <li class="benefit-item">
+        <div class="benefit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Track AI costs across all providers</span>
+      </li>
+      <li class="benefit-item">
+        <div class="benefit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Version & rate your best prompts</span>
+      </li>
+      <li class="benefit-item">
+        <div class="benefit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Monitor automation health</span>
+      </li>
+      <li class="benefit-item">
+        <div class="benefit-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <span>Log every AI session & learning</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="cta">
+    <div class="cta-button">Available on Gumroad</div>
+    <div class="cta-price">
+      <div class="cta-price-amount">$29</div>
+      <div class="cta-price-note">One-time purchase</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

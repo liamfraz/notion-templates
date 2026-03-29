@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowTech — Template Slideshow</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --surface: #0f0f0f;
+      --card: #1a1a1a;
+      --border: #2a2a2a;
+      --accent: #e8a838;
+      --accent-dark: #c48a2a;
+      --muted: #888888;
+      --light: #e5e5e5;
+      --white: #ffffff;
+    }
+
+    body {
+      background: var(--surface);
+      color: var(--light);
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+      overflow: hidden;
+      width: 1080px;
+      height: 1920px;
+    }
+
+    /* --- Slide System --- */
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 60px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      pointer-events: none;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .slide.exit {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-weight: 400;
+    }
+
+    .accent { color: var(--accent); }
+    .gradient-text {
+      background: linear-gradient(135deg, #e8a838 0%, #f0c96e 50%, #e8a838 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* --- Slide 1: Hook --- */
+    .slide-hook {
+      text-align: center;
+      gap: 40px;
+    }
+
+    .slide-hook h1 {
+      font-size: 72px;
+      line-height: 1.15;
+      max-width: 900px;
+    }
+
+    .slide-hook .subtitle {
+      font-size: 32px;
+      color: var(--muted);
+      max-width: 700px;
+      line-height: 1.5;
+    }
+
+    /* --- Slide 2-5: Template Cards --- */
+    .slide-template {
+      gap: 50px;
+      text-align: left;
+      padding: 80px 70px;
+    }
+
+    .template-badge {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+      padding: 8px 24px;
+      border-radius: 100px;
+    }
+
+    .template-name {
+      font-size: 64px;
+      line-height: 1.1;
+      color: var(--white);
+    }
+
+    .template-tagline {
+      font-size: 30px;
+      color: var(--muted);
+      line-height: 1.5;
+      max-width: 850px;
+    }
+
+    .template-price {
+      font-size: 48px;
+      font-family: 'DM Serif Display', Georgia, serif;
+    }
+
+    .template-price .amount { color: var(--accent); }
+    .template-price .note { font-size: 22px; color: var(--muted); font-family: 'Instrument Sans', sans-serif; }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      width: 100%;
+    }
+
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .feature-card .count {
+      font-size: 36px;
+      font-family: 'DM Serif Display', serif;
+      color: var(--accent);
+    }
+
+    .feature-card .label {
+      font-size: 20px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .feature-list {
+      list-style: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .feature-list li {
+      font-size: 28px;
+      line-height: 1.4;
+      padding-left: 40px;
+      position: relative;
+    }
+
+    .feature-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    /* --- Slide 6: Bundle --- */
+    .slide-bundle {
+      text-align: center;
+      gap: 50px;
+    }
+
+    .slide-bundle h1 {
+      font-size: 60px;
+      line-height: 1.15;
+    }
+
+    .bundle-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .bundle-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: left;
+    }
+
+    .bundle-item .name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      color: var(--white);
+    }
+
+    .bundle-item .price {
+      font-size: 20px;
+      color: var(--muted);
+      margin-top: 4px;
+      text-decoration: line-through;
+    }
+
+    .savings-banner {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: var(--surface);
+      font-size: 28px;
+      font-weight: 700;
+      padding: 24px 48px;
+      border-radius: 16px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .savings-banner .big {
+      font-family: 'DM Serif Display', serif;
+      font-size: 56px;
+      display: block;
+    }
+
+    /* --- Slide 7: CTA --- */
+    .slide-cta {
+      text-align: center;
+      gap: 50px;
+    }
+
+    .slide-cta h1 {
+      font-size: 72px;
+      line-height: 1.15;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--surface);
+      font-size: 32px;
+      font-weight: 700;
+      padding: 24px 64px;
+      border-radius: 100px;
+      text-decoration: none;
+    }
+
+    .cta-badges {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-badges span {
+      font-size: 22px;
+      color: var(--muted);
+    }
+
+    /* --- Progress Bar --- */
+    .progress-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 6px;
+      background: var(--accent);
+      transition: width 0.6s ease;
+      z-index: 100;
+    }
+
+    /* --- Slide counter --- */
+    .slide-counter {
+      position: fixed;
+      top: 40px;
+      right: 60px;
+      font-size: 18px;
+      color: var(--muted);
+      z-index: 100;
+    }
+
+    /* --- Logo --- */
+    .logo {
+      position: fixed;
+      top: 40px;
+      left: 60px;
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      color: var(--accent);
+      z-index: 100;
+    }
+
+    /* --- Grain overlay --- */
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 99;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">FlowTech</div>
+  <div class="slide-counter"><span id="current">1</span> / <span id="total">7</span></div>
+  <div class="progress-bar" id="progress" style="width: 14.28%"></div>
+  <div class="grain"></div>
+
+  <!-- Slide 1: Hook -->
+  <div class="slide slide-hook active" data-slide="1">
+    <h1>Stop using <span class="gradient-text">spreadsheets</span> to run your business</h1>
+    <p class="subtitle">4 purpose-built Notion templates. For professionals who've outgrown generic tools.</p>
+  </div>
+
+  <!-- Slide 2: AgentOps -->
+  <div class="slide slide-template" data-slide="2">
+    <span class="template-badge">For Developers</span>
+    <h1 class="template-name">AgentOps</h1>
+    <p class="template-tagline">Track AI sessions, version prompts, monitor API costs. The ops dashboard for developers who build with AI daily.</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="count">7</div>
+        <div class="label">Connected databases</div>
+      </div>
+      <div class="feature-card">
+        <div class="count">10</div>
+        <div class="label">Starter prompts</div>
+      </div>
+      <div class="feature-card">
+        <div class="count">20</div>
+        <div class="label">Code review items</div>
+      </div>
+      <div class="feature-card">
+        <div class="count">$29</div>
+        <div class="label">AUD — introductory</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3: Consultant OS -->
+  <div class="slide slide-template" data-slide="3">
+    <span class="template-badge">For Consultants</span>
+    <h1 class="template-name">Consultant OS</h1>
+    <p class="template-tagline">Client CRM, lead pipeline, time tracking, invoicing, and SOW templates. Your entire consulting business in one workspace.</p>
+    <ul class="feature-list">
+      <li><strong>Client CRM</strong> with health scoring</li>
+      <li><strong>Lead Pipeline</strong> — first contact to signed deal</li>
+      <li><strong>Time Tracker + Invoicing</strong> — never miss a bill</li>
+      <li><strong>SOW Template</strong> with worked example</li>
+      <li><strong>8 databases</strong> with sample data</li>
+    </ul>
+    <p class="template-price"><span class="amount">$49 AUD</span> <span class="note">one-time purchase</span></p>
+  </div>
+
+  <!-- Slide 4: PM OS -->
+  <div class="slide slide-template" data-slide="4">
+    <span class="template-badge">For Project Managers</span>
+    <h1 class="template-name">PM OS</h1>
+    <p class="template-tagline">Not a to-do list. A real PM system with risk registers, decision logs, stakeholder mapping, and weekly reviews.</p>
+    <ul class="feature-list">
+      <li><strong>Risk Register</strong> — probability/impact scoring</li>
+      <li><strong>Decision Log</strong> — linked to stakeholders</li>
+      <li><strong>RACI Mapping</strong> — who owns what</li>
+      <li><strong>Weekly Reviews</strong> — overdue items surfaced</li>
+      <li><strong>3 dashboards, 8 databases</strong></li>
+    </ul>
+    <p class="template-price"><span class="amount">$39 USD</span> <span class="note">one-time purchase</span></p>
+  </div>
+
+  <!-- Slide 5: SiteOS -->
+  <div class="slide slide-template" data-slide="5">
+    <span class="template-badge">For Construction</span>
+    <h1 class="template-name">SiteOS</h1>
+    <p class="template-tagline">Defects, RFIs, variations, safety, site diaries, progress claims. Built by someone who spent 3+ years on Australian construction sites.</p>
+    <ul class="feature-list">
+      <li><strong>Defect Management</strong> — priority + close-out</li>
+      <li><strong>RFI Register</strong> — deadline tracking</li>
+      <li><strong>Variation Register</strong> — cost rollup formulas</li>
+      <li><strong>Site Diary</strong> — phone-friendly daily logging</li>
+      <li><strong>9 databases</strong> — replaces $50k/yr tools</li>
+    </ul>
+    <p class="template-price"><span class="amount">$99 AUD</span> <span class="note">one-time purchase</span></p>
+  </div>
+
+  <!-- Slide 6: Bundle -->
+  <div class="slide slide-bundle" data-slide="6">
+    <h1>Get all four.<br><span class="gradient-text">Save 40%.</span></h1>
+    <div class="bundle-grid">
+      <div class="bundle-item">
+        <div class="name">AgentOps</div>
+        <div class="price">$29 AUD</div>
+      </div>
+      <div class="bundle-item">
+        <div class="name">Consultant OS</div>
+        <div class="price">$49 AUD</div>
+      </div>
+      <div class="bundle-item">
+        <div class="name">PM OS</div>
+        <div class="price">$39 USD</div>
+      </div>
+      <div class="bundle-item">
+        <div class="name">SiteOS</div>
+        <div class="price">$99 AUD</div>
+      </div>
+    </div>
+    <div class="savings-banner">
+      <span class="big">$129 AUD</span>
+      Save $87 with the Complete Bundle
+    </div>
+  </div>
+
+  <!-- Slide 7: CTA -->
+  <div class="slide slide-cta" data-slide="7">
+    <h1>Your next project deserves better than a <span class="gradient-text">spreadsheet</span></h1>
+    <span class="cta-button">Link in bio</span>
+    <div class="cta-badges">
+      <span>One-time purchase</span>
+      <span>30-day guarantee</span>
+      <span>Free Lite versions</span>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const total = slides.length;
+    const progress = document.getElementById('progress');
+    const currentEl = document.getElementById('current');
+    const totalEl = document.getElementById('total');
+    let current = 0;
+    let autoTimer = null;
+
+    totalEl.textContent = total;
+
+    function showSlide(index) {
+      slides.forEach((s, i) => {
+        s.classList.remove('active', 'exit');
+        if (i < index) s.classList.add('exit');
+      });
+      slides[index].classList.add('active');
+      currentEl.textContent = index + 1;
+      progress.style.width = ((index + 1) / total * 100) + '%';
+    }
+
+    function next() {
+      current = (current + 1) % total;
+      showSlide(current);
+    }
+
+    function prev() {
+      current = (current - 1 + total) % total;
+      showSlide(current);
+    }
+
+    // Auto-advance every 5 seconds
+    function startAuto() {
+      stopAuto();
+      autoTimer = setInterval(next, 5000);
+    }
+
+    function stopAuto() {
+      if (autoTimer) clearInterval(autoTimer);
+    }
+
+    // Keyboard controls
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') { next(); stopAuto(); }
+      if (e.key === 'ArrowLeft') { prev(); stopAuto(); }
+      if (e.key === 'a') startAuto();
+      if (e.key === 'Escape') stopAuto();
+    });
+
+    // Click to advance
+    document.addEventListener('click', (e) => {
+      next();
+      stopAuto();
+    });
+
+    // Start auto-play
+    startAuto();
+  </script>
+</body>
+</html>
