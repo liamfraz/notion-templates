@@ -4,7 +4,7 @@
 
 **Title:** AI Side Hustle Tracker -- Revenue, Expenses & Project Dashboard (Notion Template)
 
-**Price:** $29 AUD (introductory) / $49 AUD (full price after first 100 sales)
+**Price:** $24 AUD (introductory) / $29 AUD (full price after first 100 sales)
 
 **Thumbnail text:** "Track revenue. Manage expenses. Launch faster. Run your AI side hustles like a real business."
 

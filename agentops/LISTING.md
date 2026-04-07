@@ -4,7 +4,7 @@
 
 **Title:** AgentOps -- AI Agent Operations Hub (Notion Template)
 
-**Price:** $49 AUD
+**Price:** $29 AUD (introductory) / $49 AUD (full price after first 100 sales)
 
 **Thumbnail text:** "Registry. Task queue. Execution logs. Cost tracking. One workspace for your entire agent fleet."
 
@@ -123,7 +123,7 @@ notion, ai, agents, claude, gpt-4o, gemini, llama, mistral, api-costs, prompt-en
 - **Product type:** Digital product
 - **File delivery:** ZIP containing all files
 - **Refund policy:** 30-day money-back guarantee
-- **Price:** $49 AUD
+- **Price:** $29 AUD (introductory) / $49 AUD (full price after first 100 sales)
 - **Discount codes:**
   - `LAUNCH50` -- 50% off (first 50 buyers)
   - `EARLYBIRD` -- 30% off (first 100 buyers)

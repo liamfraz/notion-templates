@@ -986,31 +986,31 @@ A: Email us with your receipt and we'll send a discount code for the difference.
 Add these to the bottom of each individual product listing:
 
 **On AgentOps:**
-> :package: **Save 45%** — Get AgentOps plus 9 more professional Notion templates in the [FlowTech Complete Pack 2026](#). PM OS, SiteOS, Consultant OS, AI Side Hustle, Creator OS, YouTube Calendar, TikTok Machine, Creator Biz & Job Search CRM included.
+> :package: **Save 43%** — Get AgentOps plus 9 more professional Notion templates in the [FlowTech Complete Pack 2026](#). PM OS, SiteOS, Consultant OS, AI Side Hustle, Creator OS, YouTube Calendar, TikTok Machine, Creator Biz & Job Search CRM included.
 
 **On Consultant OS:**
-> :package: **Save 45%** — Get Consultant OS plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Track AI ops, manage construction sites, create content, run side hustles & more.
+> :package: **Save 43%** — Get Consultant OS plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Track AI ops, manage construction sites, create content, run side hustles & more.
 
 **On PM OS:**
-> :package: **Save 45%** — Get PM OS plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Construction, consulting, AI ops, content creation, YouTube, TikTok & job search included.
+> :package: **Save 43%** — Get PM OS plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Construction, consulting, AI ops, content creation, YouTube, TikTok & job search included.
 
 **On SiteOS:**
-> :package: **Save 45%** — Get SiteOS plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Add project management, consulting, AI ops, creator tools & more.
+> :package: **Save 43%** — Get SiteOS plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Add project management, consulting, AI ops, creator tools & more.
 
 **On AI Side Hustle Tracker:**
-> :package: **Save 45%** — Get AI Side Hustle Tracker plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). PM, construction, consulting, creator economy & job search included.
+> :package: **Save 43%** — Get AI Side Hustle Tracker plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). PM, construction, consulting, creator economy & job search included.
 
 **On Creator OS:**
-> :package: **Save 45%** — Get Creator OS plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Add YouTube Calendar, TikTok Machine, Creator Biz OS & 6 professional templates.
+> :package: **Save 43%** — Get Creator OS plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Add YouTube Calendar, TikTok Machine, Creator Biz OS & 6 professional templates.
 
 **On Job Search CRM:**
-> :package: **Save 45%** — Get Job Search CRM plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Professional, creator & income tools all included.
+> :package: **Save 43%** — Get Job Search CRM plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Professional, creator & income tools all included.
 
 **On YouTube Calendar:**
-> :package: **Save 45%** — Get YouTube Calendar plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Add Creator OS, TikTok Machine, Creator Biz OS & 6 professional templates.
+> :package: **Save 43%** — Get YouTube Calendar plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Add Creator OS, TikTok Machine, Creator Biz OS & 6 professional templates.
 
 **On TikTok Machine:**
-> :package: **Save 45%** — Get TikTok Machine plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Add YouTube Calendar, Creator OS, Creator Biz OS & 6 professional templates.
+> :package: **Save 43%** — Get TikTok Machine plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Add YouTube Calendar, Creator OS, Creator Biz OS & 6 professional templates.
 
 **On Creator Biz OS:**
-> :package: **Save 45%** — Get Creator Biz OS plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Add Creator OS, YouTube Calendar, TikTok Machine & 6 professional templates.
+> :package: **Save 43%** — Get Creator Biz OS plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Add Creator OS, YouTube Calendar, TikTok Machine & 6 professional templates.
