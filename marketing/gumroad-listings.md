@@ -920,19 +920,19 @@ One-time purchase. No subscription. Updates included.
 ## Bundle — FlowTech Complete Pack 2026
 
 ### Product Name
-**FlowTech Complete Pack 2026 — All 10 Notion Templates | Save 43%**
+**FlowTech Complete Pack 2026 — All 12 Notion Templates | Save 44%**
 
 ### Short Description (140 chars)
-All 10 FlowTech Notion templates in one bundle. PM, construction, consulting, AI, creators, YouTube, TikTok & job search. Save 43% in 2026.
+All 12 FlowTech Notion templates in one bundle. PM, construction, consulting, AI, creators, side hustles & job search. Save 44% in 2026.
 
 ### Bundle Price
-**$199 AUD** (vs $350 separately — save 43%)
+**$199 AUD** (vs $358 separately — save 44%)
 
 ### Long Description
 
-**Why buy one when you can run your entire life from Notion?**
+**Why buy one when you can run your entire professional life from Notion?**
 
-The FlowTech Complete Pack includes all ten professional Notion templates at 43% off:
+The FlowTech Complete Pack includes all twelve professional Notion templates at 44% off:
 
 **Professional & Business:**
 :bar_chart: **PM OS** ($39 value) — Project portfolio, risk registers, decision logs & weekly reviews
@@ -948,9 +948,13 @@ The FlowTech Complete Pack includes all ten professional Notion templates at 43%
 
 **Income & Career:**
 :money_with_wings: **AI Side Hustle Tracker** ($24 value) — Multi-stream AI income dashboard with tool ROI tracking
+:dart: **Side Hustle Tracker** ($29 value) — Track any hustle type with Hustle Scoring System, tax calculator & decision tree
 :dart: **Job Search CRM 2026** ($19 value) — Application tracker, interview prep, salary research & offer comparison
 
-**Total value: $350 AUD. Bundle price: $199 AUD. You save $151.**
+**AI & Productivity:**
+:bookmark: **AI Prompt Library** ($19 value) — 50 CRAFT-framework prompts, 12 workflows & 8 collections for AI power users
+
+**Total value: $358 AUD. Bundle price: $199 AUD. You save $159.**
 
 Every template includes:
 - Pre-built databases with realistic 2026 sample data
@@ -958,14 +962,14 @@ Every template includes:
 - Free Lite version
 - 30-day money-back guarantee
 
-One-time purchase. No subscriptions. No per-user fees. Lifetime updates on all 10 templates.
+One-time purchase. No subscriptions. No per-user fees. Lifetime updates on all 12 templates.
 
-*Perfect for professionals who wear multiple hats — manage projects, create content, run side hustles, and build their career. The complete Notion workspace for your entire professional life.*
+*Perfect for professionals who wear multiple hats — manage projects, create content, run side hustles, track AI ops, and build their career. The complete Notion workspace for your entire professional life.*
 
 ### FAQ
 
 **Q: Do I get all future templates too?**
-A: You get all 10 current templates with lifetime updates. Future templates are separate, but bundle buyers get a 25% discount code for any new template.
+A: You get all 12 current templates with lifetime updates. Future templates are separate, but bundle buyers get a 25% discount code for any new template.
 
 **Q: Can I buy the bundle and share templates with my team?**
 A: The license is for one person. Each team member needs their own purchase. Contact us for team pricing on 3+ licenses.
@@ -974,7 +978,7 @@ A: The license is for one person. Each team member needs their own purchase. Con
 A: Email us with your receipt and we'll send a discount code for the difference.
 
 ### Tags
-`notion template bundle`, `notion templates 2026`, `project management`, `construction management`, `content creator`, `AI tools`, `job search`, `freelancer template`, `notion workspace`, `best notion templates`
+`notion template bundle`, `notion templates 2026`, `project management`, `construction management`, `content creator`, `AI tools`, `job search`, `side hustle`, `notion workspace`, `best notion templates`
 
 ### URL Slug
 `flowtech-complete-pack-notion-templates`
@@ -1014,3 +1018,188 @@ Add these to the bottom of each individual product listing:
 
 **On Creator Biz OS:**
 > :package: **Save 43%** — Get Creator Biz OS plus 9 more Notion templates in the [FlowTech Complete Pack 2026](#). Add Creator OS, YouTube Calendar, TikTok Machine & 6 professional templates.
+
+**On Prompt Library:**
+> :package: **Save 43%** — Get AI Prompt Library plus 11 more Notion templates in the [FlowTech Complete Pack 2026](#). PM, construction, consulting, creator tools, side hustles & more.
+
+**On Side Hustle Tracker:**
+> :package: **Save 43%** — Get Side Hustle Tracker plus 11 more Notion templates in the [FlowTech Complete Pack 2026](#). AI ops, construction, consulting, creator economy & job search included.
+
+---
+
+## 11. AI Prompt Library — Best Notion Template for Prompt Engineering 2026
+
+### Product Name
+**AI Prompt Library & Workflow Manager | Best Notion Template for AI Power Users 2026**
+
+### Short Description (140 chars)
+50 CRAFT-framework prompts, 12 workflows & 8 collections. Best Notion template to organise, version & track your AI prompts in 2026.
+
+### Long Description
+
+**Your best prompts are buried in chat history you'll never find again.**
+
+You've written a prompt that worked perfectly. Three days later you can't remember how you worded it. You're rebuilding the same instructions for Claude, ChatGPT, and Gemini every session. Multi-step tasks get done manually because you never turned them into a repeatable workflow. Your AI usage is growing but your prompts are getting messier, not better.
+
+AI Prompt Library & Workflow Manager is a Notion workspace for people who use AI tools seriously. Not a list of generic prompts copied from the internet — a system for building, managing, and continuously improving the prompts that work for your specific work.
+
+**What's inside:**
+
+:bookmark: **Prompts Database (50 pre-built prompts)** — Genuinely useful prompts across 8 categories: Writing, Coding, Marketing, Analysis, Research, Creative, Business, and Productivity. Each uses the CRAFT framework (Context, Role, Action, Format, Tone) with model compatibility notes, ratings, version tracking & usage history
+
+:link: **Workflows Database (12 pre-built workflows)** — Chain prompts into repeatable multi-step processes. Content Pipeline, Code Review Cycle, Market Research Sprint, Client Proposal Builder & more. Track steps, success rate & time saved
+
+:file_folder: **Collections Database (8 curated sets)** — Prompt playlists for specific jobs: Newsletter Writer Kit, Code Quality Suite, Marketing Starter Pack, Product Launch Kit. Grab a collection when you need a full toolkit
+
+:bar_chart: **Usage Log (20 sample entries)** — Track every prompt use with ratings, output quality, time saved & notes. See which prompts and models perform best over time. Make data-driven decisions
+
+:pencil: **Prompt Crafting Guide** — The complete CRAFT framework with good vs bad examples, an iteration process & common mistakes to avoid
+
+**Also includes:**
+- Analytics & Monthly Review — monitor performance, spot weak categories, keep your library sharp
+- "Prompt of the Day" system for daily engagement
+- 4 pre-built databases with realistic 2026 sample data (CSV import)
+- Step-by-step setup guide (30 minutes)
+- Free Lite version included (prompt database + basic workflows + CRAFT method)
+
+### Why AI Prompt Library vs Alternatives
+
+| | AI Prompt Library | PromptBase / prompt stores | Notes apps (Notion, Obsidian) | ChatGPT saved prompts |
+|---|---|---|---|---|
+| Prompt versioning with ratings | Yes — track iterations & performance | No | No structure | No |
+| Multi-step workflow chaining | Yes — 12 pre-built workflows | No | No | No |
+| Usage log with model performance | Yes — see which AI performs best per prompt | No | No | No |
+| Curated collections by use case | Yes — 8 ready-to-use collections | Sell individual prompts | No | No |
+| CRAFT framework built in | Yes — every prompt structured | Varies | No | No |
+| Price | $19 AUD one-time | $3-10 per prompt | Free but unstructured | Free but no analytics |
+
+### FAQ
+
+**Q: Are the 50 prompts actually useful or just generic filler?**
+A: Every prompt is written using the CRAFT framework with specific variables, model recommendations, and practical notes. Categories cover real work: code review, blog writing, data analysis, client proposals — not "write a poem about a sunset."
+
+**Q: How is this different from just saving prompts in a Google Doc?**
+A: A Google Doc can store prompts but can't tell you which ones perform best, which models work for which tasks, or chain them into multi-step workflows. This is a database with ratings, versioning, usage tracking, and workflow automation.
+
+**Q: Does this work for Claude, ChatGPT, and Gemini?**
+A: Yes — each prompt includes model compatibility notes. The CRAFT framework works across all major AI models.
+
+**Q: Is there a free version?**
+A: Yes. The Lite version includes the prompt database structure, basic workflows, and the CRAFT method — free forever. Upgrade for 50 pre-built prompts, 12 workflows, 8 collections, usage tracking, and analytics.
+
+**Q: I already have prompts saved elsewhere. Can I migrate them?**
+A: Yes — the databases accept CSV imports. Copy your existing prompts into the CSV template and import in one step.
+
+**Perfect for:**
+- Developers using Claude Code, Cursor, or GitHub Copilot daily
+- Content creators writing blogs, newsletters, or social media
+- Marketers running campaigns, writing ads, and analysing competitors
+- Freelancers and consultants who need consistent, professional outputs
+- Anyone using Claude, ChatGPT, or Gemini more than 5 times per week
+
+> Build the prompt library you wish you'd started six months ago.
+
+:shield: **30-day money-back guarantee.** At $19, this template pays for itself the first time it surfaces a prompt that saves you 30 minutes of rewriting.
+
+### Tags
+`notion template`, `prompt engineering`, `AI prompts`, `ChatGPT`, `Claude`, `notion template 2026`, `AI productivity`, `workflow automation`
+
+### Price
+**$19 AUD** — Fixed price
+One-time purchase. No subscription.
+
+### URL Slug
+`ai-prompt-library-notion-template`
+
+---
+
+## 12. Side Hustle Tracker — Best Notion Template for Multiple Income Streams 2026
+
+### Product Name
+**Side Hustle Tracker & Revenue Dashboard | Best Notion Template for Multiple Income Streams 2026**
+
+### Short Description (140 chars)
+Track every income stream with a Hustle Score, tax calculator & "When to Quit" decision tree. Best Notion template for side hustles in 2026.
+
+### Long Description
+
+**You're running side hustles. But which ones are actually worth your time?**
+
+You're earning from Etsy, Upwork, a newsletter, and a course you launched six months ago. Revenue lives across six platform dashboards. Expenses are scattered across bank statements. You're "making money" but can't answer the real question: after expenses, hours, and tax — which hustles are worth scaling and which ones should you cut?
+
+Side Hustle Tracker is a Notion workspace for anyone running 2+ income streams who needs to see the full picture. Not a generic budgeting app — a purpose-built revenue dashboard with a scoring system, tax calculator, and decision framework.
+
+**What's inside:**
+
+:money_with_wings: **Side Hustles Database (12 sample hustles)** — Track every income stream across category, platform, revenue, expenses, net profit, hours, and the 5-dimension Hustle Scoring System (Revenue, Growth, Time Efficiency, Scalability, Passion — scored out of 25)
+
+:chart_with_upwards_trend: **Monthly Revenue Tracker (36 rows of sample data)** — Per-hustle revenue, expenses, net profit, hours spent & effective hourly rate. Spot trends, track growth rates, make data-driven decisions about where to invest your hours
+
+:receipt: **Expense Logger (25 categorised entries)** — Every business expense tagged by hustle with tax deduction flags. Includes Australian tax deduction categories reference
+
+:dart: **Goals Dashboard (10 goals with milestones)** — SMART goals with progress percentages, 3 milestones per goal & weekly review workflow. Revenue targets, subscriber goals, product launches
+
+:clock3: **Time Log (20 detailed entries)** — Log hours per hustle with activity types (Admin, Creation, Marketing, Client Work) and energy levels. Understand where your time actually goes
+
+:page_facing_up: **Tax Estimates (quarterly)** — Quarterly tax liability using Australian 2025-26 tax brackets. Gross income, deductions, taxable income, Medicare Levy & GST threshold guidance
+
+**Also includes:**
+- Revenue Dashboard — total revenue, net profit, best performer, estimated tax liability at a glance
+- Tax Calculator with Australian brackets, worked examples & step-by-step formula
+- Time-Value Analysis & "When to Quit" decision tree — make hard calls with data, not emotion
+- Quarterly Review Workflow (45-minute structured checklist)
+- Side Hustle Health Indicators (green/yellow/red)
+- 6 pre-built databases with realistic 2026 sample data (CSV import)
+- Step-by-step setup guide (40 minutes)
+- Free Lite version included (3 databases)
+
+### Why Side Hustle Tracker vs Alternatives
+
+| | Side Hustle Tracker | AI Side Hustle Tracker | Generic budget apps | Wave / QuickBooks |
+|---|---|---|---|---|
+| Multi-hustle scoring system (out of 25) | Yes — 5-dimension scoring | No | No | No |
+| "When to Quit" decision framework | Yes — structured decision tree | No | No | No |
+| Per-hustle effective hourly rate | Yes — auto-calculated | Yes | No | Partial |
+| Australian tax calculator with worked example | Yes — 2025-26 brackets | Yes | No | Yes but $15-30/mo |
+| Progress bar goals with 3 milestones | Yes | No | No | No |
+| Covers any hustle type | Yes — e-commerce, freelance, crafts, Airbnb, etc. | AI-focused only | Yes | Yes |
+| Price | $29 AUD one-time | $24 AUD one-time | Free but no structure | $180-360/year |
+
+### FAQ
+
+**Q: How is this different from the AI Side Hustle Tracker?**
+A: The AI Side Hustle Tracker ($24) is purpose-built for AI-powered income streams — it tracks AI tool costs, AI-specific categories (prompt engineering, automation agencies, AI SaaS), and AI tool ROI ratings. This Side Hustle Tracker ($29) is general purpose — works for ANY hustle type (e-commerce, freelancing, tutoring, Airbnb, etc.) and includes the Hustle Scoring System, Tax Calculator, "When to Quit" decision tree, and progress bar goals with milestones. If your hustles are mostly AI-powered, get the AI version. If you run a mix, get this one.
+
+**Q: I only have 2 side hustles. Is this still useful?**
+A: Yes — especially the Hustle Scoring System, hourly rate calculator, and tax estimates. Most users add streams over time. The system is ready when you scale.
+
+**Q: Is this for Australians only?**
+A: No. The tracking system works globally. The tax calculator uses Australian brackets and ATO references, but you can easily swap in your country's rates. All other features are universal.
+
+**Q: Is there a free version?**
+A: Yes. The Lite version includes Side Hustles, Monthly Revenue, and Goals — free forever. Upgrade for the full expense logger, time tracking, tax estimates, and quarterly review workflow.
+
+**Q: Can I track my Etsy, Shopify, and Airbnb income all together?**
+A: Yes — the Side Hustles database supports any category: e-commerce, freelance, content creation, rental income, digital products, and more.
+
+**Perfect for:**
+- Anyone running 2+ side hustles who needs to see the full picture
+- E-commerce sellers on Etsy, Shopify, eBay, or Amazon
+- Freelancers on Upwork, Fiverr, or running their own client base
+- Digital product sellers (courses, templates, ebooks)
+- Anyone approaching tax time wanting clarity on side hustle income
+- Side hustlers planning to replace their day job income
+
+> Stop guessing which hustles are worth it. Know it.
+
+:shield: **30-day money-back guarantee.** At $29, this template pays for itself the first time the Hustle Scoring System tells you to cut a time-sink hustle or double down on a hidden winner.
+
+### Tags
+`notion template`, `side hustle`, `income tracker`, `multiple income streams`, `passive income`, `notion template 2026`, `tax calculator`, `side hustle tracker`
+
+### Price
+**$29 AUD** — Pay what you want, minimum $29
+One-time purchase. No subscription. Lifetime updates.
+
+### URL Slug
+`side-hustle-tracker-notion-template`

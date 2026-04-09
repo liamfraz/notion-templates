@@ -3,34 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FlowTech — Premium Notion Templates for Professionals | 2026</title>
-  <meta name="description" content="10 premium Notion templates for developers, creators, consultants, project managers, job seekers, and construction professionals. AI tools, content calendars, business dashboards — real operational systems. From $14 AUD.">
+  <title>FlowTech — Premium Notion Templates for Professionals</title>
+  <meta name="description" content="Purpose-built Notion templates for developers, consultants, project managers, and construction professionals. Not generic planners — real operational systems. From $29 AUD.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://flowtech.notion.site/">
   <meta property="og:title" content="FlowTech — Premium Notion Templates for Professionals">
-  <meta property="og:description" content="Purpose-built Notion templates for developers, consultants, project managers, and construction professionals. From $14 AUD.">
+  <meta property="og:description" content="Purpose-built Notion workspaces. AgentOps, Consultant OS, PM OS, SiteOS. Free lite versions included.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://flowtech.notion.site/">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="FlowTech — Premium Notion Templates for Professionals">
-  <meta name="twitter:description" content="Purpose-built Notion templates for developers, consultants, project managers, and construction professionals. From $14 AUD.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            surface: '#0f0f0f',
-            card: '#1a1a1a',
-            cardHover: '#222222',
-            border: '#2a2a2a',
+            surface: '#0c0c0c',
+            card: '#141414',
+            cardHover: '#1c1c1c',
+            border: '#262626',
             accent: '#e8a838',
             accentDark: '#c48a2a',
-            muted: '#888888',
-            light: '#e5e5e5',
+            accentMuted: 'rgba(232,168,56,0.12)',
+            muted: '#808080',
+            light: '#e8e8e8',
           },
           fontFamily: {
             display: ['"DM Serif Display"', 'Georgia', 'serif'],
@@ -41,800 +38,522 @@
     }
   </script>
   <style>
-    body { background: #0f0f0f; }
-    .card-glow:hover { box-shadow: 0 0 40px rgba(232, 168, 56, 0.08); }
+    * { box-sizing: border-box; }
+    body { background: #0c0c0c; }
+
     .gradient-text {
-      background: linear-gradient(135deg, #e8a838 0%, #f0c96e 50%, #e8a838 100%);
+      background: linear-gradient(135deg, #e8a838 0%, #f4d07a 50%, #e8a838 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .hero-grain {
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    .grain::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
     }
-    .tag { letter-spacing: 0.15em; }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
+    .card-hover { transition: border-color 0.25s, box-shadow 0.25s; }
+    .card-hover:hover { border-color: rgba(232,168,56,0.35); box-shadow: 0 0 50px rgba(232,168,56,0.06); }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .fade-up { animation: fadeUp 0.65s ease-out both; }
+    .fade-1 { animation-delay: 0.05s; }
+    .fade-2 { animation-delay: 0.15s; }
+    .fade-3 { animation-delay: 0.25s; }
+    .fade-4 { animation-delay: 0.35s; }
+    .tag { letter-spacing: 0.14em; }
+    .check svg { flex-shrink: 0; }
+
+    /* FAQ accordion */
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .faq-arrow { transform: rotate(180deg); }
+    .faq-arrow { transition: transform 0.2s; }
+    details[open] summary { color: #e8e8e8; }
+
+    /* Lite/Premium tabs */
+    .tab-btn { transition: background 0.2s, color 0.2s; }
+    .tab-btn.active { background: rgba(232,168,56,0.15); color: #e8a838; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* Guarantee badge shimmer */
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
     }
-    .fade-up { animation: fadeUp 0.7s ease-out both; }
-    .fade-up-1 { animation-delay: 0.1s; }
-    .fade-up-2 { animation-delay: 0.2s; }
-    .fade-up-3 { animation-delay: 0.3s; }
-    .fade-up-4 { animation-delay: 0.4s; }
-    .lite-row { background: rgba(232, 168, 56, 0.03); }
-    .premium-row { background: rgba(232, 168, 56, 0.08); }
+    .badge-shimmer {
+      background: linear-gradient(90deg, #e8a838 0%, #f4d07a 45%, #e8a838 100%);
+      background-size: 200% auto;
+      animation: shimmer 3s linear infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
   </style>
 </head>
-<body class="font-body text-light antialiased">
+<body class="font-body text-light antialiased grain">
 
-  <!-- Nav -->
-  <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-surface/80 border-b border-border">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <span class="font-display text-xl text-accent">FlowTech</span>
-      <div class="hidden sm:flex items-center gap-8 text-sm text-muted">
-        <a href="#templates" class="hover:text-light transition-colors">Templates</a>
-        <a href="#compare" class="hover:text-light transition-colors">Compare</a>
-        <a href="#faq" class="hover:text-light transition-colors">FAQ</a>
-      </div>
-      <a href="bundle.html" class="text-sm font-semibold text-surface bg-accent hover:bg-accentDark px-5 py-2 rounded-full transition-colors">Get the Bundle &mdash; Save 43%</a>
+<!-- ── Nav ── -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-surface/80 border-b border-border">
+  <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+    <span class="font-display text-xl text-accent tracking-wide">FlowTech</span>
+    <div class="hidden sm:flex items-center gap-7 text-sm text-muted">
+      <a href="#templates" class="hover:text-light transition-colors">Templates</a>
+      <a href="#compare" class="hover:text-light transition-colors">Compare</a>
+      <a href="#faq" class="hover:text-light transition-colors">FAQ</a>
     </div>
-  </nav>
+    <a href="bundle.html" class="text-xs sm:text-sm font-semibold text-surface bg-accent hover:bg-accentDark px-4 sm:px-5 py-2 rounded-full transition-colors whitespace-nowrap">Bundle — Save 43%</a>
+  </div>
+</nav>
 
-  <!-- Hero -->
-  <section class="hero-grain relative min-h-[90vh] flex items-center justify-center pt-20">
-    <div class="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface pointer-events-none"></div>
-    <div class="relative text-center max-w-4xl mx-auto px-6 py-24">
-      <p class="tag text-accent text-xs font-semibold uppercase mb-6 fade-up">Notion Templates by FlowTech</p>
-      <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.1] mb-8 fade-up fade-up-1">
-        Premium Notion Templates<br>
-        <span class="gradient-text">for Professionals</span>
-      </h1>
-      <p class="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-12 leading-relaxed fade-up fade-up-2">
-        Purpose-built workspace systems for developers, consultants, project managers, and construction professionals. Not generic planners &mdash; real operational tools.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-up fade-up-3">
-        <a href="#templates" class="bg-accent hover:bg-accentDark text-surface font-semibold px-8 py-3.5 rounded-full transition-colors text-base">View All Templates</a>
-        <a href="#compare" class="border border-border hover:border-muted text-light font-medium px-8 py-3.5 rounded-full transition-colors text-base">Compare Plans</a>
-      </div>
-      <div class="flex items-center justify-center gap-8 mt-16 text-muted text-sm fade-up fade-up-4">
-        <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
-          One-time purchase
-        </span>
-        <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
-          30-day guarantee
-        </span>
-        <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
-          Free lite versions
-        </span>
-      </div>
+<!-- ── Hero ── -->
+<section class="relative min-h-[88vh] flex items-center justify-center pt-16">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(232,168,56,0.07),transparent)] pointer-events-none"></div>
+  <div class="relative text-center max-w-4xl mx-auto px-6 py-24 z-10">
+    <p class="tag text-accent text-xs font-semibold uppercase mb-5 fade-up">Notion Templates by FlowTech</p>
+    <h1 class="font-display text-5xl sm:text-6xl lg:text-[5rem] leading-[1.08] mb-7 fade-up fade-1">
+      Premium Notion Templates<br>
+      <span class="gradient-text">for Professionals</span>
+    </h1>
+    <p class="text-base sm:text-lg text-muted max-w-2xl mx-auto mb-10 leading-relaxed fade-up fade-2">
+      Not generic planners. Real operational systems — built by someone who uses them daily. Pick your workflow, get running in under an hour.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 fade-up fade-3">
+      <a href="#templates" class="w-full sm:w-auto bg-accent hover:bg-accentDark text-surface font-semibold px-8 py-3.5 rounded-full transition-colors">Browse Templates</a>
+      <a href="bundle.html" class="w-full sm:w-auto border border-border hover:border-accent/40 text-light font-medium px-8 py-3.5 rounded-full transition-colors">Get All 10 — Save 43%</a>
     </div>
-  </section>
-
-  <!-- Templates -->
-  <section id="templates" class="max-w-7xl mx-auto px-6 py-24">
-    <div class="text-center mb-16">
-      <p class="tag text-accent text-xs font-semibold uppercase mb-4">The Collection</p>
-      <h2 class="font-display text-4xl sm:text-5xl mb-4">Ten Templates. Built for Real Work.</h2>
-      <p class="text-muted text-lg max-w-xl mx-auto">Each built from real-world experience. Purpose-built for specific workflows.</p>
+    <!-- Trust signals -->
+    <div class="flex flex-wrap items-center justify-center gap-6 mt-14 text-muted text-sm fade-up fade-4">
+      <span class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        One-time purchase
+      </span>
+      <span class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        30-day money-back guarantee
+      </span>
+      <span class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Free lite version with every template
+      </span>
+      <span class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Works on Notion Free plan
+      </span>
     </div>
+  </div>
+</section>
 
-    <div class="grid md:grid-cols-2 gap-6">
+<!-- ── Templates ── -->
+<section id="templates" class="max-w-6xl mx-auto px-5 pb-28">
+  <div class="text-center mb-14">
+    <p class="tag text-accent text-xs font-semibold uppercase mb-3">The Collection</p>
+    <h2 class="font-display text-4xl sm:text-5xl mb-4">Four Templates. Four Professions.</h2>
+    <p class="text-muted max-w-lg mx-auto">Each one built from real-world experience. No filler, no generic productivity fluff.</p>
+  </div>
 
-      <!-- AgentOps -->
-      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30 flex flex-col">
-        <div class="flex items-start justify-between mb-6">
-          <div>
-            <span class="inline-block bg-blue-500/10 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For Developers</span>
-            <h3 class="font-display text-2xl mb-1">AgentOps</h3>
-            <p class="text-muted text-sm">AI Agent &amp; Automation Dashboard</p>
-          </div>
-          <div class="text-right">
-            <span class="font-display text-3xl text-accent">$29</span>
-            <p class="text-muted text-xs">AUD &middot; introductory</p>
-          </div>
+  <div class="grid md:grid-cols-2 gap-5">
+
+    <!-- ── AgentOps ── -->
+    <div class="bg-card border border-border rounded-2xl p-7 sm:p-8 card-hover flex flex-col">
+      <div class="flex items-start justify-between gap-4 mb-5">
+        <div>
+          <span class="inline-block bg-blue-500/10 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For AI Developers</span>
+          <h3 class="font-display text-2xl mb-1">AgentOps</h3>
+          <p class="text-muted text-sm">AI Agent Operations Hub</p>
         </div>
-        <p class="text-muted leading-relaxed mb-6">Track AI sessions, version prompts, monitor API costs, and manage automation flows. Built for developers who ship with Claude Code, ChatGPT, Copilot, and n8n daily.</p>
-        <ul class="space-y-2.5 mb-8 flex-1">
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>AI Session Logger with cost &amp; quality tracking</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Prompt Library with versioning &amp; ratings</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Automation Registry (Power Automate, n8n, Zapier)</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>API Cost Tracker with budget alerts</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>20-item AI Code Review Checklist</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Tech Debt Log &amp; Tool Registry</li>
-        </ul>
-        <div class="flex gap-3">
-          <a href="agentops.html" class="flex-1 text-center border border-border hover:border-muted text-light font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
-          <a href="https://flowtech.gumroad.com/l/agentops-notion-template" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface font-semibold py-3.5 rounded-xl transition-colors">Buy &mdash; $29 AUD</a>
+        <div class="text-right shrink-0">
+          <div class="font-display text-3xl text-accent">$29</div>
+          <p class="text-muted text-xs">AUD &middot; intro price</p>
+        </div>
+      </div>
+      <p class="text-muted text-sm leading-relaxed mb-6">Registry, task queue, execution logs, cost tracking. One Notion workspace for your entire agent fleet — built for developers who deploy Claude, GPT-4o, Gemini, and Llama daily.</p>
+
+      <!-- Feature bullets -->
+      <ul class="space-y-2 mb-6 flex-1">
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Agent Registry — fleet inventory with success rates &amp; costs</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Execution Logs — full audit trail with error tracing</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Cost Tracker — monthly spend by provider with budget alerts</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Prompt Library — versioned prompts with success rate tracking</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>3 dashboards: Daily Spend, Agent Performance, Error Rates</li>
+      </ul>
+
+      <!-- Lite vs Premium -->
+      <div class="border border-border rounded-xl overflow-hidden mb-6">
+        <div class="flex">
+          <button onclick="switchTab(this,'agentops-lite')" class="tab-btn active flex-1 py-2.5 text-xs font-semibold text-center rounded-none border-r border-border">Free Lite</button>
+          <button onclick="switchTab(this,'agentops-premium')" class="tab-btn flex-1 py-2.5 text-xs font-semibold text-center text-muted rounded-none">Premium</button>
+        </div>
+        <div id="agentops-lite" class="tab-panel active p-4 bg-surface/60">
+          <p class="text-xs text-muted mb-2.5 font-medium">Included free:</p>
+          <ul class="space-y-1.5 text-xs text-muted">
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Agent Registry</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Prompt Library</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Basic Cost Tracker</li>
+          </ul>
+        </div>
+        <div id="agentops-premium" class="tab-panel p-4 bg-accentMuted/50">
+          <p class="text-xs text-accent mb-2.5 font-medium">Everything in Lite, plus:</p>
+          <ul class="space-y-1.5 text-xs text-light">
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Task Queue with priority &amp; error handling</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Full Execution Logs with session IDs</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>3 performance dashboards</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Automation recipes &amp; webhook patterns</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>5 databases with realistic sample data</li>
+          </ul>
         </div>
       </div>
 
-      <!-- Consultant OS -->
-      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30 flex flex-col">
-        <div class="flex items-start justify-between mb-6">
-          <div>
-            <span class="inline-block bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For Consultants</span>
-            <h3 class="font-display text-2xl mb-1">Consultant OS</h3>
-            <p class="text-muted text-sm">Technical Consultant Operating System</p>
-          </div>
-          <div class="text-right">
-            <span class="font-display text-3xl text-accent">$49</span>
-            <p class="text-muted text-xs">AUD &middot; one-time</p>
-          </div>
-        </div>
-        <p class="text-muted leading-relaxed mb-6">Run your consulting business from one workspace. Client pipeline, project delivery, time tracking, invoicing, and SOW templates &mdash; built for technical professionals.</p>
-        <ul class="space-y-2.5 mb-8 flex-1">
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Client CRM with health scoring</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Lead Pipeline with weighted value tracking</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>SOW &amp; Proposal Templates with worked example</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Time Tracker with utilisation rate</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Invoice Register with chase process</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Rate Card Manager &amp; Knowledge Base</li>
-        </ul>
-        <div class="flex gap-3">
-          <a href="consultant-os.html" class="flex-1 text-center border border-border hover:border-muted text-light font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
-          <a href="https://flowtech.gumroad.com/l/consultant-os-notion-template" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface font-semibold py-3.5 rounded-xl transition-colors">Buy &mdash; $49 AUD</a>
-        </div>
-      </div>
-
-      <!-- PM OS -->
-      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30 flex flex-col">
-        <div class="flex items-start justify-between mb-6">
-          <div>
-            <span class="inline-block bg-violet-500/10 text-violet-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For Project Managers</span>
-            <h3 class="font-display text-2xl mb-1">PM OS</h3>
-            <p class="text-muted text-sm">Project Manager Personal OS</p>
-          </div>
-          <div class="text-right">
-            <span class="font-display text-3xl text-accent">$39</span>
-            <p class="text-muted text-xs">AUD &middot; one-time</p>
-          </div>
-        </div>
-        <p class="text-muted leading-relaxed mb-6">8 connected databases, 3 dashboards. Every project, task, risk, decision, and stakeholder in one workspace. Built by a PM who actually manages projects.</p>
-        <ul class="space-y-2.5 mb-8 flex-1">
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Risk Register with probability/impact scoring</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Decision Log with stakeholder &amp; rationale linking</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Stakeholder Register with RACI mapping</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Weekly Review dashboard for overdue items</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Meeting Notes with auto-linked action items</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>3 dashboards: Portfolio, Weekly Review, Stakeholders</li>
-        </ul>
-        <div class="flex gap-3">
-          <a href="pm-os.html" class="flex-1 text-center border border-border hover:border-muted text-light font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
-          <a href="https://flowtech.gumroad.com/l/pm-os-notion-template" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface font-semibold py-3.5 rounded-xl transition-colors">Buy &mdash; $39 AUD</a>
-        </div>
-      </div>
-
-      <!-- SiteOS -->
-      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30 flex flex-col">
-        <div class="flex items-start justify-between mb-6">
-          <div>
-            <span class="inline-block bg-orange-500/10 text-orange-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For Construction</span>
-            <h3 class="font-display text-2xl mb-1">SiteOS</h3>
-            <p class="text-muted text-sm">Construction Project Command Center</p>
-          </div>
-          <div class="text-right">
-            <span class="font-display text-3xl text-accent">$99</span>
-            <p class="text-muted text-xs">AUD &middot; one-time</p>
-          </div>
-        </div>
-        <p class="text-muted leading-relaxed mb-6">9 connected databases covering the full construction PM workflow. Defects, RFIs, variations, safety incidents, progress claims, and site diaries &mdash; all in one workspace.</p>
-        <ul class="space-y-2.5 mb-8 flex-1">
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Defect Management with close-out tracking</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>RFI Register with response deadline tracking</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Variation Register with cost rollup formulas</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Safety Incident Register with root cause analysis</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Site Diary with weather &amp; workforce logging</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Subcontractor Register with compliance alerts</li>
-        </ul>
-        <div class="flex gap-3">
-          <a href="siteos.html" class="flex-1 text-center border border-border hover:border-muted text-light font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
-          <a href="https://flowtech.gumroad.com/l/siteos-notion-template" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface font-semibold py-3.5 rounded-xl transition-colors">Buy &mdash; $99 AUD</a>
-        </div>
-      </div>
-
-      <!-- AI Side Hustle Tracker -->
-      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30 flex flex-col">
-        <div class="flex items-start justify-between mb-6">
-          <div>
-            <span class="inline-block bg-pink-500/10 text-pink-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For AI Hustlers</span>
-            <h3 class="font-display text-2xl mb-1">AI Side Hustle Tracker</h3>
-            <p class="text-muted text-sm">AI Income &amp; Project Dashboard</p>
-          </div>
-          <div class="text-right">
-            <span class="font-display text-3xl text-accent">$24</span>
-            <p class="text-muted text-xs">AUD &middot; one-time</p>
-          </div>
-        </div>
-        <p class="text-muted leading-relaxed mb-6">Track multiple AI income streams, monthly revenue, tool costs &amp; project profitability. The dashboard for anyone building income with AI tools.</p>
-        <ul class="space-y-2.5 mb-8 flex-1">
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Income Streams with revenue tracking</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Monthly Revenue dashboard</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Tool &amp; API Cost Tracker</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Project profitability analysis</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Expense categorization for tax</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Goal tracking with milestones</li>
-        </ul>
-        <div class="flex gap-3">
-          <a href="ai-sidehustle.html" class="flex-1 text-center border border-border hover:border-muted text-light font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
-          <a href="https://flowtech.gumroad.com/l/ai-sidehustle-notion-template" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface font-semibold py-3.5 rounded-xl transition-colors">Buy &mdash; $24 AUD</a>
-        </div>
-      </div>
-
-      <!-- Creator OS -->
-      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30 flex flex-col">
-        <div class="flex items-start justify-between mb-6">
-          <div>
-            <span class="inline-block bg-cyan-500/10 text-cyan-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For Creators</span>
-            <h3 class="font-display text-2xl mb-1">Creator OS</h3>
-            <p class="text-muted text-sm">Content Creator Operating System</p>
-          </div>
-          <div class="text-right">
-            <span class="font-display text-3xl text-accent">$29</span>
-            <p class="text-muted text-xs">AUD &middot; one-time</p>
-          </div>
-        </div>
-        <p class="text-muted leading-relaxed mb-6">Content calendar, analytics, brand deals, and income tracking for multi-platform creators. Your entire creator career in one Notion workspace.</p>
-        <ul class="space-y-2.5 mb-8 flex-1">
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Content Calendar with pipeline stages</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Analytics across platforms</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Brand Deal Pipeline</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Income &amp; Revenue tracking</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Idea Bank with scoring</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Platform-specific strategy views</li>
-        </ul>
-        <div class="flex gap-3">
-          <a href="creator-os.html" class="flex-1 text-center border border-border hover:border-muted text-light font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
-          <a href="https://flowtech.gumroad.com/l/creator-os-notion-template" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface font-semibold py-3.5 rounded-xl transition-colors">Buy &mdash; $29 AUD</a>
-        </div>
-      </div>
-
-      <!-- Creator Business OS -->
-      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30 flex flex-col">
-        <div class="flex items-start justify-between mb-6">
-          <div>
-            <span class="inline-block bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For Creator Businesses</span>
-            <h3 class="font-display text-2xl mb-1">Creator Business OS</h3>
-            <p class="text-muted text-sm">Creator Business Operating System</p>
-          </div>
-          <div class="text-right">
-            <span class="font-display text-3xl text-accent">$29</span>
-            <p class="text-muted text-xs">AUD &middot; one-time</p>
-          </div>
-        </div>
-        <p class="text-muted leading-relaxed mb-6">Track revenue, manage brand deals, invoice clients, and hit financial goals. The business brain behind your creator career.</p>
-        <ul class="space-y-2.5 mb-8 flex-1">
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Income Streams with profit margins</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Brand Deals Pipeline &amp; CRM</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Expense Tracker for tax time</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Invoice Tracker with overdue alerts</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Digital Products Manager</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Financial Goals &amp; quarterly reviews</li>
-        </ul>
-        <div class="flex gap-3">
-          <a href="creator-biz.html" class="flex-1 text-center border border-border hover:border-muted text-light font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
-          <a href="https://flowtech.gumroad.com/l/creator-biz-notion-template" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface font-semibold py-3.5 rounded-xl transition-colors">Buy &mdash; $29 AUD</a>
-        </div>
-      </div>
-
-      <!-- Job Search CRM -->
-      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30 flex flex-col">
-        <div class="flex items-start justify-between mb-6">
-          <div>
-            <span class="inline-block bg-amber-500/10 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For Job Seekers</span>
-            <h3 class="font-display text-2xl mb-1">Job Search CRM</h3>
-            <p class="text-muted text-sm">Job Application Tracking System</p>
-          </div>
-          <div class="text-right">
-            <span class="font-display text-3xl text-accent">$19</span>
-            <p class="text-muted text-xs">AUD &middot; one-time</p>
-          </div>
-        </div>
-        <p class="text-muted leading-relaxed mb-6">Track applications, prep for interviews, compare offers, and manage your network. Never lose track of where you applied or who you spoke to.</p>
-        <ul class="space-y-2.5 mb-8 flex-1">
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Application Tracker with status pipeline</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Interview Prep with question bank</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Salary Research by role &amp; company</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Offer Comparison calculator</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Company Research profiles</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Contact &amp; Network CRM</li>
-        </ul>
-        <div class="flex gap-3">
-          <a href="job-search.html" class="flex-1 text-center border border-border hover:border-muted text-light font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
-          <a href="https://flowtech.gumroad.com/l/job-search-notion-template" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface font-semibold py-3.5 rounded-xl transition-colors">Buy &mdash; $19 AUD</a>
-        </div>
-      </div>
-
-      <!-- TikTok & Reels Content Machine -->
-      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30 flex flex-col">
-        <div class="flex items-start justify-between mb-6">
-          <div>
-            <span class="inline-block bg-purple-500/10 text-purple-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For Short-Form Creators</span>
-            <h3 class="font-display text-2xl mb-1">TikTok &amp; Reels Content Machine</h3>
-            <p class="text-muted text-sm">Short-Form Video Command Center</p>
-          </div>
-          <div class="text-right">
-            <span class="font-display text-3xl text-accent">$14</span>
-            <p class="text-muted text-xs">AUD &middot; one-time</p>
-          </div>
-        </div>
-        <p class="text-muted leading-relaxed mb-6">Plan, hook, post, and track your short-form videos across TikTok, Instagram Reels, and YouTube Shorts from one Notion workspace.</p>
-        <ul class="space-y-2.5 mb-8 flex-1">
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Content Pipeline with batch workflow</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Hooks Library with completion rates</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Hashtag Tracker by platform</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Sounds &amp; Trends lifecycle tracking</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Analytics with performance ratings</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Posting Schedule optimizer</li>
-        </ul>
-        <div class="flex gap-3">
-          <a href="tiktok-machine.html" class="flex-1 text-center border border-border hover:border-muted text-light font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
-          <a href="https://flowtech.gumroad.com/l/tiktok-machine-notion-template" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface font-semibold py-3.5 rounded-xl transition-colors">Buy &mdash; $14 AUD</a>
-        </div>
-      </div>
-
-      <!-- YouTube Calendar & Analytics -->
-      <div class="bg-card border border-border rounded-2xl p-8 card-glow transition-all duration-300 hover:border-accent/30 flex flex-col">
-        <div class="flex items-start justify-between mb-6">
-          <div>
-            <span class="inline-block bg-red-500/10 text-red-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For YouTubers</span>
-            <h3 class="font-display text-2xl mb-1">YouTube Calendar &amp; Analytics</h3>
-            <p class="text-muted text-sm">YouTube Channel Command Center</p>
-          </div>
-          <div class="text-right">
-            <span class="font-display text-3xl text-accent">$19</span>
-            <p class="text-muted text-xs">AUD &middot; one-time</p>
-          </div>
-        </div>
-        <p class="text-muted leading-relaxed mb-6">Track your production pipeline, A/B test thumbnails, and know exactly which videos drive revenue. Built exclusively for YouTubers.</p>
-        <ul class="space-y-2.5 mb-8 flex-1">
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Video Production Pipeline (8 stages)</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Analytics with CTR &amp; watch hours</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Thumbnail A/B Testing workflow</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Playlist Strategy manager</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Revenue by source breakdown</li>
-          <li class="flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Idea Pipeline with SEO scoring</li>
-        </ul>
-        <div class="flex gap-3">
-          <a href="youtube-calendar.html" class="flex-1 text-center border border-border hover:border-muted text-light font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
-          <a href="https://flowtech.gumroad.com/l/youtube-calendar-notion-template" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface font-semibold py-3.5 rounded-xl transition-colors">Buy &mdash; $19 AUD</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Bundle Card -->
-    <div class="mt-6 bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-2xl p-8 text-center">
-      <div class="inline-flex items-center gap-2 bg-accent/15 text-accent text-xs font-semibold px-3 py-1 rounded-full mb-4">SAVE 43% &mdash; BEST VALUE</div>
-      <h3 class="font-display text-3xl mb-3">Ultimate Notion Template Bundle</h3>
-      <p class="text-muted leading-relaxed max-w-xl mx-auto mb-6">Get all 10 templates for <span class="text-accent font-semibold">$199 AUD</span> instead of $350 if bought separately. 65+ databases, 10 setup guides, every Lite version included.</p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="bundle.html" class="border border-accent/30 hover:border-accent text-light font-medium px-8 py-3.5 rounded-full transition-colors text-base">View Bundle Details</a>
-        <a href="https://flowtech.gumroad.com/l/flowtech-complete-bundle" target="_blank" rel="noopener" class="bg-accent hover:bg-accentDark text-surface font-semibold px-8 py-3.5 rounded-full transition-colors text-base">Get the Bundle &mdash; $199 AUD</a>
+      <div class="flex gap-3">
+        <a href="agentops.html" class="flex-1 text-center border border-border hover:border-muted text-light text-sm font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
+        <a href="https://gumroad.com" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface text-sm font-semibold py-3.5 rounded-xl transition-colors">Buy on Gumroad &rarr;</a>
       </div>
     </div>
 
-  </section>
-
-  <!-- Lite vs Premium Comparison -->
-  <section id="compare" class="max-w-7xl mx-auto px-6 py-24">
-    <div class="text-center mb-16">
-      <p class="tag text-accent text-xs font-semibold uppercase mb-4">Lite vs Premium</p>
-      <h2 class="font-display text-4xl sm:text-5xl mb-4">Start Free, Upgrade When Ready</h2>
-      <p class="text-muted text-lg max-w-xl mx-auto">Every template includes a free Lite version. Try before you buy.</p>
-    </div>
-
-    <div class="grid lg:grid-cols-2 gap-6">
-
-      <!-- AgentOps Comparison -->
-      <div class="bg-card border border-border rounded-2xl overflow-hidden">
-        <div class="p-6 border-b border-border">
-          <h3 class="font-display text-xl">AgentOps</h3>
-          <p class="text-muted text-sm mt-1">AI Agent &amp; Automation Dashboard</p>
+    <!-- ── Consultant OS ── -->
+    <div class="bg-card border border-border rounded-2xl p-7 sm:p-8 card-hover flex flex-col">
+      <div class="flex items-start justify-between gap-4 mb-5">
+        <div>
+          <span class="inline-block bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For IT Consultants</span>
+          <h3 class="font-display text-2xl mb-1">Consultant OS</h3>
+          <p class="text-muted text-sm">Technical Consultant Operating System</p>
         </div>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-border text-muted">
-              <th class="text-left p-4 font-medium">Feature</th>
-              <th class="text-center p-4 font-medium w-24">Lite</th>
-              <th class="text-center p-4 font-medium w-24">Premium</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">AI Session Logger</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Prompt Library</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Basic Cost Tracker</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Command Center Dashboard</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Automation Registry</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">AI Code Review Checklist</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Tech Debt Log &amp; Tool Registry</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="premium-row"><td class="p-4">Monthly Ops Report Template</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-          </tbody>
-        </table>
-        <div class="p-4 border-t border-border flex items-center justify-between">
-          <span class="text-muted text-sm">Lite: Free &middot; Premium: $29 AUD</span>
-          <a href="agentops.html" class="text-accent hover:text-accentDark text-sm font-semibold transition-colors">Learn More &rarr;</a>
+        <div class="text-right shrink-0">
+          <div class="font-display text-3xl text-accent">$49</div>
+          <p class="text-muted text-xs">AUD &middot; one-time</p>
+        </div>
+      </div>
+      <p class="text-muted text-sm leading-relaxed mb-6">Run your consulting business from one workspace. Client pipeline, project delivery, time tracking, invoicing, and SOW templates — built for technical professionals who deliver projects, not just bill hours.</p>
+
+      <ul class="space-y-2 mb-6 flex-1">
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Client CRM with health scoring &amp; engagement history</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Lead Pipeline with weighted value &amp; conversion tracking</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>SOW &amp; Proposal Templates with worked example</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Time Tracker with utilisation rate &amp; effective rate</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Rate Card Manager with standard / discounted / premium tiers</li>
+      </ul>
+
+      <div class="border border-border rounded-xl overflow-hidden mb-6">
+        <div class="flex">
+          <button onclick="switchTab(this,'consultant-lite')" class="tab-btn active flex-1 py-2.5 text-xs font-semibold text-center rounded-none border-r border-border">Free Lite</button>
+          <button onclick="switchTab(this,'consultant-premium')" class="tab-btn flex-1 py-2.5 text-xs font-semibold text-center text-muted rounded-none">Premium</button>
+        </div>
+        <div id="consultant-lite" class="tab-panel active p-4 bg-surface/60">
+          <p class="text-xs text-muted mb-2.5 font-medium">Included free:</p>
+          <ul class="space-y-1.5 text-xs text-muted">
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Client CRM</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Time Tracker</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Invoice Register</li>
+          </ul>
+        </div>
+        <div id="consultant-premium" class="tab-panel p-4 bg-accentMuted/50">
+          <p class="text-xs text-accent mb-2.5 font-medium">Everything in Lite, plus:</p>
+          <ul class="space-y-1.5 text-xs text-light">
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Lead Pipeline + Project Tracker</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>SOW &amp; Proposal Templates</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Rate Card Manager + Knowledge Base</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Skills Matrix + Monthly Business Review</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Business Dashboard + realistic sample data</li>
+          </ul>
         </div>
       </div>
 
-      <!-- Consultant OS Comparison -->
-      <div class="bg-card border border-border rounded-2xl overflow-hidden">
-        <div class="p-6 border-b border-border">
-          <h3 class="font-display text-xl">Consultant OS</h3>
-          <p class="text-muted text-sm mt-1">Technical Consultant Operating System</p>
-        </div>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-border text-muted">
-              <th class="text-left p-4 font-medium">Feature</th>
-              <th class="text-center p-4 font-medium w-24">Lite</th>
-              <th class="text-center p-4 font-medium w-24">Premium</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Client CRM</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Time Tracker</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Invoice Register</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Lead Pipeline</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Project Tracker with Milestones</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">SOW &amp; Proposal Templates</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Rate Card Manager</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="premium-row"><td class="p-4">Monthly Business Review</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-          </tbody>
-        </table>
-        <div class="p-4 border-t border-border flex items-center justify-between">
-          <span class="text-muted text-sm">Lite: Free &middot; Premium: $49 AUD</span>
-          <a href="consultant-os.html" class="text-accent hover:text-accentDark text-sm font-semibold transition-colors">Learn More &rarr;</a>
-        </div>
-      </div>
-
-      <!-- PM OS Comparison -->
-      <div class="bg-card border border-border rounded-2xl overflow-hidden">
-        <div class="p-6 border-b border-border">
-          <h3 class="font-display text-xl">PM OS</h3>
-          <p class="text-muted text-sm mt-1">Project Manager Personal OS</p>
-        </div>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-border text-muted">
-              <th class="text-left p-4 font-medium">Feature</th>
-              <th class="text-center p-4 font-medium w-24">Lite</th>
-              <th class="text-center p-4 font-medium w-24">Premium</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Project Tracker</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Task Management</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Risk Register</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Decision Log</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Stakeholder Register &amp; RACI</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Meeting Notes with Action Items</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Weekly Review Dashboard</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="premium-row"><td class="p-4">Workstream &amp; Dependency Tracking</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-          </tbody>
-        </table>
-        <div class="p-4 border-t border-border flex items-center justify-between">
-          <span class="text-muted text-sm">Lite: Free &middot; Premium: $39 AUD</span>
-          <a href="pm-os.html" class="text-accent hover:text-accentDark text-sm font-semibold transition-colors">Learn More &rarr;</a>
-        </div>
-      </div>
-
-      <!-- SiteOS Comparison -->
-      <div class="bg-card border border-border rounded-2xl overflow-hidden">
-        <div class="p-6 border-b border-border">
-          <h3 class="font-display text-xl">SiteOS</h3>
-          <p class="text-muted text-sm mt-1">Construction Project Command Center</p>
-        </div>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-border text-muted">
-              <th class="text-left p-4 font-medium">Feature</th>
-              <th class="text-center p-4 font-medium w-24">Lite</th>
-              <th class="text-center p-4 font-medium w-24">Premium</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Project Tracker</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Defect Management</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Site Diary</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">RFI Register</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Variation Register</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Safety Incident Register</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Progress Claims &amp; Retention</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="premium-row"><td class="p-4">Subcontractor Register</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-          </tbody>
-        </table>
-        <div class="p-4 border-t border-border flex items-center justify-between">
-          <span class="text-muted text-sm">Lite: Free &middot; Premium: $99 AUD</span>
-          <a href="siteos.html" class="text-accent hover:text-accentDark text-sm font-semibold transition-colors">Learn More &rarr;</a>
-        </div>
-      </div>
-
-      <!-- AI Side Hustle Tracker Comparison -->
-      <div class="bg-card border border-border rounded-2xl overflow-hidden">
-        <div class="p-6 border-b border-border">
-          <h3 class="font-display text-xl">AI Side Hustle Tracker</h3>
-          <p class="text-muted text-sm mt-1">AI Income &amp; Project Dashboard</p>
-        </div>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-border text-muted">
-              <th class="text-left p-4 font-medium">Feature</th>
-              <th class="text-center p-4 font-medium w-24">Lite</th>
-              <th class="text-center p-4 font-medium w-24">Premium</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Income Streams</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Monthly Revenue</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Tool Costs</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Projects</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Expenses</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Goals</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Sample Data</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="premium-row"><td class="p-4">Setup Guide</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-          </tbody>
-        </table>
-        <div class="p-4 border-t border-border flex items-center justify-between">
-          <span class="text-muted text-sm">Lite: Free &middot; Premium: $24 AUD</span>
-          <a href="ai-sidehustle.html" class="text-accent hover:text-accentDark text-sm font-semibold transition-colors">Learn More &rarr;</a>
-        </div>
-      </div>
-
-      <!-- Creator OS Comparison -->
-      <div class="bg-card border border-border rounded-2xl overflow-hidden">
-        <div class="p-6 border-b border-border">
-          <h3 class="font-display text-xl">Creator OS</h3>
-          <p class="text-muted text-sm mt-1">Content Creator Operating System</p>
-        </div>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-border text-muted">
-              <th class="text-left p-4 font-medium">Feature</th>
-              <th class="text-center p-4 font-medium w-24">Lite</th>
-              <th class="text-center p-4 font-medium w-24">Premium</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Content Calendar</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Ideas</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Platforms</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Analytics</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Brand Deals</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="premium-row"><td class="p-4">Income</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-          </tbody>
-        </table>
-        <div class="p-4 border-t border-border flex items-center justify-between">
-          <span class="text-muted text-sm">Lite: Free &middot; Premium: $29 AUD</span>
-          <a href="creator-os.html" class="text-accent hover:text-accentDark text-sm font-semibold transition-colors">Learn More &rarr;</a>
-        </div>
-      </div>
-
-      <!-- Creator Business OS Comparison -->
-      <div class="bg-card border border-border rounded-2xl overflow-hidden">
-        <div class="p-6 border-b border-border">
-          <h3 class="font-display text-xl">Creator Business OS</h3>
-          <p class="text-muted text-sm mt-1">Creator Business Operating System</p>
-        </div>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-border text-muted">
-              <th class="text-left p-4 font-medium">Feature</th>
-              <th class="text-center p-4 font-medium w-24">Lite</th>
-              <th class="text-center p-4 font-medium w-24">Premium</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Income Streams</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Expenses</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Goals</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Brand Deals</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Sponsors CRM</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Invoices</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="premium-row"><td class="p-4">Products</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-          </tbody>
-        </table>
-        <div class="p-4 border-t border-border flex items-center justify-between">
-          <span class="text-muted text-sm">Lite: Free &middot; Premium: $29 AUD</span>
-          <a href="creator-biz.html" class="text-accent hover:text-accentDark text-sm font-semibold transition-colors">Learn More &rarr;</a>
-        </div>
-      </div>
-
-      <!-- Job Search CRM Comparison -->
-      <div class="bg-card border border-border rounded-2xl overflow-hidden">
-        <div class="p-6 border-b border-border">
-          <h3 class="font-display text-xl">Job Search CRM</h3>
-          <p class="text-muted text-sm mt-1">Job Application Tracking System</p>
-        </div>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-border text-muted">
-              <th class="text-left p-4 font-medium">Feature</th>
-              <th class="text-center p-4 font-medium w-24">Lite</th>
-              <th class="text-center p-4 font-medium w-24">Premium</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Applications</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Companies</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Contacts</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Interviews</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Offers</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="premium-row"><td class="p-4">Salary Research</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-          </tbody>
-        </table>
-        <div class="p-4 border-t border-border flex items-center justify-between">
-          <span class="text-muted text-sm">Lite: Free &middot; Premium: $19 AUD</span>
-          <a href="job-search.html" class="text-accent hover:text-accentDark text-sm font-semibold transition-colors">Learn More &rarr;</a>
-        </div>
-      </div>
-
-      <!-- TikTok Content Machine Comparison -->
-      <div class="bg-card border border-border rounded-2xl overflow-hidden">
-        <div class="p-6 border-b border-border">
-          <h3 class="font-display text-xl">TikTok Content Machine</h3>
-          <p class="text-muted text-sm mt-1">Short-Form Video Command Center</p>
-        </div>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-border text-muted">
-              <th class="text-left p-4 font-medium">Feature</th>
-              <th class="text-center p-4 font-medium w-24">Lite</th>
-              <th class="text-center p-4 font-medium w-24">Premium</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Content Pipeline</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Hooks Library</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Posting Schedule</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Hashtag Tracker</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Sounds &amp; Trends</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="premium-row"><td class="p-4">Analytics</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-          </tbody>
-        </table>
-        <div class="p-4 border-t border-border flex items-center justify-between">
-          <span class="text-muted text-sm">Lite: Free &middot; Premium: $14 AUD</span>
-          <a href="tiktok-machine.html" class="text-accent hover:text-accentDark text-sm font-semibold transition-colors">Learn More &rarr;</a>
-        </div>
-      </div>
-
-      <!-- YouTube Calendar Comparison -->
-      <div class="bg-card border border-border rounded-2xl overflow-hidden">
-        <div class="p-6 border-b border-border">
-          <h3 class="font-display text-xl">YouTube Calendar</h3>
-          <p class="text-muted text-sm mt-1">YouTube Channel Command Center</p>
-        </div>
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="border-b border-border text-muted">
-              <th class="text-left p-4 font-medium">Feature</th>
-              <th class="text-center p-4 font-medium w-24">Lite</th>
-              <th class="text-center p-4 font-medium w-24">Premium</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Videos</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Ideas</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 lite-row"><td class="p-4">Playlists</td><td class="text-center p-4 text-accent">&#10003;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Analytics</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="border-b border-border/50 premium-row"><td class="p-4">Thumbnails</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-            <tr class="premium-row"><td class="p-4">Revenue</td><td class="text-center p-4 text-muted">&mdash;</td><td class="text-center p-4 text-accent">&#10003;</td></tr>
-          </tbody>
-        </table>
-        <div class="p-4 border-t border-border flex items-center justify-between">
-          <span class="text-muted text-sm">Lite: Free &middot; Premium: $19 AUD</span>
-          <a href="youtube-calendar.html" class="text-accent hover:text-accentDark text-sm font-semibold transition-colors">Learn More &rarr;</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Money-Back Guarantee -->
-  <section class="max-w-3xl mx-auto px-6 py-16">
-    <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-2xl p-10 text-center">
-      <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/20 mb-6">
-        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-        </svg>
-      </div>
-      <h3 class="font-display text-2xl mb-3">30-Day Money-Back Guarantee</h3>
-      <p class="text-muted leading-relaxed max-w-lg mx-auto">Not the right fit? No worries. Every template comes with a 30-day, no-questions-asked refund policy. Try it risk-free.</p>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="max-w-3xl mx-auto px-6 py-24">
-    <div class="text-center mb-16">
-      <p class="tag text-accent text-xs font-semibold uppercase mb-4">FAQ</p>
-      <h2 class="font-display text-4xl sm:text-5xl">Common Questions</h2>
-    </div>
-
-    <div class="space-y-4">
-
-      <details class="group bg-card border border-border rounded-xl" open>
-        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-          <span class="font-medium">What Notion plan do I need?</span>
-          <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <div class="px-6 pb-6 text-muted leading-relaxed">All templates work on any Notion plan, including Free. Databases, relations, and linked views work on all tiers. A paid plan gives you unlimited file uploads and more advanced features.</div>
-      </details>
-
-      <details class="group bg-card border border-border rounded-xl">
-        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-          <span class="font-medium">How do I set it up?</span>
-          <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <div class="px-6 pb-6 text-muted leading-relaxed">Duplicate the template to your Notion workspace, import the CSV files for sample data, and follow the included step-by-step Setup Guide. The whole process takes under an hour &mdash; no technical knowledge required.</div>
-      </details>
-
-      <details class="group bg-card border border-border rounded-xl">
-        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-          <span class="font-medium">Can I customise the databases?</span>
-          <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <div class="px-6 pb-6 text-muted leading-relaxed">Absolutely. Add columns, change categories, create new views, adjust formulas &mdash; it&rsquo;s your workspace. The sample data gives you a starting point; replace it with your own data when ready.</div>
-      </details>
-
-      <details class="group bg-card border border-border rounded-xl">
-        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-          <span class="font-medium">Is there a free version?</span>
-          <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <div class="px-6 pb-6 text-muted leading-relaxed">Yes! Every template includes a free Lite version with core databases. Try it out, and upgrade to Premium when you&rsquo;re ready for the full system.</div>
-      </details>
-
-      <details class="group bg-card border border-border rounded-xl">
-        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-          <span class="font-medium">Can I use these for a team?</span>
-          <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <div class="px-6 pb-6 text-muted leading-relaxed">Yes. Share the workspace with your team and Notion handles permissions. No per-user fees &mdash; one purchase covers unlimited team members.</div>
-      </details>
-
-      <details class="group bg-card border border-border rounded-xl">
-        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-          <span class="font-medium">What&rsquo;s your refund policy?</span>
-          <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <div class="px-6 pb-6 text-muted leading-relaxed">30-day money-back guarantee on all templates. No questions asked. If it&rsquo;s not the right fit, you get a full refund.</div>
-      </details>
-
-      <details class="group bg-card border border-border rounded-xl">
-        <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
-          <span class="font-medium">Do templates integrate with other tools automatically?</span>
-          <svg class="w-5 h-5 text-muted group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </summary>
-        <div class="px-6 pb-6 text-muted leading-relaxed">These are Notion templates, not SaaS products. However, the setup guides include ideas for automating data entry using n8n, Power Automate, or Zapier webhooks if you want to connect external tools.</div>
-      </details>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-border">
-    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <span class="font-display text-lg text-accent">FlowTech</span>
-      <p class="text-muted text-sm">&copy; 2026 FlowTech. All rights reserved.</p>
-      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted">
-        <a href="agentops.html" class="hover:text-light transition-colors">AgentOps</a>
-        <a href="ai-sidehustle.html" class="hover:text-light transition-colors">AI Side Hustle</a>
-        <a href="creator-os.html" class="hover:text-light transition-colors">Creator OS</a>
-        <a href="creator-biz.html" class="hover:text-light transition-colors">Creator Biz</a>
-        <a href="job-search.html" class="hover:text-light transition-colors">Job Search</a>
-        <a href="consultant-os.html" class="hover:text-light transition-colors">Consultant OS</a>
-        <a href="pm-os.html" class="hover:text-light transition-colors">PM OS</a>
-        <a href="siteos.html" class="hover:text-light transition-colors">SiteOS</a>
-        <a href="tiktok-machine.html" class="hover:text-light transition-colors">TikTok Machine</a>
-        <a href="youtube-calendar.html" class="hover:text-light transition-colors">YouTube Calendar</a>
-        <a href="bundle.html" class="hover:text-light transition-colors text-accent">Bundle</a>
-        <a href="#faq" class="hover:text-light transition-colors">FAQ</a>
+      <div class="flex gap-3">
+        <a href="consultant-os.html" class="flex-1 text-center border border-border hover:border-muted text-light text-sm font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
+        <a href="https://gumroad.com" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface text-sm font-semibold py-3.5 rounded-xl transition-colors">Buy on Gumroad &rarr;</a>
       </div>
     </div>
-  </footer>
+
+    <!-- ── PM OS ── -->
+    <div class="bg-card border border-border rounded-2xl p-7 sm:p-8 card-hover flex flex-col">
+      <div class="flex items-start justify-between gap-4 mb-5">
+        <div>
+          <span class="inline-block bg-violet-500/10 text-violet-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For Project Managers</span>
+          <h3 class="font-display text-2xl mb-1">PM OS</h3>
+          <p class="text-muted text-sm">Project Manager Personal OS</p>
+        </div>
+        <div class="text-right shrink-0">
+          <div class="font-display text-3xl text-accent">$39</div>
+          <p class="text-muted text-xs">AUD &middot; one-time</p>
+        </div>
+      </div>
+      <p class="text-muted text-sm leading-relaxed mb-6">8 connected databases, 3 dashboards. Every project, task, risk, decision, and stakeholder in one workspace. Built by a PM who actually manages projects — not a template designer who read a PMP guide.</p>
+
+      <ul class="space-y-2 mb-6 flex-1">
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Risk Register with probability/impact scoring &amp; mitigation plans</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Decision Log — stakeholder-linked rationale capture</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Stakeholder Register with RACI mapping</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Weekly Review — surfaces overdue tasks &amp; escalating risks</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Meeting Notes with auto-linked action items to task database</li>
+      </ul>
+
+      <div class="border border-border rounded-xl overflow-hidden mb-6">
+        <div class="flex">
+          <button onclick="switchTab(this,'pmos-lite')" class="tab-btn active flex-1 py-2.5 text-xs font-semibold text-center rounded-none border-r border-border">Free Lite</button>
+          <button onclick="switchTab(this,'pmos-premium')" class="tab-btn flex-1 py-2.5 text-xs font-semibold text-center text-muted rounded-none">Premium</button>
+        </div>
+        <div id="pmos-lite" class="tab-panel active p-4 bg-surface/60">
+          <p class="text-xs text-muted mb-2.5 font-medium">Included free (3 databases):</p>
+          <ul class="space-y-1.5 text-xs text-muted">
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Projects database</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Tasks database</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Risk Register</li>
+          </ul>
+        </div>
+        <div id="pmos-premium" class="tab-panel p-4 bg-accentMuted/50">
+          <p class="text-xs text-accent mb-2.5 font-medium">Everything in Lite, plus 5 more databases:</p>
+          <ul class="space-y-1.5 text-xs text-light">
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Decision Log + Stakeholder Register</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Meeting Notes + Workstream view</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>3 dashboards: Portfolio, Weekly Review, Stakeholders</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Automation recipes + formula library</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex gap-3">
+        <a href="pm-os.html" class="flex-1 text-center border border-border hover:border-muted text-light text-sm font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
+        <a href="https://gumroad.com" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface text-sm font-semibold py-3.5 rounded-xl transition-colors">Buy on Gumroad &rarr;</a>
+      </div>
+    </div>
+
+    <!-- ── SiteOS ── -->
+    <div class="bg-card border border-border rounded-2xl p-7 sm:p-8 card-hover flex flex-col">
+      <div class="flex items-start justify-between gap-4 mb-5">
+        <div>
+          <span class="inline-block bg-orange-500/10 text-orange-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">For Construction PMs</span>
+          <h3 class="font-display text-2xl mb-1">SiteOS</h3>
+          <p class="text-muted text-sm">Construction Project Command Center</p>
+        </div>
+        <div class="text-right shrink-0">
+          <div class="font-display text-3xl text-accent">$99</div>
+          <p class="text-muted text-xs">AUD &middot; one-time</p>
+        </div>
+      </div>
+      <p class="text-muted text-sm leading-relaxed mb-6">9 connected databases covering the full construction PM workflow. Defects, RFIs, variations, safety incidents, progress claims — all in one workspace. Built by a Tier 1 construction professional.</p>
+
+      <ul class="space-y-2 mb-6 flex-1">
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Defect Management with priority &amp; close-out tracking</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>RFI Register with response deadlines &amp; cost/time impact</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Variation Register with approval pipeline &amp; cost rollup</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Safety Incident Register with root cause analysis</li>
+        <li class="check flex items-start gap-2.5 text-sm"><svg class="w-4 h-4 text-accent mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Subcontractor Register with insurance &amp; licence expiry alerts</li>
+      </ul>
+
+      <div class="border border-border rounded-xl overflow-hidden mb-6">
+        <div class="flex">
+          <button onclick="switchTab(this,'siteos-lite')" class="tab-btn active flex-1 py-2.5 text-xs font-semibold text-center rounded-none border-r border-border">Free Lite</button>
+          <button onclick="switchTab(this,'siteos-premium')" class="tab-btn flex-1 py-2.5 text-xs font-semibold text-center text-muted rounded-none">Premium</button>
+        </div>
+        <div id="siteos-lite" class="tab-panel active p-4 bg-surface/60">
+          <p class="text-xs text-muted mb-2.5 font-medium">Included free (3 databases):</p>
+          <ul class="space-y-1.5 text-xs text-muted">
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Project Tracker</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Defect Register</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Site Diary</li>
+          </ul>
+        </div>
+        <div id="siteos-premium" class="tab-panel p-4 bg-accentMuted/50">
+          <p class="text-xs text-accent mb-2.5 font-medium">Everything in Lite, plus 6 more databases:</p>
+          <ul class="space-y-1.5 text-xs text-light">
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>RFI + Variation Registers</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Safety + Progress Claims + Meeting Minutes</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Subcontractor Register with expiry alerts</li>
+            <li class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>Unified dashboard + Australian sample data</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex gap-3">
+        <a href="siteos.html" class="flex-1 text-center border border-border hover:border-muted text-light text-sm font-medium py-3.5 rounded-xl transition-colors">Learn More</a>
+        <a href="https://gumroad.com" target="_blank" rel="noopener" class="flex-1 text-center bg-accent hover:bg-accentDark text-surface text-sm font-semibold py-3.5 rounded-xl transition-colors">Buy on Gumroad &rarr;</a>
+      </div>
+    </div>
+
+  </div><!-- /grid -->
+</section>
+
+<!-- ── Compare Section ── -->
+<section id="compare" class="max-w-6xl mx-auto px-5 pb-28">
+  <div class="text-center mb-12">
+    <p class="tag text-accent text-xs font-semibold uppercase mb-3">At a Glance</p>
+    <h2 class="font-display text-4xl sm:text-5xl mb-4">Compare Templates</h2>
+    <p class="text-muted max-w-md mx-auto">Pick the right one for your workflow.</p>
+  </div>
+  <div class="overflow-x-auto rounded-2xl border border-border">
+    <table class="w-full text-sm">
+      <thead>
+        <tr class="border-b border-border bg-card">
+          <th class="text-left px-5 py-4 font-semibold text-muted w-1/4">Feature</th>
+          <th class="px-4 py-4 text-center font-semibold text-blue-400">AgentOps<br><span class="text-accent font-display text-base font-normal">$29</span></th>
+          <th class="px-4 py-4 text-center font-semibold text-emerald-400">Consultant OS<br><span class="text-accent font-display text-base font-normal">$49</span></th>
+          <th class="px-4 py-4 text-center font-semibold text-violet-400">PM OS<br><span class="text-accent font-display text-base font-normal">$39</span></th>
+          <th class="px-4 py-4 text-center font-semibold text-orange-400">SiteOS<br><span class="text-accent font-display text-base font-normal">$99</span></th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-border">
+        <tr class="bg-surface/40"><td class="px-5 py-3.5 text-muted">Databases</td><td class="px-4 py-3.5 text-center">5</td><td class="px-4 py-3.5 text-center">8</td><td class="px-4 py-3.5 text-center">8</td><td class="px-4 py-3.5 text-center">9</td></tr>
+        <tr><td class="px-5 py-3.5 text-muted">Dashboards</td><td class="px-4 py-3.5 text-center">3</td><td class="px-4 py-3.5 text-center">1</td><td class="px-4 py-3.5 text-center">3</td><td class="px-4 py-3.5 text-center">1</td></tr>
+        <tr class="bg-surface/40"><td class="px-5 py-3.5 text-muted">Free Lite version</td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+        </tr>
+        <tr><td class="px-5 py-3.5 text-muted">Sample data (CSV)</td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+        </tr>
+        <tr class="bg-surface/40"><td class="px-5 py-3.5 text-muted">Automation recipes</td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+          <td class="px-4 py-3.5 text-center text-muted">—</td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+        </tr>
+        <tr><td class="px-5 py-3.5 text-muted">Works on Notion Free</td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+          <td class="px-4 py-3.5 text-center"><svg class="w-4 h-4 text-emerald-500 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></td>
+        </tr>
+        <tr class="bg-surface/40"><td class="px-5 py-3.5 text-muted">Best for</td>
+          <td class="px-4 py-3.5 text-center text-xs text-muted">AI devs spending $100+/mo on APIs</td>
+          <td class="px-4 py-3.5 text-center text-xs text-muted">Solo consultants with 2–8 clients</td>
+          <td class="px-4 py-3.5 text-center text-xs text-muted">PMs running 2–8 active projects</td>
+          <td class="px-4 py-3.5 text-center text-xs text-muted">Construction PMs &amp; CAs</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section id="faq" class="max-w-3xl mx-auto px-5 pb-28">
+  <div class="text-center mb-12">
+    <p class="tag text-accent text-xs font-semibold uppercase mb-3">Common Questions</p>
+    <h2 class="font-display text-4xl sm:text-5xl">FAQ</h2>
+  </div>
+
+  <div class="space-y-3">
+    <!-- Q1 -->
+    <details class="bg-card border border-border rounded-xl group">
+      <summary class="flex items-center justify-between px-6 py-5 text-sm font-medium text-muted hover:text-light transition-colors">
+        Do I need a paid Notion plan?
+        <svg class="faq-arrow w-4 h-4 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <p class="px-6 pb-5 text-sm text-muted leading-relaxed">All templates work on Notion's free plan. Every database, linked view, and formula works on every tier. A paid plan gives you unlimited file uploads and better sharing — nice to have, not required.</p>
+    </details>
+
+    <!-- Q2 -->
+    <details class="bg-card border border-border rounded-xl group">
+      <summary class="flex items-center justify-between px-6 py-5 text-sm font-medium text-muted hover:text-light transition-colors">
+        How long does setup take?
+        <svg class="faq-arrow w-4 h-4 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <p class="px-6 pb-5 text-sm text-muted leading-relaxed">Under an hour for any template. Each one includes a step-by-step Setup Guide with screenshots. If you can use a spreadsheet, you can set this up. You duplicate the template, import the CSV files, connect the database relations, then replace the sample data with your own.</p>
+    </details>
+
+    <!-- Q3 -->
+    <details class="bg-card border border-border rounded-xl group">
+      <summary class="flex items-center justify-between px-6 py-5 text-sm font-medium text-muted hover:text-light transition-colors">
+        Can I customise the databases?
+        <svg class="faq-arrow w-4 h-4 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <p class="px-6 pb-5 text-sm text-muted leading-relaxed">Completely. Add columns, change categories, rename properties, create new views. The templates give you a proven starting structure — make it yours. The Setup Guide explains how everything connects so you know what you can safely change.</p>
+    </details>
+
+    <!-- Q4 -->
+    <details class="bg-card border border-border rounded-xl group">
+      <summary class="flex items-center justify-between px-6 py-5 text-sm font-medium text-muted hover:text-light transition-colors">
+        Can I use these with my team?
+        <svg class="faq-arrow w-4 h-4 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <p class="px-6 pb-5 text-sm text-muted leading-relaxed">Yes. Share the Notion workspace with your team and use the owner/assignee fields to filter views per person. Works well for teams of 2–10. Notion handles permissions — one purchase covers your whole team.</p>
+    </details>
+
+    <!-- Q5 -->
+    <details class="bg-card border border-border rounded-xl group">
+      <summary class="flex items-center justify-between px-6 py-5 text-sm font-medium text-muted hover:text-light transition-colors">
+        What's the difference between Lite and Premium?
+        <svg class="faq-arrow w-4 h-4 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <p class="px-6 pb-5 text-sm text-muted leading-relaxed">Every template includes a free Lite version — typically 3 core databases to get you started immediately. Premium adds the full database suite, dashboards, automation recipes, formula library, and realistic sample data. Lite is a genuine working tool, not a teaser. Premium is what you use when the workflow becomes central to your day.</p>
+    </details>
+
+    <!-- Q6 -->
+    <details class="bg-card border border-border rounded-xl group">
+      <summary class="flex items-center justify-between px-6 py-5 text-sm font-medium text-muted hover:text-light transition-colors">
+        What if I'm not satisfied?
+        <svg class="faq-arrow w-4 h-4 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <p class="px-6 pb-5 text-sm text-muted leading-relaxed">30-day money-back guarantee, no questions asked. If the template doesn't work for your workflow, just request a refund via Gumroad within 30 days of purchase.</p>
+    </details>
+
+    <!-- Q7 -->
+    <details class="bg-card border border-border rounded-xl group">
+      <summary class="flex items-center justify-between px-6 py-5 text-sm font-medium text-muted hover:text-light transition-colors">
+        Do prices include updates?
+        <svg class="faq-arrow w-4 h-4 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <p class="px-6 pb-5 text-sm text-muted leading-relaxed">Yes. One-time purchase, lifetime updates. When templates are improved or extended, existing buyers get access to the updated files via Gumroad at no extra cost.</p>
+    </details>
+
+    <!-- Q8 -->
+    <details class="bg-card border border-border rounded-xl group">
+      <summary class="flex items-center justify-between px-6 py-5 text-sm font-medium text-muted hover:text-light transition-colors">
+        Can I import these into an existing Notion workspace?
+        <svg class="faq-arrow w-4 h-4 text-muted shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </summary>
+      <p class="px-6 pb-5 text-sm text-muted leading-relaxed">Yes. Import the main template as a new page in your workspace and import the CSV files as databases. Each template is self-contained and works alongside your existing setup without disrupting anything.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ── Guarantee ── -->
+<section class="max-w-6xl mx-auto px-5 pb-28">
+  <div class="relative bg-card border border-border rounded-2xl px-8 py-14 text-center overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_50%,rgba(232,168,56,0.06),transparent)] pointer-events-none"></div>
+    <div class="relative">
+      <div class="w-16 h-16 rounded-full bg-accentMuted border border-accent/20 flex items-center justify-center mx-auto mb-5">
+        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+      </div>
+      <p class="badge-shimmer text-xs font-semibold uppercase tracking-widest mb-3">30-Day Money-Back Guarantee</p>
+      <h2 class="font-display text-3xl sm:text-4xl mb-4 text-light">Try it risk-free.</h2>
+      <p class="text-muted max-w-xl mx-auto mb-8 leading-relaxed">If any template doesn't deliver value within 30 days of purchase, request a full refund via Gumroad. No forms, no questions, no friction.</p>
+      <a href="#templates" class="inline-block bg-accent hover:bg-accentDark text-surface font-semibold px-8 py-3.5 rounded-full transition-colors">Browse Templates</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="border-t border-border">
+  <div class="max-w-6xl mx-auto px-5 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <span class="font-display text-lg text-accent">FlowTech</span>
+    <p class="text-muted text-xs text-center">Premium Notion templates for professionals. All prices in AUD. One-time purchase.</p>
+    <div class="flex items-center gap-5 text-xs text-muted">
+      <a href="bundle.html" class="hover:text-light transition-colors">Bundle Deal</a>
+      <a href="links.html" class="hover:text-light transition-colors">All Templates</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function switchTab(btn, panelId) {
+    // Find the card containing this button
+    const card = btn.closest('.bg-card');
+    // Deactivate all tabs + panels in this card
+    card.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    card.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    // Activate clicked tab + panel
+    btn.classList.add('active');
+    document.getElementById(panelId).classList.add('active');
+  }
+</script>
 
 </body>
 </html>
