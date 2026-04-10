@@ -920,19 +920,19 @@ One-time purchase. No subscription. Updates included.
 ## Bundle — FlowTech Complete Pack 2026
 
 ### Product Name
-**FlowTech Complete Pack 2026 — All 12 Notion Templates | Save 44%**
+**FlowTech Complete Pack 2026 — All 12 Notion Templates | Save 50%**
 
 ### Short Description (140 chars)
-All 12 FlowTech Notion templates in one bundle. PM, construction, consulting, AI, creators, side hustles & job search. Save 44% in 2026.
+All 12 FlowTech Notion templates in one bundle. PM, construction, consulting, AI, creators, side hustles & job search. Save 50% in 2026.
 
 ### Bundle Price
-**$199 AUD** (vs $358 separately — save 44%)
+**$199 AUD** (vs $398 separately — save 50%)
 
 ### Long Description
 
 **Why buy one when you can run your entire professional life from Notion?**
 
-The FlowTech Complete Pack includes all twelve professional Notion templates at 44% off:
+The FlowTech Complete Pack includes all twelve professional Notion templates at 50% off:
 
 **Professional & Business:**
 :bar_chart: **PM OS** ($39 value) — Project portfolio, risk registers, decision logs & weekly reviews
@@ -954,7 +954,7 @@ The FlowTech Complete Pack includes all twelve professional Notion templates at 
 **AI & Productivity:**
 :bookmark: **AI Prompt Library** ($19 value) — 50 CRAFT-framework prompts, 12 workflows & 8 collections for AI power users
 
-**Total value: $358 AUD. Bundle price: $199 AUD. You save $159.**
+**Total value: $398 AUD. Bundle price: $199 AUD. You save $199.**
 
 Every template includes:
 - Pre-built databases with realistic 2026 sample data
