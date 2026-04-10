@@ -1,7 +1,7 @@
 # Gumroad Listing Copy — FlowTech Notion Templates (2026)
 
 > SEO-optimized for Gumroad search, Google discovery, conversion, and cross-sell. Copy-paste ready.
-> Updated: March 2026 — all 10 templates + bundle.
+> Updated: April 2026 — all 12 templates + bundle.
 
 ---
 
