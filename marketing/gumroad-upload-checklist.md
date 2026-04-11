@@ -28,6 +28,8 @@ Step-by-step instructions to list all 12 FlowTech templates + bundle on Gumroad.
 | YouTube Calendar | `youtube-calendar-premium.zip` | `youtube-calendar-lite.zip` |
 | TikTok Machine | `tiktok-machine-premium.zip` | `tiktok-machine-lite.zip` |
 | Creator Biz OS | `creator-biz-premium.zip` | `creator-biz-lite.zip` |
+| Side Hustle Tracker | `hustle-tracker-premium.zip` | `hustle-tracker-lite.zip` |
+| AI Prompt Library | `prompt-library-premium.zip` | `prompt-library-lite.zip` |
 
 ---
 
@@ -42,16 +44,18 @@ List cheapest first to build social proof with more sales:
 5. AgentOps ($29)
 6. Creator OS ($29)
 7. Creator Biz OS ($29)
-8. PM OS ($49)
+8. PM OS ($39)
 9. Consultant OS ($49)
 10. SiteOS ($99)
-11. FlowTech Complete Pack ($199)
+11. Side Hustle Tracker ($29)
+12. AI Prompt Library ($19)
+13. FlowTech Complete Pack ($199)
 
 ---
 
 ## Per-Product Upload Steps
 
-Repeat for each of the 10 products:
+Repeat for each of the 12 products:
 
 ### 1. Create Product
 1. Go to gumroad.com/products → **New Product**
@@ -89,19 +93,21 @@ Repeat for each of the 10 products:
 | 5 | AgentOps | $29 | AUD | Yes, min $29 | `agentops-notion-template` |
 | 6 | Creator OS | $29 | AUD | Yes, min $29 | `creator-os-notion-template` |
 | 7 | Creator Biz OS | $29 | AUD | Yes, min $29 | `creator-business-os-notion-template` |
-| 8 | PM OS | $49 | AUD | Yes, min $49 | `pm-os-notion-template` |
+| 8 | PM OS | $39 | AUD | Yes, min $39 | `pm-os-notion-template` |
 | 9 | Consultant OS | $49 | AUD | Yes, min $49 | `consultant-os-notion-template` |
 | 10 | SiteOS | $99 | AUD | Yes, min $99 | `siteos-construction-notion-template` |
-| 11 | Complete Pack | $199 | AUD | No | `flowtech-complete-pack-notion-templates` |
+| 11 | Side Hustle Tracker | $29 | AUD | Yes, min $29 | `side-hustle-tracker-notion-template` |
+| 12 | AI Prompt Library | $19 | AUD | Yes, min $19 | `ai-prompt-library-notion-template` |
+| 13 | Complete Pack | $199 | AUD | No | `flowtech-complete-pack-notion-templates` |
 
 ---
 
 ## Bundle Upload
 
 1. **New Product** → Digital product
-2. Name: `FlowTech Complete Pack 2026 — All 10 Notion Templates | Save 40%`
+2. Name: `FlowTech Complete Pack 2026 — All 12 Notion Templates | Save 50%`
 3. Price: **$199 AUD** (fixed)
-4. Upload ALL 10 premium ZIP files
+4. Upload ALL 12 premium ZIP files
 5. Copy bundle description + FAQ from `gumroad-listings.md`
 6. Tags: Copy from listings file
 7. Publish
@@ -111,13 +117,13 @@ Repeat for each of the 10 products:
 
 ## Free Lite Versions (Lead Magnets)
 
-Create 10 additional free products:
+Create 12 additional free products:
 
 | Free Product | Upload | Upsell CTA |
 |---|---|---|
 | AgentOps Lite | `agentops-lite.zip` | "Get the full version for $29" |
 | Consultant OS Lite | `consultant-os-lite.zip` | "Get the full version for $49" |
-| PM OS Lite | `pm-os-lite.zip` | "Get the full version for $49" |
+| PM OS Lite | `pm-os-lite.zip` | "Get the full version for $39" |
 | SiteOS Lite | `siteos-lite.zip` | "Get the full version for $99" |
 | AI Side Hustle Lite | `ai-sidehustle-lite.zip` | "Get the full version for $24" |
 | Creator OS Lite | `creator-os-lite.zip` | "Get the full version for $29" |
@@ -125,6 +131,8 @@ Create 10 additional free products:
 | YouTube Calendar Lite | `youtube-calendar-lite.zip` | "Get the full version for $19" |
 | TikTok Machine Lite | `tiktok-machine-lite.zip` | "Get the full version for $14" |
 | Creator Biz OS Lite | `creator-biz-lite.zip` | "Get the full version for $29" |
+| Side Hustle Tracker Lite | `hustle-tracker-lite.zip` | "Get the full version for $29" |
+| AI Prompt Library Lite | `prompt-library-lite.zip` | "Get the full version for $19" |
 
 For each: Price $0, add short description explaining what's included, link to premium version.
 
@@ -132,7 +140,7 @@ For each: Price $0, add short description explaining what's included, link to pr
 
 ## Post-Upload Checklist
 
-After all 21 products are live (10 premium + 10 lite + 1 bundle):
+After all 25 products are live (12 premium + 12 lite + 1 bundle):
 
 - [ ] **Cross-sell links:** Replace all `#` placeholders with actual bundle URL in every premium listing
 - [ ] **Upsell links:** Add premium product URL to each lite listing description
