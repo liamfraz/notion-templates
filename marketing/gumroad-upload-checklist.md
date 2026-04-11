@@ -1,6 +1,6 @@
-# Gumroad Upload Checklist — All 10 Templates (2026)
+# Gumroad Upload Checklist — All 12 Templates (2026)
 
-Step-by-step instructions to list all 10 FlowTech templates + bundle on Gumroad. Each product takes ~5 minutes once screenshots are ready.
+Step-by-step instructions to list all 12 FlowTech templates + bundle on Gumroad. Each product takes ~5 minutes once screenshots are ready.
 
 ---
 

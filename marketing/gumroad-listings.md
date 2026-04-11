@@ -11,7 +11,7 @@ Use one of these as your Gumroad store/profile tagline:
 
 1. **FlowTech — Best Notion Templates 2026 | PM, Construction, Creators, AI & Job Search**
 2. **Professional Notion Templates 2026 | Project Management, Construction, Consulting, AI & Creator Tools**
-3. **FlowTech Notion Templates — Run Your Entire Business From Notion (10 Templates, 2026)**
+3. **FlowTech Notion Templates — Run Your Entire Business From Notion (12 Templates, 2026)**
 
 ---
 
